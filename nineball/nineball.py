@@ -11,7 +11,7 @@ class nineball:
         self.ball = ["As I see it, yes!", "According to Lambdadelta, it is certain!", "It is decidedly so!", "Most likely.", "The outlook is good.",
              "Yes. That's where the signs point!", "Without a doubt!", "Yes.", "Yes, definitely!", "You may rely on it.", 
              "Don't count on it.", "My reply is no!! *cackles*", "My sources say no.", "The outlook is not good.", "Very doubtful.",
-             "Not a chance in hell!", "I refuse.", "The odds of that happening are...zero!", "The truth of the matter, is no." "Lambdadelta certainly says no."]
+             "Not a chance in hell!", "I refuse.", "The odds of that happening are...zero!", "The truth of the matter, is no.", "Lambdadelta certainly says no."]
 
     @commands.command(name="9", aliases=["9ball"])
     async def _9ball(self, *question):
