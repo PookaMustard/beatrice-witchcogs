@@ -121,6 +121,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://static.fjcdn.com/gifs/What_a9d5b5_5443845.gif")
+        
+    @commands.command()
+    async def suplex(self):
+        """Presented by SABIN and TED WOOLSEY."""
+
+        #Your code will go here
+        await self.bot.say("http://www.gamingrebellion.com/wp-content/uploads/2015/09/FF6-Train-Suplex.gif?9d7bd4")
 
     @commands.command()
     async def genesisdoes(self):
