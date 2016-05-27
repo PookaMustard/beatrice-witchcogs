@@ -92,7 +92,14 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://www.tonysfoodphotos.com/data/photos/67_1stuffed_crust_pizza.jpg")
+  
+    @commands.command()
+    async def disappointed(self):
+        """I am disappoint."""
 
+        #Your code will go here
+        await self.bot.say("https://media.giphy.com/media/3oAt21Fnr4i54uK8vK/giphy.gif")      
+        
     @commands.command()
     async def mandms(self):
         """Lambdadelta likes M&Ms."""
