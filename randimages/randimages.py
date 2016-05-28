@@ -163,6 +163,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://i.imgur.com/RqgiDtI.gif")
+        
+    @commands.command()
+    async def weebstick(self):
+        """Because we REALLY NEEDED an Overwatch GIF."""
+
+        #Your code will go here
+        await self.bot.say("http://imgur.com/PIpsc02")
 
     @commands.command()
     async def notprepared(self):
