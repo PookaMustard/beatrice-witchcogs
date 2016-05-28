@@ -114,6 +114,12 @@ class randimages:
         #Your code will go here
         await self.bot.say("http://i.imgur.com/o1DnKkL.png")
 
+    @commands.command()
+    async def doge(self):
+        """Awww......"""
+
+        #Your code will go here
+        await self.bot.say("http://barkpost-assets.s3.amazonaws.com/wp-content/uploads/2013/11/dogesmall.jpg")
 
     @commands.command()
     async def limewire(self):
