@@ -115,8 +115,8 @@ class randimages:
         await self.bot.say("http://i.imgur.com/o1DnKkL.png")
 
     @commands.command()
-    async def dance(self):
-        """Dance."""
+    async def boo(self):
+        """ULTRA SCARY."""
 
         #Your code will go here
         await self.bot.say("http://i.imgur.com/4HbsKX1.gif")
@@ -162,6 +162,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://www.chrisewings.com/images/Misc/images/Nuke%203_jpg.jpg")
+        
+    @commands.command()
+    async def drm(self):
+        """The pirates are badass, too."""
+
+        #Your code will go here
+        await self.bot.say("http://static.fjcdn.com/gifs/Drm+sucks+drm+is+not+good+for+anyone_2de156_4485223.gif")
 
     @commands.command()
     async def gooddaysir(self):
