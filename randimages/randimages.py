@@ -183,7 +183,14 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://imgur.com/LiRYZeY")
+        
+    @commands.command()
+    async def killthoseponies(self):
+        """Bring them back to death."""
 
+        #Your code will go here
+        await self.bot.say("http://www.dailyfreegames.com/images/thumbsfree/KTPON150.jpg")     
+        
     @commands.command()
     async def awake(self):
         """I have a bad feeling about this."""
