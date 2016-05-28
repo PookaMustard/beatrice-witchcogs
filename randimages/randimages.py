@@ -248,6 +248,13 @@ class randimages:
         await self.bot.say("http://i.imgur.com/shlFpZM.gif")
 
     @commands.command()
+    async def bendgate(self):
+        """Yes, iPhone 6+s are still bent to this day."""
+
+        #Your code will go here
+        await self.bot.say("http://pbs.twimg.com/media/By90YiIIcAAeyYh.jpg")
+
+    @commands.command()
     async def getgood(self):
         """...it means get good."""
 
