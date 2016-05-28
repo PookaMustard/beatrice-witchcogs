@@ -115,6 +115,13 @@ class randimages:
         await self.bot.say("http://i.imgur.com/o1DnKkL.png")
 
     @commands.command()
+    async def dance(self):
+        """Dance."""
+
+        #Your code will go here
+        await self.bot.say("http://i.imgur.com/4HbsKX1.gif")
+
+    @commands.command()
     async def doge(self):
         """Awww......"""
 
