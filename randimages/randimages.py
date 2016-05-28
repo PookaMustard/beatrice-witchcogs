@@ -217,7 +217,14 @@ class randimages:
         """Uhh."""
 
         #Your code will go here
-        await self.bot.say("http://i.imgur.com/EUChYKI.gif")
+        await self.bot.say
+        
+    @commands.command()
+    async def finalcountdown(self):
+        """Venus isn't a good place to live."""
+
+        #Your code will go here
+        await self.bot.say("http://b.vimeocdn.com/ts/234/533/234533071_640.jpg")
 
     @commands.command()
     async def pcmr(self):
