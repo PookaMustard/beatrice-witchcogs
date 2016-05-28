@@ -171,6 +171,13 @@ class randimages:
         await self.bot.say("http://giphy.com/gifs/reaction-angry-gFjbkip9OIIuI")
 
     @commands.command()
+    async def fetish(self):
+        """That is my fetish."""
+
+        #Your code will go here
+        await self.bot.say("http://imgur.com/LiRYZeY")
+
+    @commands.command()
     async def awake(self):
         """I have a bad feeling about this."""
 
