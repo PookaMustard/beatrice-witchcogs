@@ -57,6 +57,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://i.imgur.com/2f19khz.gif")
+        
+    @commands.command()
+    async def confoundthem(self):
+        """Don't drink THAT much!"""
+
+        #Your code will go here
+        await self.bot.say("http://imgur.com/wDKwqN0")
 
     @commands.command()
     async def iamyourfather(self):
