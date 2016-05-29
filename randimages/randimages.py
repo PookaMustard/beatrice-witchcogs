@@ -217,7 +217,7 @@ class randimages:
         """Uhh."""
 
         #Your code will go here
-        await self.bot.say
+        await self.bot.say("http://i.imgur.com/EUChYKI.gifv")
         
     @commands.command()
     async def finalcountdown(self):
