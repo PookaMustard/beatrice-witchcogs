@@ -14,6 +14,7 @@ class MyAnimeListSearch:
         """Returns MAL anime search result using anime name"""
 
         #Your code will go here
+        text = " ".join(text)
         query=text.replace(" ", "%20")
         await self.bot.say("http://myanimelist.net/anime.php?q="+query)
 
