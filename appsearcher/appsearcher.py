@@ -47,6 +47,14 @@ class appsearcher:
 
         #Your code will go here
         await self.bot.say("http://store.steampowered.com/app/"+text+"/")
+        
+    @commands.command()
+    async def steamuser(self, *text):
+        """Returns Steam user page using custom user ID"""
+
+        #Your code will go here
+        text = " ".join(text)
+        await self.bot.say("http://steamcommunity.com/id/"+text+"/")
 
     @commands.command()
     async def steamsearch(self, *text):
