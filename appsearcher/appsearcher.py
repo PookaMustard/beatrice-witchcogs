@@ -84,7 +84,7 @@ class appsearcher:
         #Your code will go here
         text = " ".join(text)
         query=text.replace(" ", "%20")
-        await self.bot.say("https://www.humblebundle.com/store/search/search/"+query)
+        await self.bot.say("https://www.origin.com/en-ie/store/browse?q="+query)
 
     @commands.command()
     async def gplay(self, *text):
