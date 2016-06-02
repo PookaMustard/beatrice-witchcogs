@@ -141,6 +141,20 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://i.imgur.com/1h6HMiV.gifv")
+        
+    @commands.command()
+    async def praisethesun(self):
+        """Praise it."""
+
+        #Your code will go here
+        await self.bot.say("http://i.imgur.com/YA2WFS8.png")
+        
+    @commands.command()
+    async def sun(self):
+        """We all love her."""
+
+        #Your code will go here
+        await self.bot.say("http://solarsystemexplore.com/wp-content/uploads/2012/11/The-Sun.jpg")
 
     @commands.command()
     async def meteorstrike(self):
