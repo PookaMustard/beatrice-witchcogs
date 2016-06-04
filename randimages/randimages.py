@@ -78,6 +78,20 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://www.spokeo.com/blog/wp-content/uploads/2011/05/RIP-Spokeo-Info-Bubble.jpg")
+        
+    @commands.command()
+    async def muda(self):
+        """Another anime punch GIF."""
+
+        #Your code will go here
+        await self.bot.say("http://imgur.com/6zcE2Vz")
+        
+    @commands.command()
+    async def zawurado(self):
+        """Flashing images. Please consult your doctor."""
+
+        #Your code will go here
+        await self.bot.say("http://38.media.tumblr.com/c2d4006f53aa908b6de083ee4a7672d3/tumblr_n5xz2qbEmM1r6mrcio3_250.gif")
 
     @commands.command()
     async def facepalm(self):
