@@ -106,6 +106,20 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://robinbrown.co.uk/wp-content/uploads/2012/02/double-facepalm1.jpg")
+        
+    @commands.command()
+    async def animesucks(self):
+        """Use this before it enters 'Murica."""
+
+        #Your code will go here
+        await self.bot.say("http://i1.kym-cdn.com/photos/images/newsfeed/000/708/423/caf.jpg")
+        
+    @commands.command()
+    async def fuckanime(self):
+        """Use this after it enters 'Murica."""
+
+        #Your code will go here
+        await self.bot.say("http://www.meh.ro/original/2009_11/meh.ro2857.jpg")
 
     @commands.command()
     async def pizza(self):
