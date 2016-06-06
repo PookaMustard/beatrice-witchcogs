@@ -38,6 +38,13 @@ class randimages:
         await self.bot.say('http://vignette2.wikia.nocookie.net/fairlyoddparents/images/6/65/Abracatastrophe0793.jpg/revision/latest?cb=20160526203432&path-prefix=en')
 
     @commands.command()
+    async def elrules(self):
+        """The loopholes are sexy."""
+
+        #Your code will go here
+        await self.bot.say('http://vignette4.wikia.nocookie.net/fairlyoddparents/images/9/99/FairyFairyQuiteContrary094.jpg/revision/latest?cb=20110404231200&path-prefix=en')
+
+    @commands.command()
     async def graphics(self):
         """The stupidity of graphics arguments"""
 
