@@ -82,6 +82,13 @@ class randimages:
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
         
     @commands.command()
+    async def tumbleweed(self):
+        """Pure abandonement."""
+
+        #Your code will go here
+        await self.bot.say('https://brittnyhabibti.files.wordpress.com/2014/10/tumbleweed.jpg')
+        
+    @commands.command()
     async def steamnazis(self):
         """Steam in a nutshell."""
 
