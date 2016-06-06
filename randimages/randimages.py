@@ -36,7 +36,14 @@ class randimages:
 
         #Your code will go here
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
+        
+    @commands.command()
+    async def steamnazis(self):
+        """Steam in a nutshell."""
 
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/178247098737754133/189429160525955073/aynA4ZY_700b_v1.jpg')
+        
     @commands.command()
     async def dealwithit(self):
         """Cool glasses."""
