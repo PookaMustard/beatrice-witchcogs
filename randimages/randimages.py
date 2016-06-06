@@ -29,6 +29,15 @@ class randimages:
         freiza = ["http://img-9gag-fun.9cache.com/photo/a9PmRPm_700b.jpg",
                "http://brain-images.cdn.dixons.com/0/9/20163490/l_20163490_001.jpg"]
         return await self.bot.say(randchoice(freiza))
+        
+    @commands.command()
+    async def bsod(self):
+        """The Ultimate Screen."""
+
+        #Your code will go here
+        bsod = ["http://f.fwallpapers.com/images/bsod-xp.jpg",
+               "http://thewindowsclub.thewindowsclubco.netdna-cdn.com/wp-content/uploads/2015/09/Blue-Screen-of-Death-Windows-10.png"]
+        return await self.bot.say(randchoice(bsod))
 
     @commands.command()
     async def darules(self):
