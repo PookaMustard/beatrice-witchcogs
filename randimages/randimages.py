@@ -45,6 +45,27 @@ class randimages:
         await self.bot.say('http://vignette4.wikia.nocookie.net/fairlyoddparents/images/9/99/FairyFairyQuiteContrary094.jpg/revision/latest?cb=20110404231200&path-prefix=en')
 
     @commands.command()
+    async def lilac(self):
+        """She's a dragon dragon."""
+
+        #Your code will go here
+        await self.bot.say('http://vignette3.wikia.nocookie.net/freedomplanet/images/0/05/Lilac_Sketch_by_Stephen_DiDuro.png/revision/latest?cb=20140803235415')
+        
+    @commands.command()
+    async def carol(self):
+        """She's a wildcat wildcat."""
+
+        #Your code will go here
+        await self.bot.say('http://vignette4.wikia.nocookie.net/freedomplanet/images/a/a7/Carol_Sketch_by_Stephen_DiDuro.jpg/revision/latest?cb=20140805001110')
+        
+    @commands.command()
+    async def milla(self):
+        """She's a dog dog."""
+
+        #Your code will go here
+        await self.bot.say('http://vignette1.wikia.nocookie.net/freedomplanet/images/9/90/Milla_Basset_Sketch_by_Stephen_DiDuro.png/revision/latest?cb=20140805001350')
+
+    @commands.command()
     async def graphics(self):
         """The stupidity of graphics arguments"""
 
