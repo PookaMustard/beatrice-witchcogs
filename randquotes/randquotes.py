@@ -20,4 +20,4 @@
          return await self.bot.say("The best part about all of this is that they can change their contract terms and retroactively apply it onto all the games bought under the previous term. If you don't accept the changes, your account is terminated along with the licenses you've bought under the old terms. You only get to keep the licenses you bought under the old terms IF you agree to them retroactively applying the new terms onto them.\nThe end.")
 
 def setup(bot):
-    bot.add_cog(randimages(bot))
+    bot.add_cog(randquotes(bot))
