@@ -12,10 +12,11 @@ class echo:
 
     @commands.command()
     @checks.is_owner()
-    async def echo(self, text):
+    async def echo(self, *text):
         """I'll repeat what you said."""
 
         #Your code will go here
+        text = " ".join(text)
         await self.bot.say(text)
 
 def setup(bot):
