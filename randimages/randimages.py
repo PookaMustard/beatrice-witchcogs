@@ -92,6 +92,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://img4.wikia.nocookie.net/__cb20130515050459/darksouls/images/6/63/You-Died.jpg")
+        
+    @commands.command()
+    async def aerisisdead(self):
+        """SPOILER ALERT! And I don't care about 'Aerith'."""
+
+        #Your code will go here
+        await self.bot.say("https://geekgirlmagazine.files.wordpress.com/2012/02/aeris-death.jpg")
 
     @commands.command()
     async def jojo(self):
