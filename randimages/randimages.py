@@ -31,6 +31,13 @@ class randimages:
         return await self.bot.say(randchoice(freiza))
 
     @commands.command()
+    async def darules(self):
+        """The loopholes are strong."""
+
+        #Your code will go here
+        await self.bot.say('http://vignette2.wikia.nocookie.net/fairlyoddparents/images/6/65/Abracatastrophe0793.jpg/revision/latest?cb=20160526203432&path-prefix=en')
+
+    @commands.command()
     async def graphics(self):
         """The stupidity of graphics arguments"""
 
