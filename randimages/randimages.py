@@ -101,6 +101,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say('http://imgur.com/HuoQG53')
+        
+    @commands.command()
+    async def objection(self):
+        """Cool pose."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/167706685715120129/189796749420789763/objection.jpg')
 
     @commands.command()
     async def youdied(self):
