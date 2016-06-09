@@ -44,7 +44,6 @@ class commandrequest:
         self.setowner_lock = False
 
     @commands.command(pass_context=True)
-    @checks.is_owner()
     async def commandrequest(self, ctx, *, command):
         """Sends a request for a new command.
         
