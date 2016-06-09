@@ -46,7 +46,9 @@ class commandrequest:
     @commands.command(pass_context=True)
     @checks.is_owner()
     async def commandrequest(self, ctx, *, command):
-        """Sends a request for a new command."""
+        """Sends a request for a new command.
+        
+        A modified version of the debug command, with help from Calebj."""
 
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
