@@ -73,7 +73,13 @@ class commandrequest:
                     result = result.replace(w, r)
                     result = result.replace(w.lower(), r)
                     result = result.replace(w.upper(), r)
-
-
+   
+   
+    @commands.command(pass_context=True, hidden=True)
+    async def channelid(self, ctx, *, channel : discord.Channel):
+        """Returns channel id"""
+        
+        await self.bot.say(channel.id)
+        
 def setup(bot):
     bot.add_cog(commandrequest(bot))
