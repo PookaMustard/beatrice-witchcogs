@@ -56,12 +56,17 @@ class randimages:
         elif server.id=='173965999744221185':
             await self.bot.say('Check server rules in ' + '<#173967163344945152>' +'!')
 
-    @commands.command()
-    async def elrules(self):
+    @commands.command(pass_context=True)
+    async def elrules(self, ctx):
         """The loopholes are sexy."""
 
         #Your code will go here
+        server = ctx.message.server
         await self.bot.say('http://vignette4.wikia.nocookie.net/fairlyoddparents/images/9/99/FairyFairyQuiteContrary094.jpg/revision/latest?cb=20110404231200&path-prefix=en')
+        if server.id=='181225160622342144':
+            await self.bot.say('Check server rules in ' + '<#181228813982760960>' +'!')
+        elif server.id=='173965999744221185':
+            await self.bot.say('Check server rules in ' + '<#173967163344945152>' +'!')
 
     @commands.command()
     async def lilac(self):
