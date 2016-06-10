@@ -59,6 +59,15 @@ class randimages:
         return await self.bot.say(randchoice(weegee))
         
     @commands.command()
+    async def kfl(self):
+        """Kentucky Fried Luigi!"""
+
+        #Your code will go here
+        kfl = ["https://lh4.googleusercontent.com/-oexhXFIUcws/V1n---gChkI/AAAAAAAACUU/sAMqbgqIDrclqFldgu6vx25FAKyPQ_O0QCL0B/w48-h64-no/KFC_specN_3.png",
+               "https://lh4.googleusercontent.com/-JD0NJULjAzg/V1n-8msS0_I/AAAAAAAACUU/SMUkD1JDxHQ-BKRz99Apg1m5YbTjFLdoQCL0B/w48-h64-no/KFC_specD_7.png"]
+        return await self.bot.say(randchoice(kfl))
+        
+    @commands.command()
     async def bsod(self):
         """The Ultimate Screen."""
 
