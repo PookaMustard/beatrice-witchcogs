@@ -1,7 +1,12 @@
 import discord
+from discord.ext import commands
 from random import randint
 from random import choice as randchoice
 from discord.ext import commands
+import datetime
+import time
+import aiohttp
+import asyncio
 
 class randimages:
     """Random images!"""
@@ -39,12 +44,15 @@ class randimages:
                "http://thewindowsclub.thewindowsclubco.netdna-cdn.com/wp-content/uploads/2015/09/Blue-Screen-of-Death-Windows-10.png"]
         return await self.bot.say(randchoice(bsod))
 
-    @commands.command()
-    async def darules(self):
+    @commands.command(pass_context=True)
+    async def darules(self, ctx):
         """The loopholes are strong."""
 
         #Your code will go here
+        server = ctx.message.server
         await self.bot.say('http://vignette2.wikia.nocookie.net/fairlyoddparents/images/6/65/Abracatastrophe0793.jpg/revision/latest?cb=20160526203432&path-prefix=en')
+        if server.id=='181225160622342144':
+            await self.bot.say('Check server rules in ' + '<#181228813982760960>' +'!')
 
     @commands.command()
     async def elrules(self):
