@@ -46,6 +46,18 @@ class randimages:
                "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png"]
         return await self.bot.say(randchoice(ovo))
         
+    @commands.command(hidden=True)
+    async def weegee(self):
+        """Weegeesquare!"""
+
+        #Your code will go here
+        weegee = ["https://lh6.googleusercontent.com/-dWUzHO0twIQ/V1n-efytS3I/AAAAAAAACUM/pPozGcXTDSIwdvhzRVQSoqJFq5v43jMzQCL0B/w48-h64-no/DLonk_idle_0.png",
+               "https://lh6.googleusercontent.com/-O2H_nPtZ_lM/V1n-jhEoz9I/AAAAAAAACUM/WkewVrDQQcAWXJs2o2koF24gg2pWVBdYQCL0B/w88-h57-no/Weegee%2527s%2BRequest%252C%2Bwith%2Ba%2Btweak_20160319_190508.jpg",
+               "https://lh5.googleusercontent.com/-7Lg4VvNReMA/V1n-kzsdwOI/AAAAAAAACUM/SupCobm8h5QP3_XCE0qc2_W6PKgq3L7gQCL0B/w47-h51-no/2_20160417_202903.jpg",
+               "https://lh6.googleusercontent.com/-QEW_5_hdVj8/V1n-tSioO0I/AAAAAAAACUM/PYwEpkGMFLwjXU-RsebrZWgB1A3yND-vACL0B/s32-no/spr_Deb_0.png",
+               "https://lh3.googleusercontent.com/-IjEvwALlGyg/V1n-zXJA5iI/AAAAAAAACUU/Li32CfrZ4oMl_cXBq8lPvXKcErZ8GsNuACL0B/w48-h50-no/spr_RyanBAS2_12.png"]
+        return await self.bot.say(randchoice(weegee))
+        
     @commands.command()
     async def bsod(self):
         """The Ultimate Screen."""
