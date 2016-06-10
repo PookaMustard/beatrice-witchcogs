@@ -33,7 +33,18 @@ class randimages:
         #Your code will go here
         freiza = ["http://img-9gag-fun.9cache.com/photo/a9PmRPm_700b.jpg",
                "http://brain-images.cdn.dixons.com/0/9/20163490/l_20163490_001.jpg"]
-        return await self.bot.say(randchoice(freiza))
+        return await self.bot.say
+        
+    @commands.command()
+    async def OvO(self):
+        """Bingo!"""
+
+        #Your code will go here
+        ovo = ["https://cdn.discordapp.com/attachments/173967012123377664/190571971564666881/Screen_Shot_2015-10-30_at_6.22.16_PM.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/190572657270456321/IMG_0670.jpg",
+               "https://cdn.discordapp.com/attachments/173967012123377664/190607662881308683/Bingo_in_FP_CS_Icon_OvO.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png"]
+        return await self.bot.say(randchoice(ovo))
         
     @commands.command()
     async def bsod(self):
