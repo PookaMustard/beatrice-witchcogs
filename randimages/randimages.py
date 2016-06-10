@@ -53,8 +53,8 @@ class randimages:
         await self.bot.say('http://vignette2.wikia.nocookie.net/fairlyoddparents/images/6/65/Abracatastrophe0793.jpg/revision/latest?cb=20160526203432&path-prefix=en')
         if server.id=='181225160622342144':
             await self.bot.say('Check server rules in ' + '<#181228813982760960>' +'!')
-        else:
-            await self.bot.say('Check the rules.')
+        elif server.id=='173965999744221185':
+            await self.bot.say('Check server rules in ' + '<#173967163344945152>' +'!')
 
     @commands.command()
     async def elrules(self):
