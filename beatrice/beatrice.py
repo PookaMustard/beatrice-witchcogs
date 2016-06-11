@@ -39,9 +39,12 @@ class beatrice:
     @commands.command()
     async def beatodetermined(self):
         """My own determination."""
-
-        #Your code will go here
         await self.bot.say('http://media.animevice.com/uploads/0/2262/137719-vlcsnap_40273_super.png')
+
+    @commands.command()
+    async def beatosmile(self):
+        """My own smile."""
+        await self.bot.say('https://kakeracomplex.files.wordpress.com/2011/05/beatrce.jpg')
 
     @commands.command()
     async def beatotroll(self):
