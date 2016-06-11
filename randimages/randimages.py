@@ -199,7 +199,7 @@ class randimages:
         await self.bot.say("http://www.spokeo.com/blog/wp-content/uploads/2011/05/RIP-Spokeo-Info-Bubble.jpg")
         
     @commands.command()
-    async def usans(self):
+    async def undersans(self):
         """(comic sans font): undertale sans"""
 
         #Your code will go here
