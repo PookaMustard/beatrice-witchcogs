@@ -16,7 +16,7 @@ class appsearcher:
             Type %gog gamecount for the number of games"""
 
         #Your code will go here
-        if text=='gamecount':
+        if text[0]=='gamecount':
             url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
             async with aiohttp.get(url) as response:
                 soupObject = BeautifulSoup(await response.text(), "html.parser") 
