@@ -13,7 +13,7 @@ class beatrice:
     @commands.command()
     async def uchar(self):
         """Random Umineko character images!"""
-        char = ["Beatrice (A.K.A. me, you idiot.)\nhttp://vignette2.wikia.nocookie.net/umineko/images/0/02/Bea_a11_akuwarai5.png/revision/latest?cb=20120227220630",
+        chazr = ["Beatrice (A.K.A. me, you idiot.)\nhttp://vignette2.wikia.nocookie.net/umineko/images/0/02/Bea_a11_akuwarai5.png/revision/latest?cb=20120227220630",
                 "Bernkastel\nhttp://vignette2.wikia.nocookie.net/umineko/images/1/18/Ber_a24_akuwarai3.png/revision/latest?cb=20130925011239",
                 "Lambdadelta\nhttp://vignette1.wikia.nocookie.net/umineko/images/f/f0/Lambdadelta1.png/revision/latest?cb=20110805145404",
                 "Featherine Augustus Aurora\nhttp://vignette4.wikia.nocookie.net/umineko/images/4/47/Fea_b11_warai2.png/revision/latest?cb=20120127223228",
