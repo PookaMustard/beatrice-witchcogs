@@ -11,7 +11,7 @@ class beatrice:
         self.bot = bot
 
     @commands.command()
-    async def uminekochars(self):
+    async def uchar(self):
         """Random Umineko character images!"""
         char = ["Beatrice (A.K.A. me, you idiot.)\nhttp://vignette2.wikia.nocookie.net/umineko/images/0/02/Bea_a11_akuwarai5.png/revision/latest/scale-to-width-down/270?cb=20120227220630",
                 "Bernkastel\nhttp://vignette2.wikia.nocookie.net/umineko/images/1/18/Ber_a24_akuwarai3.png/revision/latest/scale-to-width-down/270?cb=20130925011239",
