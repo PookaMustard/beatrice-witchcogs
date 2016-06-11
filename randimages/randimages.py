@@ -206,6 +206,20 @@ class randimages:
         await self.bot.say("http://i2.kym-cdn.com/photos/images/newsfeed/001/021/889/68d.gif")
         
     @commands.command()
+    async def smug(self):
+        """Smugging hard."""
+
+        #Your code will go here
+        await self.bot.say("https://cdn.discordapp.com/attachments/184816492838256640/190986742227009538/IMG_0291.JPG")
+        
+    @commands.command()
+    async def smugmode(self):
+        """Smugging harder."""
+
+        #Your code will go here
+        await self.bot.say("https://v.dreamwidth.org/27224/52508")
+        
+    @commands.command()
     async def muda(self):
         """Another anime punch GIF."""
 
