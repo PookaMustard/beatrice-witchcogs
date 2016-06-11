@@ -14,7 +14,7 @@ class pokemon:
         """Random Pokemon images!"""
         pokemonran = ["#0025 Pikachu\nhttp://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png",
                       "#0150 Mewtwo\nhttp://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png",
-                      "#039 Jigglypuff\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
+                      "#0039 Jigglypuff\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
                       "#0151 Mew\nhttp://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
