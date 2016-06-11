@@ -199,6 +199,13 @@ class randimages:
         await self.bot.say("http://www.spokeo.com/blog/wp-content/uploads/2011/05/RIP-Spokeo-Info-Bubble.jpg")
         
     @commands.command()
+    async def usans(self):
+        """(comic sans font): undertale sans"""
+
+        #Your code will go here
+        await self.bot.say("http://i2.kym-cdn.com/photos/images/newsfeed/001/021/889/68d.gif")
+        
+    @commands.command()
     async def muda(self):
         """Another anime punch GIF."""
 
