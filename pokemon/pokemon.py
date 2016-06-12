@@ -1,4 +1,3 @@
-# -*- coding: cp1252 -*-
 import discord
 from discord.ext import commands
 from random import randint
@@ -18,7 +17,7 @@ class pokemon:
         try:
             inte=int(inte)
         except ValueError:
-            return await self.bot.say("Please enter a Pokédex number.")
+            return await self.bot.say("Please enter a Pokedex number.")
         pokemonran = [
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
@@ -427,11 +426,11 @@ class pokemon:
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
-            return await self.bot.say("There are no negative Pokédex entries. Try a positive number.")
+            return await self.bot.say("There are no negative Pokedex entries. Try a positive number.")
         elif (inte==0):
-            return await self.bot.say("There is no Pokédex entry at #0000. Try a number higher than zero.")
+            return await self.bot.say("There is no Pokedex entry at #0000. Try a number higher than zero.")
         else:
-            return await self.bot.say("There is no Pokédex entry under that number. Try a lower positive number.")
+            return await self.bot.say("There is no Pokedex entry under that number. Try a lower positive number.")
     
 def setup(bot):
     bot.add_cog(pokemon(bot))
