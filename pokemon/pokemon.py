@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import discord
 from discord.ext import commands
 from random import randint
@@ -10,12 +11,15 @@ class pokemon:
         self.bot = bot
 
     @commands.command()
-    async def pokemon(self):
+    async def pokemon(self, inte=''):
         """Random Pokemon images!"""
-        pokemonran = ["#0025 Pikachu\nhttp://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png",
-                      "#0150 Mewtwo\nhttp://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png",
-                      "#0039 Jigglypuff\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
-                      "#0151 Mew\nhttp://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
+        if inte=='':
+            inte=600613600613
+        try:
+            inte=int(inte)
+        except ValueError:
+            return await self.bot.say("Please enter a Pokédex number.")
+        pokemonran = [
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
                       "#0003 Venusaur\nhttp://cdn.bulbagarden.net/upload/thumb/a/ae/003Venusaur.png/250px-003Venusaur.png",
@@ -40,6 +44,7 @@ class pokemon:
                       "#0022 Fearow\nhttp://cdn.bulbagarden.net/upload/thumb/a/a0/022Fearow.png/250px-022Fearow.png",
                       "#0023 Ekans\nhttp://cdn.bulbagarden.net/upload/thumb/f/fa/023Ekans.png/250px-023Ekans.png",
                       "#0024 Arbok\nhttp://cdn.bulbagarden.net/upload/thumb/c/cd/024Arbok.png/250px-024Arbok.png",
+                      "#0025 Pikachu\nhttp://cdn.bulbagarden.net/upload/thumb/0/0d/025Pikachu.png/250px-025Pikachu.png",
                       "#0026 Raichu\nhttp://cdn.bulbagarden.net/upload/thumb/8/88/026Raichu.png/250px-026Raichu.png",
                       "#0027 Sandshrew\nhttp://cdn.bulbagarden.net/upload/thumb/9/9e/027Sandshrew.png/250px-027Sandshrew.png",
                       "#0028 Sandslash\nhttp://cdn.bulbagarden.net/upload/thumb/0/0b/028Sandslash.png/250px-028Sandslash.png",
@@ -53,6 +58,7 @@ class pokemon:
                       "#0036 Clefable\nhttp://cdn.bulbagarden.net/upload/thumb/a/a9/036Clefable.png/250px-036Clefable.png",
                       "#0037 Vulpix\nhttp://cdn.bulbagarden.net/upload/thumb/6/60/037Vulpix.png/250px-037Vulpix.png",
                       "#0038 Ninetales\nhttp://cdn.bulbagarden.net/upload/thumb/0/05/038Ninetales.png/250px-038Ninetales.png",
+                      "#0039 Jigglypuff\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/039Jigglypuff.png/250px-039Jigglypuff.png",
                       "#0040 Wigglytuff\nhttp://cdn.bulbagarden.net/upload/thumb/9/92/040Wigglytuff.png/250px-040Wigglytuff.png",
                       "#0041 Zubat\nhttp://cdn.bulbagarden.net/upload/thumb/d/da/041Zubat.png/250px-041Zubat.png",
                       "#0042 Golbat\nhttp://cdn.bulbagarden.net/upload/thumb/0/0c/042Golbat.png/250px-042Golbat.png",
@@ -163,6 +169,8 @@ class pokemon:
                       "#0147 Dratini\nhttp://cdn.bulbagarden.net/upload/thumb/c/cc/147Dratini.png/250px-147Dratini.png",
                       "#0148 Dragonair\nhttp://cdn.bulbagarden.net/upload/thumb/9/93/148Dragonair.png/250px-148Dragonair.png",
                       "#0149 Dragonite\nhttp://cdn.bulbagarden.net/upload/thumb/8/8b/149Dragonite.png/250px-149Dragonite.png",
+                      "#0150 Mewtwo\nhttp://cdn.bulbagarden.net/upload/thumb/7/78/150Mewtwo.png/250px-150Mewtwo.png",
+                      "#0151 Mew\nhttp://cdn.bulbagarden.net/upload/thumb/b/b1/151Mew.png/250px-151Mew.png",
                       "#0152 Chikorita\nhttp://cdn.bulbagarden.net/upload/thumb/b/bf/152Chikorita.png/250px-152Chikorita.png",
                       "#0153 Bayleef\nhttp://cdn.bulbagarden.net/upload/thumb/c/ca/153Bayleef.png/250px-153Bayleef.png",
                       "#0154 Meganium\nhttp://cdn.bulbagarden.net/upload/thumb/d/d1/154Meganium.png/250px-154Meganium.png",
@@ -413,7 +421,17 @@ class pokemon:
                       "#0399 Bidoof\nhttp://cdn.bulbagarden.net/upload/thumb/f/f5/399Bidoof.png/250px-399Bidoof.png",
                       "#0400 Bibarel\nhttp://cdn.bulbagarden.net/upload/thumb/9/91/400Bibarel.png/250px-400Bibarel.png"
                       ]
-        return await self.bot.say(randchoice(pokemonran))
+        if inte==600613600613:
+            return await self.bot.say(randchoice(pokemonran))
+        elif (inte<401 and inte>0):
+            inte-=1
+            return await self.bot.say(pokemonran[inte])
+        elif (inte<0):
+            return await self.bot.say("There are no negative Pokédex entries. Try a positive number.")
+        elif (inte==0):
+            return await self.bot.say("There is no Pokédex entry at #0000. Try a number higher than zero.")
+        else:
+            return await self.bot.say("There is no Pokédex entry under that number. Try a lower positive number.")
     
 def setup(bot):
     bot.add_cog(pokemon(bot))
