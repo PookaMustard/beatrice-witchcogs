@@ -11,7 +11,7 @@ class pokemon:
 
     @commands.command()
     async def pokemon(self, inte=''):
-        """Random Pokemon images!"""
+        """Returns a random or selected Pokemon image. (Put a Pokedex number after the command to select a Pokemon)"""
         if inte=='':
             inte=600613600613
         try:
@@ -558,11 +558,21 @@ class pokemon:
                       "#0537 Seismitoad\nhttp://cdn.bulbagarden.net/upload/thumb/3/35/537Seismitoad.png/250px-537Seismitoad.png",
                       "#0538 Throh\nhttp://cdn.bulbagarden.net/upload/thumb/7/74/538Throh.png/250px-538Throh.png",
                       "#0539 Sawk\nhttp://cdn.bulbagarden.net/upload/thumb/a/a8/539Sawk.png/250px-539Sawk.png",
-                      "#0540 Sewaddle\nhttp://cdn.bulbagarden.net/upload/thumb/4/4a/540Sewaddle.png/250px-540Sewaddle.png"
+                      "#0540 Sewaddle\nhttp://cdn.bulbagarden.net/upload/thumb/4/4a/540Sewaddle.png/250px-540Sewaddle.png",
+                      "#0541 Swadloon\nhttp://cdn.bulbagarden.net/upload/thumb/2/2b/541Swadloon.png/250px-541Swadloon.png",
+                      "#0542 Leavanny\nhttp://cdn.bulbagarden.net/upload/thumb/8/8e/542Leavanny.png/250px-542Leavanny.png",
+                      "#0543 Venipede\nhttp://cdn.bulbagarden.net/upload/thumb/0/0e/543Venipede.png/250px-543Venipede.png",
+                      "#0544 Whirlipede\nhttp://cdn.bulbagarden.net/upload/thumb/b/bc/544Whirlipede.png/250px-544Whirlipede.png",
+                      "#0545 Scolipede\nhttp://cdn.bulbagarden.net/upload/thumb/c/cb/545Scolipede.png/250px-545Scolipede.png",
+                      "#0546 Cottonee\nhttp://cdn.bulbagarden.net/upload/thumb/4/44/546Cottonee.png/250px-546Cottonee.png",
+                      "#0547 Whimsicott\nhttp://cdn.bulbagarden.net/upload/thumb/a/a2/547Whimsicott.png/250px-547Whimsicott.png",
+                      "#0548 Petilil\nhttp://cdn.bulbagarden.net/upload/thumb/0/0b/548Petilil.png/250px-548Petilil.png",
+                      "#0549 Lilligant\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/549Lilligant.png/250px-549Lilligant.png",
+                      "#0550 Basculin\nhttp://cdn.bulbagarden.net/upload/thumb/2/2f/550Basculin.png/250px-550Basculin.png"
                       ]
         if inte==600613600613:
             return await self.bot.say(randchoice(pokemonran))
-        elif (inte<541 and inte>0):
+        elif (inte<551 and inte>0):
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
