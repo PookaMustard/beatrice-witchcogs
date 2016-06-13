@@ -418,7 +418,7 @@ class pokemon:
                       "#0397 Staravia\nhttp://cdn.bulbagarden.net/upload/thumb/f/f8/397Staravia.png/250px-397Staravia.png",
                       "#0398 Staraptor\nhttp://cdn.bulbagarden.net/upload/thumb/5/5e/398Staraptor.png/250px-398Staraptor.png",
                       "#0399 Bidoof\nhttp://cdn.bulbagarden.net/upload/thumb/f/f5/399Bidoof.png/250px-399Bidoof.png",
-                      "#0400 Bibarel\nhttp://cdn.bulbagarden.net/upload/thumb/9/91/400Bibarel.png/250px-400Bibarel.png"
+                      "#0400 Bibarel\nhttp://cdn.bulbagarden.net/upload/thumb/9/91/400Bibarel.png/250px-400Bibarel.png",
                       "#0401 Kricketot\nhttp://cdn.bulbagarden.net/upload/thumb/3/33/401Kricketot.png/250px-401Kricketot.png",
                       "#0402 Kricketune\nhttp://cdn.bulbagarden.net/upload/thumb/e/e5/402Kricketune.png/250px-402Kricketune.png",
                       "#0403 Shinx\nhttp://cdn.bulbagarden.net/upload/thumb/3/32/403Shinx.png/250px-403Shinx.png",
