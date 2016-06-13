@@ -518,11 +518,51 @@ class pokemon:
                       "#0497 Serperior\nhttp://cdn.bulbagarden.net/upload/thumb/b/b7/497Serperior.png/250px-497Serperior.png",
                       "#0498 Tepig\nhttp://cdn.bulbagarden.net/upload/thumb/5/5b/498Tepig.png/250px-498Tepig.png",
                       "#0499 Pignite\nhttp://cdn.bulbagarden.net/upload/thumb/e/e8/499Pignite.png/250px-499Pignite.png",
-                      "#0500 Emboar\nhttp://cdn.bulbagarden.net/upload/thumb/1/18/500Emboar.png/250px-500Emboar.png"
+                      "#0500 Emboar\nhttp://cdn.bulbagarden.net/upload/thumb/1/18/500Emboar.png/250px-500Emboar.png",
+                      "#0501 Oshawott\nhttp://cdn.bulbagarden.net/upload/thumb/3/3b/501Oshawott.png/250px-501Oshawott.png",
+                      "#0502 Dewott\nhttp://cdn.bulbagarden.net/upload/thumb/e/e4/502Dewott.png/250px-502Dewott.png",
+                      "#0503 Samurott\nhttp://cdn.bulbagarden.net/upload/thumb/b/b5/503Samurott.png/250px-503Samurott.png",
+                      "#0504 Patrat\nhttp://cdn.bulbagarden.net/upload/thumb/c/cb/504Patrat.png/250px-504Patrat.png",
+                      "#0505 Watchog\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/505Watchog.png/250px-505Watchog.png",
+                      "#0506 Lillipup\nhttp://cdn.bulbagarden.net/upload/thumb/7/7e/506Lillipup.png/250px-506Lillipup.png",
+                      "#0507 Herdier\nhttp://cdn.bulbagarden.net/upload/thumb/9/96/507Herdier.png/250px-507Herdier.png",
+                      "#0508 Stoutland\nhttp://cdn.bulbagarden.net/upload/thumb/3/3e/508Stoutland.png/250px-508Stoutland.png",
+                      "#0509 Purrloin\nhttp://cdn.bulbagarden.net/upload/thumb/4/46/509Purrloin.png/250px-509Purrloin.png",
+                      "#0510 Liepard\nhttp://cdn.bulbagarden.net/upload/thumb/0/09/510Liepard.png/250px-510Liepard.png",
+                      "#0511 Pansage\nhttp://cdn.bulbagarden.net/upload/thumb/6/6b/511Pansage.png/250px-511Pansage.png",
+                      "#0512 Simisage\nhttp://cdn.bulbagarden.net/upload/thumb/2/24/512Simisage.png/250px-512Simisage.png",
+                      "#0513 Pansear\nhttp://cdn.bulbagarden.net/upload/thumb/e/e1/513Pansear.png/250px-513Pansear.png",
+                      "#0514 Simisear\nhttp://cdn.bulbagarden.net/upload/thumb/7/7c/514Simisear.png/250px-514Simisear.png",
+                      "#0515 Panpour\nhttp://cdn.bulbagarden.net/upload/thumb/2/2f/515Panpour.png/250px-515Panpour.png",
+                      "#0516 Simipour\nhttp://cdn.bulbagarden.net/upload/thumb/8/83/516Simipour.png/250px-516Simipour.png",
+                      "#0517 Munna\nhttp://cdn.bulbagarden.net/upload/thumb/6/61/517Munna.png/250px-517Munna.png",
+                      "#0518 Musharna\nhttp://cdn.bulbagarden.net/upload/thumb/2/2d/518Musharna.png/250px-518Musharna.png",
+                      "#0519 Pidove\nhttp://cdn.bulbagarden.net/upload/thumb/c/c3/519Pidove.png/250px-519Pidove.png",
+                      "#0520 Tranquill\nhttp://cdn.bulbagarden.net/upload/thumb/a/a3/520Tranquill.png/250px-520Tranquill.png",
+                      "#0521 Unfezant\nhttp://cdn.bulbagarden.net/upload/thumb/d/d0/521Unfezant.png/250px-521Unfezant.png",
+                      "#0522 Blitzle\nhttp://cdn.bulbagarden.net/upload/thumb/a/af/522Blitzle.png/250px-522Blitzle.png",
+                      "#0523 Zebstrika\nhttp://cdn.bulbagarden.net/upload/thumb/a/a1/523Zebstrika.png/250px-523Zebstrika.png",
+                      "#0524 Roggenrola\nhttp://cdn.bulbagarden.net/upload/thumb/6/69/524Roggenrola.png/250px-524Roggenrola.png",
+                      "#0525 Boldore\nhttp://cdn.bulbagarden.net/upload/thumb/c/ce/525Boldore.png/250px-525Boldore.png",
+                      "#0526 Gigalith\nhttp://cdn.bulbagarden.net/upload/thumb/5/59/526Gigalith.png/250px-526Gigalith.png",
+                      "#0527 Woobat\nhttp://cdn.bulbagarden.net/upload/thumb/3/36/527Woobat.png/250px-527Woobat.png",
+                      "#0528 Swoobat\nhttp://cdn.bulbagarden.net/upload/thumb/9/9d/528Swoobat.png/250px-528Swoobat.png",
+                      "#0529 Drillbur\nhttp://cdn.bulbagarden.net/upload/thumb/c/cf/529Drilbur.png/250px-529Drilbur.png",
+                      "#0530 Excadrill\nhttp://cdn.bulbagarden.net/upload/thumb/6/63/530Excadrill.png/250px-530Excadrill.png",
+                      "#0531 Audino\nhttp://cdn.bulbagarden.net/upload/thumb/f/f5/531Audino.png/250px-531Audino.png",
+                      "#0532 Timburr\nhttp://cdn.bulbagarden.net/upload/thumb/6/69/532Timburr.png/250px-532Timburr.png",
+                      "#0533 Gurdurr\nhttp://cdn.bulbagarden.net/upload/thumb/a/ad/533Gurdurr.png/250px-533Gurdurr.png",
+                      "#0534 Conkeldurr\nhttp://cdn.bulbagarden.net/upload/thumb/1/11/534Conkeldurr.png/250px-534Conkeldurr.png",
+                      "#0535 Tympole\nhttp://cdn.bulbagarden.net/upload/thumb/c/c9/535Tympole.png/250px-535Tympole.png",
+                      "#0536 Palpitoad\nhttp://cdn.bulbagarden.net/upload/thumb/c/c9/536Palpitoad.png/250px-536Palpitoad.png",
+                      "#0537 Seismitoad\nhttp://cdn.bulbagarden.net/upload/thumb/3/35/537Seismitoad.png/250px-537Seismitoad.png",
+                      "#0538 Throh\nhttp://cdn.bulbagarden.net/upload/thumb/7/74/538Throh.png/250px-538Throh.png",
+                      "#0539 Sawk\nhttp://cdn.bulbagarden.net/upload/thumb/a/a8/539Sawk.png/250px-539Sawk.png",
+                      "#0540 Sewaddle\nhttp://cdn.bulbagarden.net/upload/thumb/4/4a/540Sewaddle.png/250px-540Sewaddle.png"
                       ]
         if inte==600613600613:
             return await self.bot.say(randchoice(pokemonran))
-        elif (inte<501 and inte>0):
+        elif (inte<541 and inte>0):
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
