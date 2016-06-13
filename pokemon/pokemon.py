@@ -472,7 +472,7 @@ class pokemon:
                       ]
         if inte==600613600613:
             return await self.bot.say(randchoice(pokemonran))
-        elif (inte<401 and inte>0):
+        elif (inte<451 and inte>0):
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
