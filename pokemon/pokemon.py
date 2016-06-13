@@ -17,7 +17,7 @@ class pokemon:
         try:
             inte=int(inte)
         except ValueError:
-            return await self.bot.say("Please enter a Pokedex number.")
+            return await self.bot.say("Please enter a valid Pokedex number.")
         pokemonran = [
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
@@ -468,11 +468,61 @@ class pokemon:
                       "#0447 Riolu\nhttp://cdn.bulbagarden.net/upload/thumb/a/a2/447Riolu.png/250px-447Riolu.png",
                       "#0448 Lucario\nhttp://cdn.bulbagarden.net/upload/thumb/d/d7/448Lucario.png/250px-448Lucario.png",
                       "#0449 Hippopotas\nhttp://cdn.bulbagarden.net/upload/thumb/a/ab/449Hippopotas.png/250px-449Hippopotas.png",
-                      "#0450 Hippowdon\nhttp://cdn.bulbagarden.net/upload/thumb/5/5f/450Hippowdon.png/250px-450Hippowdon.png"
+                      "#0450 Hippowdon\nhttp://cdn.bulbagarden.net/upload/thumb/5/5f/450Hippowdon.png/250px-450Hippowdon.png",
+                      "#0451 Skorupi\nhttp://cdn.bulbagarden.net/upload/thumb/4/47/451Skorupi.png/250px-451Skorupi.png",
+                      "#0452 Drapion\nhttp://cdn.bulbagarden.net/upload/thumb/1/13/452Drapion.png/250px-452Drapion.png",
+                      "#0453 Croagunk\nhttp://cdn.bulbagarden.net/upload/thumb/f/fa/453Croagunk.png/250px-453Croagunk.png",
+                      "#0454 Toxicroak\nhttp://cdn.bulbagarden.net/upload/thumb/8/8b/454Toxicroak.png/250px-454Toxicroak.png",
+                      "#0455 Carnivine\nhttp://cdn.bulbagarden.net/upload/thumb/d/df/455Carnivine.png/250px-455Carnivine.png",
+                      "#0456 Finneon\nhttp://cdn.bulbagarden.net/upload/thumb/4/45/456Finneon.png/250px-456Finneon.png",
+                      "#0457 Lumineon\nhttp://cdn.bulbagarden.net/upload/thumb/f/f0/457Lumineon.png/250px-457Lumineon.png",
+                      "#0458 Mantyke\nhttp://cdn.bulbagarden.net/upload/thumb/b/bc/458Mantyke.png/250px-458Mantyke.png",
+                      "#0459 Snover\nhttp://cdn.bulbagarden.net/upload/thumb/d/d2/459Snover.png/250px-459Snover.png",
+                      "#0460 Abomasnow\nhttp://cdn.bulbagarden.net/upload/thumb/3/3b/460Abomasnow.png/250px-460Abomasnow.png",
+                      "#0461 Weavile\nhttp://cdn.bulbagarden.net/upload/thumb/d/d2/461Weavile.png/250px-461Weavile.png",
+                      "#0462 Magnezone\nhttp://cdn.bulbagarden.net/upload/thumb/5/53/462Magnezone.png/250px-462Magnezone.png",
+                      "#0463 Lickilicky\nhttp://cdn.bulbagarden.net/upload/thumb/8/8e/463Lickilicky.png/250px-463Lickilicky.png",
+                      "#0464 Rhyperior\nhttp://cdn.bulbagarden.net/upload/thumb/d/d9/464Rhyperior.png/250px-464Rhyperior.png",
+                      "#0465 Tangrowth\nhttp://cdn.bulbagarden.net/upload/thumb/3/32/465Tangrowth.png/250px-465Tangrowth.png",
+                      "#0466 Elctivire\nhttp://cdn.bulbagarden.net/upload/thumb/2/23/466Electivire.png/250px-466Electivire.png",
+                      "#0467 Magmortar\nhttp://cdn.bulbagarden.net/upload/thumb/6/60/467Magmortar.png/250px-467Magmortar.png",
+                      "#0468 Togekiss\nhttp://cdn.bulbagarden.net/upload/thumb/8/87/468Togekiss.png/250px-468Togekiss.png",
+                      "#0469 Yanmega\nhttp://cdn.bulbagarden.net/upload/thumb/e/e6/469Yanmega.png/250px-469Yanmega.png",
+                      "#0470 Leafeon\nhttp://cdn.bulbagarden.net/upload/thumb/f/f5/470Leafeon.png/250px-470Leafeon.png",
+                      "#0471 Glaceon\nhttp://cdn.bulbagarden.net/upload/thumb/2/23/471Glaceon.png/250px-471Glaceon.png",
+                      "#0472 Gliscor\nhttp://cdn.bulbagarden.net/upload/thumb/a/ac/472Gliscor.png/250px-472Gliscor.png",
+                      "#0473 Mamoswine\nhttp://cdn.bulbagarden.net/upload/thumb/d/d0/473Mamoswine.png/250px-473Mamoswine.png",
+                      "#0474 Porygon-Z\nhttp://cdn.bulbagarden.net/upload/thumb/2/24/474Porygon-Z.png/250px-474Porygon-Z.png",
+                      "#0475 Gallade\nhttp://cdn.bulbagarden.net/upload/thumb/5/58/475Gallade.png/250px-475Gallade.png",
+                      "#0476 Probopass\nhttp://cdn.bulbagarden.net/upload/thumb/a/a6/476Probopass.png/250px-476Probopass.png",
+                      "#0477 Dusknoir\nhttp://cdn.bulbagarden.net/upload/thumb/4/4f/477Dusknoir.png/250px-477Dusknoir.png",
+                      "#0478 Froslass\nhttp://cdn.bulbagarden.net/upload/thumb/a/a2/478Froslass.png/250px-478Froslass.png",
+                      "#0479 Rotom\nhttp://cdn.bulbagarden.net/upload/thumb/c/c5/479Rotom.png/250px-479Rotom.png",
+                      "#0480 Uxie\nhttp://cdn.bulbagarden.net/upload/thumb/e/ef/480Uxie.png/250px-480Uxie.png",
+                      "#0481 Mesprit\nhttp://cdn.bulbagarden.net/upload/thumb/4/40/481Mesprit.png/250px-481Mesprit.png",
+                      "#0482 Azelf\nhttp://cdn.bulbagarden.net/upload/thumb/d/d0/482Azelf.png/250px-482Azelf.png",
+                      "#0483 Dialga\nhttp://cdn.bulbagarden.net/upload/thumb/8/8a/483Dialga.png/250px-483Dialga.png",
+                      "#0484 Palkia\nhttp://cdn.bulbagarden.net/upload/thumb/6/66/484Palkia.png/250px-484Palkia.png",
+                      "#0485 Heatran\nhttp://cdn.bulbagarden.net/upload/thumb/b/b7/485Heatran.png/250px-485Heatran.png",
+                      "#0486 Regigigas\nhttp://cdn.bulbagarden.net/upload/thumb/a/a1/486Regigigas.png/250px-486Regigigas.png",
+                      "#0487 Giratina\nhttp://cdn.bulbagarden.net/upload/thumb/c/c5/487Giratina-Altered.png/250px-487Giratina-Altered.png",
+                      "#0488 Cresselia\nhttp://cdn.bulbagarden.net/upload/thumb/4/4a/488Cresselia.png/250px-488Cresselia.png",
+                      "#0489 Phione\nhttp://cdn.bulbagarden.net/upload/thumb/7/72/489Phione.png/250px-489Phione.png",
+                      "#0490 Manaphy\nhttp://cdn.bulbagarden.net/upload/thumb/2/2e/490Manaphy.png/250px-490Manaphy.png",
+                      "#0491 Darkrai\nhttp://cdn.bulbagarden.net/upload/thumb/6/6d/491Darkrai.png/250px-491Darkrai.png",
+                      "#0492 Shaymin\nhttp://cdn.bulbagarden.net/upload/thumb/0/05/492Shaymin-Land.png/250px-492Shaymin-Land.png",
+                      "#0493 Arceus\nhttp://cdn.bulbagarden.net/upload/thumb/f/fc/493Arceus.png/250px-493Arceus.png",
+                      "#0494 Victini\nhttp://cdn.bulbagarden.net/upload/thumb/6/60/494Victini.png/250px-494Victini.png",
+                      "#0495 Snivy\nhttp://cdn.bulbagarden.net/upload/thumb/7/75/495Snivy.png/250px-495Snivy.png",
+                      "#0496 Servine\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/496Servine.png/250px-496Servine.png",
+                      "#0497 Serperior\nhttp://cdn.bulbagarden.net/upload/thumb/b/b7/497Serperior.png/250px-497Serperior.png",
+                      "#0498 Tepig\nhttp://cdn.bulbagarden.net/upload/thumb/5/5b/498Tepig.png/250px-498Tepig.png",
+                      "#0499 Pignite\nhttp://cdn.bulbagarden.net/upload/thumb/e/e8/499Pignite.png/250px-499Pignite.png",
+                      "#0500 Emboar\nhttp://cdn.bulbagarden.net/upload/thumb/1/18/500Emboar.png/250px-500Emboar.png"
                       ]
         if inte==600613600613:
             return await self.bot.say(randchoice(pokemonran))
-        elif (inte<451 and inte>0):
+        elif (inte<501 and inte>0):
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
