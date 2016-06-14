@@ -129,6 +129,27 @@ class randimages:
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
         
     @commands.command()
+    async def zerosystem(self):
+        """Startup initiation commence!"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/189389254093307905/191661403596259330/tumblr_zerosystem.gif')
+        
+    @commands.command()
+    async def examwarning(self):
+        """Beware the exam!"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192311643969945601/EXAM_System_-_Activated.jpg')
+
+    @commands.command()
+    async def android(self):
+        """THE Google Android"""
+
+        #Your code will go here
+        await self.bot.say('http://crackberry.com/sites/crackberry.com/files/styles/large/public/topic_images/2013/ANDROID.png?itok=xhm7jaxS')
+        
+    @commands.command()
     async def tumbleweed(self):
         """Pure abandonement."""
 
