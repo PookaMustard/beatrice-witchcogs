@@ -10,22 +10,21 @@ class randvideos:
     @commands.command()
     async def dchipmunk(self):
         """The one and only dramatic chipmunk."""
-
-        #Your code will go here
         await self.bot.say('https://www.youtube.com/watch?v=a1Y73sPHKxw')
+
+    @commands.command()
+    async def getready(self):
+        """I said get ready."""
+        await self.bot.say('https://www.youtube.com/watch?v=ArF8lrby8xY')
 
     @commands.command()
     async def nostrongfeelings(self):
         """I am neutral."""
-
-        #Your code will go here
         await self.bot.say('https://www.youtube.com/watch?v=CxK_nA2iVXw')
 
     @commands.command()
     async def godno(self):
         """PLEASE NO!!!"""
-
-        #Your code will go here
         await self.bot.say('https://www.youtube.com/watch?v=umDr0mPuyQc')
         
 def setup(bot):
