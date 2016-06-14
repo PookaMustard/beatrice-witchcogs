@@ -400,6 +400,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://www.dailyfreegames.com/images/thumbsfree/KTPON150.jpg")     
+
+    @commands.command()
+    async def itsover9000(self):
+        """What does the scouter say about their power level?"""
+
+        #Your code will go here
+        await self.bot.say("http://blog.sheasilverman.com/wp-content/uploads/2014/05/tumblr_lwhv2roIab1qd47jqo1_500.gif")    
         
     @commands.command()
     async def awake(self):
