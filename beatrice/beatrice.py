@@ -73,7 +73,7 @@ class beatrice:
     async def insult(self, user : discord.Member):
         """Insults the mentioned member"""
         if user.id == self.bot.user.id:
-        return await self.bot.say("You cannot insult me!")
+            return await self.bot.say("You cannot insult me!")
         quote = [user.mention + " is incompetent!!", "Don't make me laugh at your misery, " + user.mention + "!", user.mention + "? What a loser.",
                  "We can all agree that you're pathetic, " + user.mention + ".", "You're a sad person, " + user.mention + ".", user.mention + "? Hahahahahahaha!!!"]
         await self.bot.say(randchoice(quote))
