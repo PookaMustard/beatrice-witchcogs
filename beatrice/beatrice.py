@@ -75,12 +75,14 @@ class beatrice:
         author = ctx.message.author
         selfinsult = ["You cannot insult me!", "Don't even try insulting me, " + author.mention +"!", "You are so pathetic for insulting me, " + author.mention + "!",
                       "Trust me, " + author.mention + ", you're not funny at this.", "I feel sad for you, " + author.mention + ".", "Whatever have I done, " + author.mention + "? Ahahahahaha!!"]
+        creatorinsult = ["My creator is better than this. Are you jealous, " + author.mention + "?", "Aren't you pathetic, " + author.mention + "?", "Lovely. You're trying to insult my creator without consequences? Nice try, " + author.mention + ". Learn your place.",
+                         "Whatever has my creator done to you, " + author.mention + "? Ahahahahahahahahaha!", "Nice one, " + author.mention + ". Happy now?", "Uh-oh, my creator should feel threatened by " + author.mention + "'s insult!!"]
         if (user.id == self.bot.user.id):
             return await self.bot.say(randchoice(selfinsult))
         elif (user.id == '151670226352603136'):
             if (user.id == author.id):
                 return await self.bot.say("Praise the lord! Praise " + user.mention + "!")
-            return await self.bot.say(randchoice(selfinsult))
+            return await self.bot.say(randchoice(creatorinsult))
         insult = [user.mention + " is incompetent!!", "Don't make me laugh at your misery, " + user.mention + "!", user.mention + "? What a loser.",
                  "We can all agree that you're pathetic, " + user.mention + ".", "You're a sad person, " + user.mention + ".", user.mention + "? Hahahahahahaha!!!"]
         await self.bot.say(randchoice(insult))
