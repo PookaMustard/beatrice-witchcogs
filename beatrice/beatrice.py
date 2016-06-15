@@ -72,16 +72,9 @@ class beatrice:
     @commands.command()
     async def beatoquote(self):
         """Random Beatrice Ushiromiya quotes"""
-        quote=int(random.randint(1,4))
-        #Your code will go here
-        if quote==1:
-            await self.bot.say("You are incompetent!!")
-        elif quote==2:
-            await self.bot.say("Too bad, witches don't refo~rm!" )
-        elif quote==3:
-            await self.bot.say("This itself is a miracle. Magic. The proof of my existence!")
-        elif quote==4:
-            await self.bot.say("Yes, that expression fits you the most. That caring expression of yours really doesn't match me after all. My back was itching, and I was frantically trying to wishtand it. *cackle* *cackle* *cackle*!!")
+        quote = ["You are incompetent!!", "Too bad, witches don't refo~rm!", "This itself is a miracle. Magic. The proof of my existence!",
+                 "Yes, that expression fits you the most. That caring expression of yours really doesn't match me after all. My back was itching, and I was frantically trying to wishtand it. *cackle* *cackle* *cackle*!!"]
+        return await self.bot.say(randchoice(quote))
 
     @commands.command()
     async def beatosmirk(self):
