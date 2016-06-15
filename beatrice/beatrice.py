@@ -70,6 +70,13 @@ class beatrice:
         return await self.bot.say(randchoice(char))
 
     @commands.command()
+    async def insult(self, user : discord.Member):
+        """Insults the mentioned member"""
+        quote = [user.mention + " is incompetent!!", "Don't make me laugh at your misery, " + user.mention + "!", user.mention + "? What a loser.",
+                 "We can all agree that you're pathetic, " + user.mention + ".", "You're a sad person, " + user.mention + ".", user.mention + "? Hahahahahahaha!!!"]
+        await self.bot.say(randchoice(quote))
+
+    @commands.command()
     async def beatoquote(self):
         """Random Beatrice Ushiromiya quotes"""
         quote = ["You are incompetent!!", "Too bad, witches don't refo~rm!", "This itself is a miracle. Magic. The proof of my existence!",
