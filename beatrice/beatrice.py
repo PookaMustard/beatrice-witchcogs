@@ -75,7 +75,11 @@ class beatrice:
         author = ctx.message.author
         selfinsult = ["You cannot insult me!", "Don't even try insulting me, " + author.mention +"!", "You are so pathetic for insulting me, " + author.mention + "!",
                       "Trust me, " + author.mention + ", you're not funny at this.", "I feel sad for you, " + author.mention + ".", "Whatever have I done, " + author.mention + "? Ahahahahaha!!"]
-        if user.id == self.bot.user.id:
+        if (user.id == self.bot.user.id):
+            return await self.bot.say(randchoice(selfinsult))
+        elif (user.id == '151670226352603136'):
+            if (user.id == author.id):
+                return await self.bot.say("Praise the lord! Praise " + user.mention + "!")
             return await self.bot.say(randchoice(selfinsult))
         insult = [user.mention + " is incompetent!!", "Don't make me laugh at your misery, " + user.mention + "!", user.mention + "? What a loser.",
                  "We can all agree that you're pathetic, " + user.mention + ".", "You're a sad person, " + user.mention + ".", user.mention + "? Hahahahahahaha!!!"]
