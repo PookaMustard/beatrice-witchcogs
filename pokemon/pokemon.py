@@ -23,7 +23,7 @@ class pokemon:
 
     @commands.command()
     async def pokemon(self, inte=''):
-        """Returns a random or selected Pokemon image. (Put a Pokedex number after the command to select a Pokemon)"""
+        """Returns a random or selected Pokemon image. (Put a Pokedex number or a Pokemon's name after the command to select a Pokemon)"""
         pokemonran = [
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
