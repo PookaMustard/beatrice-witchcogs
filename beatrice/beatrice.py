@@ -75,27 +75,6 @@ class beatrice:
         quote = ["You are incompetent!!", "Too bad, witches don't refo~rm!", "This itself is a miracle. Magic. The proof of my existence!",
                  "Yes, that expression fits you the most. That caring expression of yours really doesn't match me after all. My back was itching, and I was frantically trying to wishtand it. *cackle* *cackle* *cackle*!!"]
         return await self.bot.say(randchoice(quote))
-        
-#    @commands.command()
-#    async def insult(self, user : discord.Channel):
-#        """Insults the mentioned member"""
-#        insult = [ user.mention + " is incompetent!", "You're pathetic, " + user.mention, user.mention + "? What a loser.", "Don't make me laugh at your misery, " + user.mention + "!"]
-#        if user.id == self.bot.user.id:
-#            return await self.bot.say("You cannot insult me!")
-#        else:
-#            await self.bot.say
-            
-    @commands.command()
-    async def insult(self, user : discord.Channel):
-        """Insults the mentioned member"""
-
-        #Your code will go here
-#        quote=int(random.randint(1,2))
-        if user.id == self.bot.user.id:
-            return await self.bot.say("You cannot insult me!")
-        quote=1
-        if quote==1:
-            await self.bot.say(user.mention + " is incompetent!")
 
     @commands.command()
     async def beatosmirk(self):
