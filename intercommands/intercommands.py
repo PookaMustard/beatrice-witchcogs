@@ -19,6 +19,18 @@ class intercommands:
               await self.bot.say("Rest in Peace.")
          else:
               await self.bot.say("I'm sorry. :_(")
+              
+     @commands.command()
+     async def insult(self, user : discord.Channel):
+         """Insults the mentioned member"""
+ 
+         #Your code will go here
+ #        quote=int(random.randint(1,2))
+         if user.id == self.bot.user.id:
+             return await self.bot.say("You cannot insult me!")
+         quote=1
+         if quote==1:
+             await self.bot.say(user.mention + " is incompetent!")
 
 def setup(bot):
     bot.add_cog(intercommands(bot))
