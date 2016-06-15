@@ -24,12 +24,6 @@ class pokemon:
     @commands.command()
     async def pokemon(self, inte=''):
         """Returns a random or selected Pokemon image. (Put a Pokedex number after the command to select a Pokemon)"""
-        if inte=='':
-            inte=600613600613
-        try:
-            inte=int(inte)
-        except ValueError:
-            return await self.bot.say("Please enter a valid Pokedex number.")
         pokemonran = [
                       "#0001 Bulbasaur\nhttp://cdn.bulbagarden.net/upload/thumb/2/21/001Bulbasaur.png/250px-001Bulbasaur.png",
                       "#0002 Ivysaur\nhttp://cdn.bulbagarden.net/upload/thumb/7/73/002Ivysaur.png/250px-002Ivysaur.png",
@@ -753,17 +747,31 @@ class pokemon:
                       "#0720 Hoopa\nhttp://cdn.bulbagarden.net/upload/thumb/f/fb/720Hoopa.png/250px-720Hoopa.png",
                       "#0721 Volcanion\nhttp://cdn.bulbagarden.net/upload/thumb/4/44/721Volcanion.png/250px-721Volcanion.png"
                       ]
+        if inte=='':
+            inte=600613600613
+        try:
+            inte=int(inte)
+        except ValueError:
+            inte=str(inte)
+            inte= " " + inte + "\n"
+            i=0
+            while (i <= 720):
+                if inte.lower() in pokemonran[i].lower():
+                    return await self.bot.say(pokemonran[i])
+                else:
+                    i=i+1
+            return await self.bot.say("Pokemon not found, or invalid Pokedex entry number entered. Please enter a valid Pokemon name or Pokedex entry number.")
         if inte==600613600613:
             return await self.bot.say(randchoice(pokemonran))
         elif (inte<722 and inte>0):
             inte-=1
             return await self.bot.say(pokemonran[inte])
         elif (inte<0):
-            return await self.bot.say("There are no negative Pokedex entries. Try a positive number.")
+            return await self.bot.say("There are no negative Pokedex entries. Enter a positive Pokedex entry number, or a full Pokemon name.")
         elif (inte==0):
-            return await self.bot.say("There is no Pokedex entry at #0000. Try a number higher than zero.")
+            return await self.bot.say("There is no Pokedex entry at #0000. Try a number higher than zero, or enter a full Pokemon name")
         else:
-            return await self.bot.say("There is no Pokedex entry under that number. Try a lower positive number (Pokedex entries range from 1 to 721).")
+            return await self.bot.say("There is no Pokedex entry under that number. Try a lower positive number (Pokedex entries range from 1 to 721), or enter a full Pokemon name")
     
 def setup(bot):
     bot.add_cog(pokemon(bot))
