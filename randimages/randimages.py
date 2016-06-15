@@ -157,6 +157,41 @@ class randimages:
         await self.bot.say('https://brittnyhabibti.files.wordpress.com/2014/10/tumbleweed.jpg')
         
     @commands.command()
+    async def headdesk(self):
+        """When the fail is even stronger."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192431766726901761/Headdesk_Violent.gif')
+        
+    @commands.command()
+    async def burnheal(self):
+        """You're going to need it."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432102313164801/4313739.png')
+        
+    @commands.command()
+    async def spoileralert(self):
+        """Massive spoilers incoming!"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432214238167042/Spoiler_Alert.jpg')
+        
+    @commands.command()
+    async def supertorque(self):
+        """He's a super alien alien."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432139415977985/IMG_16052016_111115.png')
+        
+    @commands.command()
+    async def technicallycorrect(self):
+        """Correctly correct!"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432893694443522/TBKOC.jpg')
+        
+    @commands.command()
     async def steamnazis(self):
         """Steam in a nutshell."""
 
