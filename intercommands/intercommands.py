@@ -1,14 +1,17 @@
 import discord 
-from discord.ext import commands 
+from discord.ext import commands
+import random
+from random import randint
+from random import choice as randchoice
  
 class intercommands: 
      """Random interactive commands!""" 
  
-    def __init__(self, bot): 
-         self.bot = bot 
+     def __init__(self, bot): 
+        self.bot = bot 
  
-    @commands.command(pass_context=True)
-    async def riprespect(self, ctx): 
+     @commands.command(pass_context=True)
+     async def riprespect(self, ctx): 
         """Pay your respects. Or not."""
         message = ctx.message
  
@@ -20,12 +23,12 @@ class intercommands:
         else:
             await self.bot.say("I'm sorry. :_(")
               
-    @commands.command()
-    async def praise(self, user : discord.Member):
+     @commands.command()
+     async def praise(self, user : discord.Member):
         """Praises the mentioned member"""
         praise = [user.mention + " is great!!", "Praise " + user.mention + "!", user.mention + "? That person is great!",
                  "We can all agree that we all love you, " + user.mention + ".", "You're a happy person, " + user.mention + ".", "May praise be upon " + user.mention + "!"]
         await self.bot.say(randchoice(praise))
 
 def setup(bot):
-    bot.add_cog(intercommands(bot))
+     bot.add_cog(intercommands(bot))
