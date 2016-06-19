@@ -358,6 +358,13 @@ class randimages:
         await self.bot.say("http://38.media.tumblr.com/c2d4006f53aa908b6de083ee4a7672d3/tumblr_n5xz2qbEmM1r6mrcio3_250.gif")
 
     @commands.command()
+    async def barvon(self):
+        """Duke Arktivus Barvon at your service."""
+
+        #Your code will go here
+        await self.bot.say("https://cdn.discordapp.com/attachments/173965999744221185/192621822108237825/barvon.png")
+
+    @commands.command()
     async def facepalm(self):
         """When the fail is strong enough."""
 
