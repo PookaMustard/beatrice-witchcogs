@@ -33,7 +33,26 @@ class randimages:
         #Your code will go here
         freiza = ["http://img-9gag-fun.9cache.com/photo/a9PmRPm_700b.jpg",
                "http://brain-images.cdn.dixons.com/0/9/20163490/l_20163490_001.jpg"]
-        return await self.bot.say
+        return await self.bot.say(randchoice(freiza))
+        
+    @commands.command()
+    async def nope(self):
+        """No. Just no."""
+
+        #Your code will go here
+        nope = ["https://cdn.discordapp.com/attachments/173967012123377664/192449277249716226/Ck8hjiJUYAA9bKl.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/192450306016018433/ExtremeNope.gif"]
+        return await self.bot.say(randchoice(nope))
+        
+    @commands.command()
+    async def salt(self):
+        """Have salt?"""
+
+        #Your code will go here
+        salt = ["http://vignette1.wikia.nocookie.net/kancolle/images/9/9a/Want_some_salt.jpg",
+               "https://cdn.meme.am/instances/500x/55031607.jpg",
+               "https://media.makeameme.org/created/well-then-you-q1b8n1.jpg"]
+        return await self.bot.say(randchoice(salt))
         
     @commands.command()
     async def OvO(self):
@@ -127,6 +146,55 @@ class randimages:
 
         #Your code will go here
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
+        
+    @commands.command()
+    async def okay(self):
+        """I approve of this."""
+
+        #Your code will go here
+        await self.bot.say('http://i.makeagif.com/media/10-04-2015/f0UVsa.gif')
+        
+    @commands.command()
+    async def puru(self):
+        """Japanese stuff..."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192355333035786242/PuruProtocultureJoke.PNG')
+        
+    @commands.command()
+    async def rekt(self):
+        """Poor stormtrooper..."""
+
+        #Your code will go here
+        await self.bot.say('http://i.imgur.com/9sKSRFD.gifv')
+
+    @commands.command()
+    async def yay(self):
+        """I love it!"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/192751917770866689/Yay.gif')
+ 
+    @commands.command()
+    async def niccage(self):
+        """Featuring Nicolas Cage!"""
+
+        #Your code will go here
+        await self.bot.say('https://i.ytimg.com/vi/G8GVWhviw8s/hqdefault.jpg') 
+        
+    @commands.command()
+    async def tobecontinued(self):
+        """Coming Soon!"""
+
+        #Your code will go here
+        await self.bot.say('https://img0.etsystatic.com/059/0/10858326/il_570xN.762412812_ccx3.jpg')    
+        
+    @commands.command()
+    async def escalated(self):
+        """Escalators are fun. Also boring."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/193499284899889153/b93f0e354df1d3a803f8e47adaae7651.png')    
         
     @commands.command()
     async def zerosystem(self):
