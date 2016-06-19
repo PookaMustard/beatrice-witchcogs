@@ -608,6 +608,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say("http://imgur.com/zMJ0ErL")
+        
+    @commands.command()
+    async def clap(self):
+        """And it's Snow White clapping!"""
+
+        #Your code will go here
+        await self.bot.say("http://cdn2.business2community.com/wp-content/uploads/2014/02/SnowWhiteClapping8.gif")
 
     #@commands.command()
     #async def meh(self):
