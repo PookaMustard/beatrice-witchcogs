@@ -23,6 +23,11 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=CxK_nA2iVXw')
 
     @commands.command()
+    async def nobodycares(self):
+        """And nobody ever will."""
+        await self.bot.say('https://www.youtube.com/watch?v=Lrr_VVtyUA8')
+
+    @commands.command()
     async def godno(self):
         """PLEASE NO!!!"""
         await self.bot.say('https://www.youtube.com/watch?v=umDr0mPuyQc')
