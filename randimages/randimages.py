@@ -45,6 +45,15 @@ class randimages:
         return await self.bot.say(randchoice(nope))
         
     @commands.command()
+    async def shantae(self):
+        """Ever dreamed of bathing with your clothes on?"""
+
+        #Your code will go here
+        nope = ["http://i.imgur.com/FyUAAw0.png",
+               "http://i.imgur.com/n74nqYR.png"]
+        return await self.bot.say(randchoice(nope))
+        
+    @commands.command()
     async def salt(self):
         """Have salt?"""
 
