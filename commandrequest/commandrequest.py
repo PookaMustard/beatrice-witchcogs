@@ -48,7 +48,7 @@ class commandrequest:
         """Sends a request for a new command.
         
         A modified version of the debug command, with help from Calebj."""
-
+        author = ctx.message.author
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
         code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+"')"
@@ -57,6 +57,7 @@ class commandrequest:
 
         try:
             result = eval(code, globals(), local_vars)
+            await self.bot.say("Requested by " + author.mention)
         except Exception as e:
             await self.bot.say(python.format(type(e).__name__ + ': ' + str(e)))
             return
@@ -73,6 +74,7 @@ class commandrequest:
                     result = result.replace(w, r)
                     result = result.replace(w.lower(), r)
                     result = result.replace(w.upper(), r)
+        
    
    
     @commands.command(pass_context=True, hidden=True)
