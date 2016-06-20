@@ -157,6 +157,13 @@ class randimages:
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
         
     @commands.command()
+    async def thumbsup(self):
+        """Going overboard, aren't we?"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/193897410664202241/Megalike.gif')
+        
+    @commands.command()
     async def okay(self):
         """I approve of this."""
 
