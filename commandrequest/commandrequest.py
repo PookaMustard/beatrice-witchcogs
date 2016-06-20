@@ -51,13 +51,12 @@ class commandrequest:
         author = ctx.message.author
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
-        code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+"')"
+        code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+" + "Requested by " + author.mention')"
         python = '```py\n{}\n```'
         result = None
 
         try:
             result = eval(code, globals(), local_vars)
-            await self.bot.say("Requested by " + author.mention)
         except Exception as e:
             await self.bot.say(python.format(type(e).__name__ + ': ' + str(e)))
             return
