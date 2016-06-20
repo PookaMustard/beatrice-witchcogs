@@ -49,9 +49,11 @@ class commandrequest:
         
         A modified version of the debug command, with help from Calebj."""
         author = ctx.message.author
+        server = ctx.message.server
+        command = command + " -- Command requested by " + author.name + " from " + "{}".format(server.name)
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
-        code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+" + "Requested by " + author.mention')"
+        code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+"')"
         python = '```py\n{}\n```'
         result = None
 
