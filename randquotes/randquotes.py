@@ -23,12 +23,12 @@ class randquotes:
         """Mighty No. 9: Thoughts"""
         server = ctx.message.server
         if server.id=='174932651201921024':
-            await self.bot.say("Test break.")
             return
         else:
-            return await self.bot.say("Test.")
-#       mn9 = ["MIGHTY NO. 9 IS GETTING MIGHTIED OUTTA THE PLANET.", "Mighty No. 9? My pizza is late!!", "Mighty No. 9? How *unmighty*.",
-#              "A thousand years would pass and still Mighty No. 9 would be quite the laughing stock...don't you think?", "Even Lambdadelta hates Mighty No. 9.", 
+            mn9 = ["MIGHTY NO. 9 IS GETTING MIGHTIED OUTTA THE PLANET.", "Mighty No. 9? My pizza is late!!", "Mighty No. 9? How *unmighty*.",
+                   "A thousand years would pass and still Mighty No. 9 would be quite the laughing stock...don't you think?", "Even Lambdadelta hates Mighty No. 9.", "4 million dollars did not save this game from turning into a flipping flop."]
+            return await self.bot.say(randchoice(mn9))
+        
 
 def setup(bot):
     bot.add_cog(randquotes(bot))
