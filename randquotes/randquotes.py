@@ -1,5 +1,7 @@
 import discord 
 from discord.ext import commands
+from random import randint
+from random import choice as randchoice
 from cogs.utils import checks
 from __main__ import set_cog, send_cmd_help, settings
  
