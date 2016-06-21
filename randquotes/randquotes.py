@@ -1,5 +1,7 @@
 import discord 
-from discord.ext import commands 
+from discord.ext import commands
+from cogs.utils import checks
+from __main__ import set_cog, send_cmd_help, settings
  
 class randquotes: 
      """Random quotes!""" 
@@ -17,13 +19,14 @@ class randquotes:
          await self.bot.say("The end.")
          
      @commands.command(pass_context=True) 
-     async def mn9(self, *ctx): 
+     async def mn9(self, ctx): 
          """Mighty No. 9: Thoughts"""
          server = ctx.message.server
          if server.id==174932651201921024:
-            break
+            await self.bot.say("Test break.")
+            return
          else:
-             return await self.bot.say("Test.")
+            return await self.bot.say("Test.")
 #         mn9 = ["MIGHTY NO. 9 IS GETTING MIGHTIED OUTTA THE PLANET.", "Mighty No. 9? My pizza is late!!", "Mighty No. 9? How *unmighty*.",
 #                "A thousand years would pass and still Mighty No. 9 would be quite the laughing stock...don't you think?", "Even Lambdadelta hates Mighty No. 9.", 
 
