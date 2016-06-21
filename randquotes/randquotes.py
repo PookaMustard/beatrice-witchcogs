@@ -22,7 +22,7 @@ class randquotes:
     async def mn9(self, ctx): 
         """Mighty No. 9: Thoughts"""
         server = ctx.message.server
-        if server.id==174932651201921024:
+        if server.id=='174932651201921024':
             await self.bot.say("Test break.")
             return
         else:
