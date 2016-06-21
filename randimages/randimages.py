@@ -49,9 +49,20 @@ class randimages:
         """Ever dreamed of bathing with your clothes on?"""
 
         #Your code will go here
-        nope = ["http://i.imgur.com/FyUAAw0.png",
+        shantae = ["http://i.imgur.com/FyUAAw0.png",
                "http://i.imgur.com/n74nqYR.png"]
-        return await self.bot.say(randchoice(nope))
+        return await self.bot.say(randchoice(shantae))
+        
+    @commands.command()
+    async def sakura(self):
+        """Ever dreamed of being censored?"""
+
+        #Your code will go here
+        sakura = ["http://i.imgur.com/96VNkgA.jpg",
+               "http://i.imgur.com/5qGiZnog.jpg",
+               "http://i.imgur.com/feyJTT8.jpg",
+               "http://i.imgur.com/mvi028v.jpg"]
+        return await self.bot.say(randchoice(sakura))
         
     @commands.command()
     async def salt(self):
