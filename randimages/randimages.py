@@ -329,6 +329,11 @@ class randimages:
         #Your code will go here
         await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432893694443522/TBKOC.jpg')
         
+    @commands.command(hidden=True)
+    async def cloudi(self
+        """Cloudi"""
+        await self.bot.say('https://lh3.googleusercontent.com/-HsnLVgWSasQ/V2Xyubme1EI/AAAAAAAACZA/Cbhh03dC2XAvssfU220auatYS_I8MoGewCL0B/w96-h64-no/spr_credits_3.png')
+        
     @commands.command()
     async def steamnazis(self):
         """Steam in a nutshell."""
