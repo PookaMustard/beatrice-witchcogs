@@ -94,7 +94,9 @@ class randimages:
                "https://lh6.googleusercontent.com/-O2H_nPtZ_lM/V1n-jhEoz9I/AAAAAAAACUM/WkewVrDQQcAWXJs2o2koF24gg2pWVBdYQCL0B/w88-h57-no/Weegee%2527s%2BRequest%252C%2Bwith%2Ba%2Btweak_20160319_190508.jpg",
                "https://lh5.googleusercontent.com/-7Lg4VvNReMA/V1n-kzsdwOI/AAAAAAAACUM/SupCobm8h5QP3_XCE0qc2_W6PKgq3L7gQCL0B/w47-h51-no/2_20160417_202903.jpg",
                "https://lh6.googleusercontent.com/-QEW_5_hdVj8/V1n-tSioO0I/AAAAAAAACUM/PYwEpkGMFLwjXU-RsebrZWgB1A3yND-vACL0B/s32-no/spr_Deb_0.png",
-               "https://lh3.googleusercontent.com/-IjEvwALlGyg/V1n-zXJA5iI/AAAAAAAACUU/Li32CfrZ4oMl_cXBq8lPvXKcErZ8GsNuACL0B/w48-h50-no/spr_RyanBAS2_12.png"]
+               "https://lh3.googleusercontent.com/-IjEvwALlGyg/V1n-zXJA5iI/AAAAAAAACUU/Li32CfrZ4oMl_cXBq8lPvXKcErZ8GsNuACL0B/w48-h50-no/spr_RyanBAS2_12.png",
+               "https://lh4.googleusercontent.com/-XTDB0I2kUfQ/V2Xx0MwAsLI/AAAAAAAACZA/qz-zcVAmhvM_4cfKdjLmWHLaIDLG_pT2gCL0B/w42-h48-no/index.png",
+               "https://lh4.googleusercontent.com/-xhxP7tqlxDk/V2Xytgvq_TI/AAAAAAAACZA/VyCpzLQ8oH0q63SnzPFxPGM760YjIrp4gCL0B/w48-h64-no/FDLonk_idle_0.png"]
         return await self.bot.say(randchoice(weegee))
         
     @commands.command()
@@ -129,15 +131,15 @@ class randimages:
 
     @commands.command(pass_context=True)
     async def elrules(self, ctx):
-        """The loopholes are sexy."""
+        """The loopholes are sexy. And Spanish."""
 
         #Your code will go here
         server = ctx.message.server
         await self.bot.say('http://vignette4.wikia.nocookie.net/fairlyoddparents/images/9/99/FairyFairyQuiteContrary094.jpg/revision/latest?cb=20110404231200&path-prefix=en')
         if server.id=='181225160622342144':
-            await self.bot.say('Check server rules in ' + '<#181228813982760960>' +'!')
+            await self.bot.say('Consultar las reglas del servidor en ' + '<#181228813982760960>' +'!')
         elif server.id=='173965999744221185':
-            await self.bot.say('Check server rules in ' + '<#173967163344945152>' +'!')
+            await self.bot.say('Consultar las reglas del servidor en ' + '<#173967163344945152>' +'!')
 
     @commands.command()
     async def lilac(self):
@@ -166,6 +168,27 @@ class randimages:
 
         #Your code will go here
         await self.bot.say('http://i.imgur.com/5m3zGue.jpg')
+        
+    @commands.command()
+    async def soapbox(self):
+        """Like ACME! But with soap."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/193922258937446412/soapbox.gif')
+        
+    @commands.command()
+    async def kidding(self):
+        """Are you kidding?"""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/195207061271740417/You-Have-Got-To-Be-Kidding-Me-GIF.gif')
+        
+    @commands.command()
+    async def popular(self):
+        """Run away from the popularity!!"""
+
+        #Your code will go here
+        await self.bot.say('https://a.dilcdn.com/bl/wp-content/uploads/sites/25/2015/03/Jack-Sparrow-Life-Goals-5.jpg')
         
     @commands.command()
     async def thumbsup(self):
@@ -252,11 +275,17 @@ class randimages:
         await self.bot.say('https://brittnyhabibti.files.wordpress.com/2014/10/tumbleweed.jpg')
         
     @commands.command()
-    async def headdesk(self):
-        """When the fail is even stronger."""
+    async def power(self):
+        """You have the power!!!!"""
 
         #Your code will go here
-        await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192431766726901761/Headdesk_Violent.gif')
+        await self.bot.say('http://s2.quickmeme.com/img/70/7028dd710bc900a57fb7068e7c1f968ce67db1ff908a709ae53ac888bf245ce7.jpg')
+        
+    @commands.command()
+    async def headdesk(self):
+        """When the fail is even stronger."""
+        headdesk = ["http://i.giphy.com/JRMvrNMKfjqmI.gif", "https://cdn.discordapp.com/attachments/173965999744221185/192431766726901761/Headdesk_Violent.gif"]
+        await self.bot.say(randchoice(headdesk))
         
     @commands.command()
     async def burnheal(self):
@@ -264,6 +293,13 @@ class randimages:
 
         #Your code will go here
         await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432102313164801/4313739.png')
+        
+    @commands.command()
+    async def whysoserious(self):
+        """Why not be funny, in a murderous way?"""
+
+        #Your code will go here
+        await self.bot.say('http://orig12.deviantart.net/6f85/f/2008/201/b/b/why_so_serious__by_tyrite.jpg')
         
     @commands.command()
     async def spoileralert(self):
@@ -511,6 +547,13 @@ class randimages:
         await self.bot.say("http://www.chrisewings.com/images/Misc/images/Nuke%203_jpg.jpg")
         
     @commands.command()
+    async def doesnotcompute(self):
+        """DIVISION BY ZERO ERROR"""
+
+        #Your code will go here
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/193922029559349259/Does_Not_Compute.gif")
+        
+    @commands.command()
     async def drm(self):
         """The pirates are badass, too."""
 
@@ -638,10 +681,9 @@ class randimages:
         
     @commands.command()
     async def clap(self):
-        """And it's Snow White clapping!"""
-
-        #Your code will go here
-        await self.bot.say("http://cdn2.business2community.com/wp-content/uploads/2014/02/SnowWhiteClapping8.gif")
+        """And it's Snow White clapping! Or maybe not."""
+        clap = ["http://cdn2.business2community.com/wp-content/uploads/2014/02/SnowWhiteClapping8.gif", "https://cdn.discordapp.com/attachments/173967012123377664/193897102990901249/manicclap1.gif"]
+        await self.bot.say(randchoice(clap))
 
     #@commands.command()
     #async def meh(self):
