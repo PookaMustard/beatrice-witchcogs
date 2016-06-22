@@ -26,6 +26,11 @@ class randvideos:
     async def nobodycares(self):
         """And nobody ever will."""
         await self.bot.say('https://www.youtube.com/watch?v=Lrr_VVtyUA8')
+        
+    @commands.command()
+    async def aha(self):
+        """Starring Alan Partridge."""
+        await self.bot.say('https://www.youtube.com/watch?v=uuN7kOW7iwo')
 
     @commands.command()
     async def godno(self):
