@@ -191,6 +191,13 @@ class randimages:
         await self.bot.say('https://a.dilcdn.com/bl/wp-content/uploads/sites/25/2015/03/Jack-Sparrow-Life-Goals-5.jpg')
         
     @commands.command()
+    async def roystory(self):
+        """No, no Bowsers for you."""
+
+        #Your code will go here
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/194954164445511681/IMG_24082015_215738.png')
+        
+    @commands.command()
     async def thumbsup(self):
         """Going overboard, aren't we?"""
 
