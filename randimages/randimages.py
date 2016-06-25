@@ -274,6 +274,15 @@ class randimages:
         await self.bot.say('http://imgur.com/HuoQG53')
         
     @commands.command()
+    async def plutia(self):
+        """She looks cute. Or is she...?"""
+        plutia = ["https://cdn.discordapp.com/attachments/196051622055378953/196067801033605121/IMG_0504.JPG",
+                  "https://cdn.discordapp.com/attachments/196051622055378953/196069013082734593/IMG_0511.JPG",
+                  "https://cdn.discordapp.com/attachments/196051622055378953/196067951948857346/IMG_0482.JPG",
+                  "https://cdn.discordapp.com/attachments/196051622055378953/196069413848350721/IMG_0512.JPG"]
+        await self.bot.say(randchoice(plutia))
+        
+    @commands.command()
     async def objection(self):
         """Cool pose."""
         await self.bot.say('https://cdn.discordapp.com/attachments/167706685715120129/189796749420789763/objection.jpg')
