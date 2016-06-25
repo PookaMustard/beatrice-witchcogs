@@ -357,7 +357,7 @@ class randimages:
     @commands.command()
     async def promotion(self):
         """Have one! Not?"""
-        await self.bot.say
+        await self.bot.say("http://stream1.gifsoup.com/view1/3156672/robotnik-prrrromotion-o.gif")
         
     @commands.command()
     async def burn(self):
