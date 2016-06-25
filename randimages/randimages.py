@@ -163,6 +163,16 @@ class randimages:
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/193897410664202241/Megalike.gif')
         
     @commands.command()
+    async def solomon(self):
+        """Nuking an entire waship fleet? Cool!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196081496132550657/GP02_Nuke_3.gif')
+        
+    @commands.command()
+    async def bored(self):
+        """Another Freedom Planet command, ugh."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/189389254093307905/196083185438687233/Bored.PNG')
+        
+    @commands.command()
     async def okay(self):
         """I approve of this."""
         await self.bot.say('http://i.makeagif.com/media/10-04-2015/f0UVsa.gif')
