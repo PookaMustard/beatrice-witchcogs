@@ -43,7 +43,7 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=l_Uo0VJihCU')
         
     @commands.command()
-    async def knock(self):
+    async def knockknock(self):
         """Knuckles is saying hi."""
         await self.bot.say('https://www.youtube.com/watch?v=CHCgn5pGoQY')
         
