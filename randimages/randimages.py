@@ -166,11 +166,66 @@ class randimages:
     async def solomon(self):
         """Nuking an entire waship fleet? Cool!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196081496132550657/GP02_Nuke_3.gif')
+
+    @commands.command()
+    async def supernova(self):
+        """Nuking an entire solar system? EVEN COOLER!"""
+        await self.bot.say('http://i.makeagif.com/media/6-30-2016/nvigN6.gif')
         
+    @commands.command()
+    async def biggaydance(self):
+        """Uhh..."""
+        await self.bot.say('http://31.media.tumblr.com/4ea7b737b18ede28490a28a41e2c3f19/tumblr_mp8icf6PhR1s83bdoo2_400.gif')
+        
+    @commands.command()
+    async def popcorn(self):
+        """The heat is intensifying!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196313267939966978/Popcorn.gif')
+        
+    @commands.command()
+    async def headcanon(self):
+        """It's a head canon."""
+        await self.bot.say('http://img4.wikia.nocookie.net/__cb20130704181437/ishipit/images/f/f7/Headcanon.jpg')
+        
+    @commands.command()
+    async def triggered(self):
+        """IT'S NO USE!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png')
+        
+    @commands.command()
+    async def second(self):
+        """First, then Second."""
+        await self.bot.say('https://i.imgur.com/7lWjDiH.png')
+        
+    @commands.command()
+    async def firefox(self):
+        """Internet browsing just got hotter."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196994416907386881/Hannameme.png')
+
     @commands.command()
     async def bored(self):
         """Another Freedom Planet command, ugh."""
         await self.bot.say('https://cdn.discordapp.com/attachments/189389254093307905/196083185438687233/Bored.PNG')
+        
+    @commands.command()
+    async def justright(self):
+        """Very right."""
+        await self.bot.say('http://i2.kym-cdn.com/photos/images/facebook/001/070/061/d96.jpg')
+        
+    @commands.command()
+    async def friend(self):
+        """With Kirby."""
+        await self.bot.say('http://img13.deviantart.net/5363/i/2014/273/c/8/kirby_is_shaped_like_a_friend_by_triple_q-d80v31j.jpg')
+        
+    @commands.command()
+    async def coincidence(self):
+        """I think not."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/172006506525360129/197429850074644482/PhijPZB.gif')
+        
+    @commands.command()
+    async def yeolder(self):
+        """I think not."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/197714935319494657/Screenshot_2016-06-29-07-08-04.png')
         
     @commands.command()
     async def okay(self):
@@ -216,7 +271,7 @@ class randimages:
     async def zerosystem(self):
         """Startup initiation commence!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/189389254093307905/191661403596259330/tumblr_zerosystem.gif')
-        
+        s
     @commands.command()
     async def examwarning(self):
         """Beware the exam!"""
