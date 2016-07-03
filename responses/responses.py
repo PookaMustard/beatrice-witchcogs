@@ -14,7 +14,8 @@ class sao:
 
     async def check_sao(self, message):
         saocheck = ['sao', 'sword art online', 'sword art offline']
-        if 'sao' in message.content.split() or 'sword art online' in str(message.content) or 'sword art offline' in str(message.content) and message.author.id != self.bot.user.id:
+        checkmessage=message.content.lower()
+        if 'sao' in checkmessage.split() or 'sword art online' in checkmessage or 'sword art offline' in checkmessage and message.author.id != self.bot.user.id:
             if message.channel.id not in self.timecheck or (time.time() - self.timecheck[message.channel.id]) > self.cooldown:
                 self.timecheck[message.channel.id] = time.time()
                 sao = ["SAO? Why don't you read Umineko no Naku Koro ni instead?", "I won't mute you for five minutes for mentioning SAO.",
