@@ -53,6 +53,11 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=1WXtUisumn8')
         
     @commands.command()
+    async def bubsylovania(self):
+        """Bubsy + Megalovania"""
+        await self.bot.say('https://soundcloud.com/seishunbeats/megalovania-but-played-entirely-with-bubsy-1-soundfonts')
+        
+    @commands.command()
     async def knockknock(self):
         """Knuckles is saying hi."""
         await self.bot.say('https://www.youtube.com/watch?v=CHCgn5pGoQY')
