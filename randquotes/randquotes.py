@@ -29,6 +29,13 @@ class randquotes:
         ia = ["I would like to report this game for Indie Sexual Assault", "Spade was based off Sonic right? Then why is everyone complaining that he has a spindash?",
               "https://youtu.be/5XsLEXSyINs"]
         await self.bot.say(randchoice(ia))
+        
+    @commands.command() 
+    async def fi(self): 
+        """And you thought Navi was bad?""" 
+        fi = ["YOUR BATTERIES ARE LOW, LINK.", "GOTTA BUY NEW BATTERIES, LINK!",
+              "LINK, IT APPEARS YOUR BATTERIES ARE AT 75%. IT WOULD BE A GOOD IDEA TO PAUSE THE GAME AND CHANGE THEM NOW."]
+        await self.bot.say(randchoice(fi))
          
     @commands.command(pass_context=True) 
     async def mn9(self, ctx): 
