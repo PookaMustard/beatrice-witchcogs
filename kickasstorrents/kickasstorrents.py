@@ -13,8 +13,8 @@ class kickasstorrents:
 
         #Your code will go here
         text = " ".join(text)
-        query=text.replace(" ", "%20")
         query=text.replace(".", "")
+        query=query.replace(" ", "%20")
         await self.bot.say("***WARNING:*** May or may not include NSFW content\nhttps://kat.cr/usearch/"+query)
 
 def setup(bot):
