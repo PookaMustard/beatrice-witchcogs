@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import random
 from random import randint
 from random import choice as randchoice
 from discord.ext import commands
@@ -69,7 +70,7 @@ class randimages:
     @commands.command()
     async def shantae(self):
         """Ever dreamed of censoring Shantae?"""
-        chance=rantint(1,100)
+        chance=randint(1,100)
         if chance <= 75:
             return await self.bot.say('http://i.imgur.com/Fu0P8Zk.png')
         else:
