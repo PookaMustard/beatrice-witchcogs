@@ -1,6 +1,6 @@
-   {   
-2 2      "AUTHOR" : "PookaMustard",   
-3 3      "DESCRIPTION" : "Appsearcher script for searching on popular app stores",   
-4 4      "DISABLED" : false,   
-5 5      "NAME" : "appsearcher"   
-6 6 }   
+{   
+     "AUTHOR" : "PookaMustard",   
+     "DESCRIPTION" : "Appsearcher script for searching on popular app stores",   
+     "DISABLED" : false,   
+     "NAME" : "appsearcher"   
+}   
