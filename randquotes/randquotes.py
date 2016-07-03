@@ -22,6 +22,13 @@ class randquotes:
     async def callforhelp(self): 
         """I hate Flowey.""" 
         await self.bot.say("But nobody came.")
+        
+    @commands.command() 
+    async def ia(self): 
+        """INDIE ASSAULTED""" 
+        ia = ["I would like to report this game for Indie Sexual Assault", "Spade was based off Sonic right? Then why is everyone complaining that he has a spindash?",
+              "https://youtu.be/5XsLEXSyINs"]
+        await self.bot.say(randchoice(ia))
          
     @commands.command(pass_context=True) 
     async def mn9(self, ctx): 
