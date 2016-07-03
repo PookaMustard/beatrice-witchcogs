@@ -396,6 +396,11 @@ class randimages:
         await self.bot.say('https://cdn.discordapp.com/attachments/167706685715120129/189796749420789763/objection.jpg')
         
     @commands.command()
+    async def vert(self):
+        """Censorship has gone extreme."""
+        await self.bot.say('http://i.imgur.com/8919cM8.jpg')      
+        
+    @commands.command()
     async def steamguard(self):
         """Ineffective solutions invade!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/172006506525360129/199185289372106754/the_most_useless_things_you_will_ever_see_640_02.jpg')
