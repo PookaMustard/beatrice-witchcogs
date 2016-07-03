@@ -216,6 +216,11 @@ class randimages:
         await self.bot.say('http://i.makeagif.com/media/6-30-2016/nvigN6.gif')
         
     @commands.command()
+    async def peashy(self):
+        """She's not the PC. She's the TurboGrafx 16."""
+        await self.bot.say('http://i.imgur.com/HGGnD03.jpg')
+        
+    @commands.command()
     async def biggaydance(self):
         """Uhh..."""
         await self.bot.say('http://31.media.tumblr.com/4ea7b737b18ede28490a28a41e2c3f19/tumblr_mp8icf6PhR1s83bdoo2_400.gif')
