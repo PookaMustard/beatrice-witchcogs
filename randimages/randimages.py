@@ -251,6 +251,11 @@ class randimages:
         await self.bot.say('http://img4.wikia.nocookie.net/__cb20130704181437/ishipit/images/f/f7/Headcanon.jpg')
         
     @commands.command()
+    async def nooo(self):
+        """PADME!!!!!!!!!"""
+        await self.bot.say('http://www.nooooooooooooooo.com/vader.jpg')
+        
+    @commands.command()
     async def triggered(self):
         """IT'S NO USE!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png')
