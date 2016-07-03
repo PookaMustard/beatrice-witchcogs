@@ -14,7 +14,7 @@ class kickasstorrents:
         #Your code will go here
         text = " ".join(text)
         query=text.replace(" ", "%20")
-        await self.bot.say("https://kat.cr/usearch/"+query)
+        await self.bot.say("***WARNING:*** May or may not include NSFW content\nhttps://kat.cr/usearch/"+query)
 
 def setup(bot):
     bot.add_cog(kickasstorrents(bot))
