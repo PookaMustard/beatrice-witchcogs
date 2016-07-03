@@ -48,6 +48,11 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=hTbXDl5U2rQ')
         
     @commands.command()
+    async def memesintensify(self):
+        """And San's terrible puns."""
+        await self.bot.say('https://www.youtube.com/watch?v=1WXtUisumn8')
+        
+    @commands.command()
     async def knockknock(self):
         """Knuckles is saying hi."""
         await self.bot.say('https://www.youtube.com/watch?v=CHCgn5pGoQY')
