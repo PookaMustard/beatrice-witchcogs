@@ -216,6 +216,11 @@ class randimages:
         await self.bot.say('http://i.makeagif.com/media/6-30-2016/nvigN6.gif')
         
     @commands.command()
+    async def shipshippingships(self):
+        """A ship shipping ship shipping shipping ships."""
+        await self.bot.say('http://funnyasduck.net/wp-content/uploads/2013/02/funny-ship-shipping-ships-pics.jpg')
+        
+    @commands.command()
     async def peashy(self):
         """She's not the PC. She's the TurboGrafx 16."""
         await self.bot.say('http://i.imgur.com/HGGnD03.jpg')
