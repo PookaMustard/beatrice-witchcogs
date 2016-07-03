@@ -403,7 +403,12 @@ class randimages:
     @commands.command()
     async def vert(self):
         """Censorship has gone extreme."""
-        await self.bot.say('http://i.imgur.com/8919cM8.jpg')      
+        await self.bot.say('http://i.imgur.com/8919cM8.jpg')     
+        
+    @commands.command()
+    async def noire(self):
+        """Who's next to bite the dust?"""
+        await self.bot.say('http://i.imgur.com/DxHitLz.jpg') 
         
     @commands.command()
     async def steamguard(self):
