@@ -32,6 +32,27 @@ class randimages:
         return await self.bot.say(randchoice(freiza))
         
     @commands.command()
+    async def chatded(self):
+        """Do not post ponies while it is dead."""
+        chatded = ["https://cdn.discordapp.com/attachments/173967012123377664/198887286132310017/16sxn0.jpg",
+               "https://cdn.discordapp.com/attachments/173967012123377664/198887289336758274/16sxna.jpg",
+               "https://cdn.discordapp.com/attachments/173967012123377664/198887295238012932/16sxmt.jpg"]
+        return await self.bot.say(randchoice(chatded))
+        
+    @commands.command()
+    async def zonic(self):
+        """Zonic the...zonic?"""
+        zonic = ["https://cdn.discordapp.com/attachments/173967012123377664/196798755712794625/Zonic_4_My_New_Life_Logo.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196799830515908609/ZonicPresentsAlt.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196799979094802433/ZonicIconLarge.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196800304187047938/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196800484332273666/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196800747067670529/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196800992803684353/mellorne_wallpaper.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/196801076781907969/OMEGANOTSERPENTINE.png"]
+        return await self.bot.say(randchoice(zonic))
+        
+    @commands.command()
     async def nope(self):
         """No. Just no."""
         nope = ["https://cdn.discordapp.com/attachments/173967012123377664/192449277249716226/Ck8hjiJUYAA9bKl.png",
@@ -146,6 +167,28 @@ class randimages:
     async def kidding(self):
         """Are you kidding?"""
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/195207061271740417/You-Have-Got-To-Be-Kidding-Me-GIF.gif')
+        
+    @commands.command()
+    async def physics(self):
+        """Laws of physics destroyed."""
+        physics = ["http://i158.photobucket.com/albums/t83/sirtmagus2/THE%20FUTURE/sonic4whoops.jpg",
+                   "http://i1.kym-cdn.com/photos/images/original/000/910/238/8dc.png"]
+        await self.bot.say(randchoice(physics))
+        
+    @commands.command()
+    async def grandad(self):
+        """Or grandmother. I don't care anymore."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/198976315930574849/a3173909832_10.jpg')
+        
+    @commands.command()
+    async def idonteven(self):
+        """I. Don't. Even."""
+        await self.bot.say('http://images.akamai.steamusercontent.com/ugc/268342479504771643/3053D7EC4642AE3FD2B024785B4DFD501579F730/')
+        
+    @commands.command()
+    async def twobecomeone(self):
+        """VVVVVV strikes back!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/198542992640835585/Two_Viridians_Become_One.png')
         
     @commands.command()
     async def popular(self):
