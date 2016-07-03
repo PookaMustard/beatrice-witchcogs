@@ -60,11 +60,20 @@ class randimages:
         return await self.bot.say(randchoice(nope))
         
     @commands.command()
-    async def shantae(self):
+    async def bathingwithclothes(self):
         """Ever dreamed of bathing with your clothes on?"""
-        shantae = ["http://i.imgur.com/FyUAAw0.png",
+        bathclothed = ["http://i.imgur.com/FyUAAw0.png",
                "http://i.imgur.com/n74nqYR.png"]
-        return await self.bot.say(randchoice(shantae))
+        return await self.bot.say(randchoice(bathclothed))
+        
+    @commands.command()
+    async def shantae(self):
+        """Ever dreamed of censoring Shantae?"""
+        chance=rantint(1,100)
+        if chance <= 75:
+            return await self.bot.say('http://i.imgur.com/Fu0P8Zk.png')
+        else:
+            return await self.bot.say('http://i.imgur.com/E1ZVRnh.png')
         
     @commands.command()
     async def sakura(self):
