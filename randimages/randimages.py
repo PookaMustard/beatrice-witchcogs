@@ -750,7 +750,7 @@ class randimages:
 
     @commands.command()
     async def leak(self):
-        """I don't care enough."""
+        """Where's that dripping coming from?"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/199621074613305355/Leek.JPG")
 
 def setup(bot):
