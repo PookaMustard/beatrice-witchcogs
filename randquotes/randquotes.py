@@ -68,9 +68,16 @@ class randquotes:
                    "Don't you mean 'Meh'ty Number No. 9?", "When you install a Mighty No. 9 function on your buster\nhttps://cdn.discordapp.com/attachments/173965999744221185/197744572514828289/unknown.png",
                    "I once heard Alex Kidd beat up Beck.", "Damn, that playthrough of MN9 made me hungry for some pizza.",
                    "As much as I give it flak, it's better than FNaF anyday, everyday. *cackles*", "Mighty No. 9 does what Megamandon't.",
-                   "Mighty? Yes. Mega? No.", "http://lvl30psy.thecomicseries.com/images/comics/64/e1fc6f772a6cd154c3b027e3a26671f9948643108.png"
+                   "Mighty? Yes. Mega? No.", "http://lvl30psy.thecomicseries.com/images/comics/64/e1fc6f772a6cd154c3b027e3a26671f9948643108.png",
+                   "I'd rather have Rock and Roll at my Beck and Call", "poor roahmmythril hes gonna have to perfect run this game someday"
                    ]
             return await self.bot.say(randchoice(mn9))
+        
+    @commands.command() 
+    async def sjw(self): 
+        """And you thought Navi was bad?""" 
+        sjw = ["You're an SJW? So you're a salty juvenile wiener?","SJW: Shameful Jackass Whiner"]
+        await self.bot.say(randchoice(sjw))
         
 
 def setup(bot):

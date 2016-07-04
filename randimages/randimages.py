@@ -748,5 +748,10 @@ class randimages:
         """I don't care enough."""
         await self.bot.say("https://images-2.discordapp.net/.eJwVyEkOwyAMAMC_8ADMErHkN4hQg5TUCLuHqurf21zmMB_1WqfaVReZvAMcgyutQ7PQKtg0EuHZyhysK11QRErtV3sKg40x5exMssZZG30Od2Xjk9tM-OtTDIBj9rfG8VDfH8FeIes.-986DO-paeh4B02b83dM92oEf14.gif")
 
+    @commands.command()
+    async def leak(self):
+        """I don't care enough."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/199621074613305355/Leek.JPG")
+
 def setup(bot):
     bot.add_cog(randimages(bot))
