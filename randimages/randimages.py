@@ -102,6 +102,34 @@ class randimages:
                "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png"]
         return await self.bot.say(randchoice(ovo))
         
+    @commands.command()
+    async def friskface(self):
+        """This face is overrated. -_-"""
+        friskface = ["https://cdn.discordapp.com/attachments/173967012123377664/200813613718437890/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200814067529678849/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200815092084768769/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200815563201576962/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200814703885156353/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200818482143690753/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200819261101309953/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200819797540339714/frusk.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200820010338222081/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200821632611123203/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200822216810561538/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200824789227667458/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200826151411646466/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200826497731133441/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200827482180419585/unknown.png\n=)",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200828130267627521/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200829046626582529/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200829527960715266/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200830183924695042/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200830713556238347/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200831279153938434/unknown.png",
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200831638467248129/unknown.png"
+                     "http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png\nGreetings! I am Chara. What, you expected Frisk? He sold his soul to me. =)"]
+        return await self.bot.say(randchoice(friskface))
+        
     @commands.command(hidden=True)
     async def weegee(self):
         """Weegeesquare!"""
@@ -186,6 +214,23 @@ class randimages:
         await self.bot.say(randchoice(physics))
         
     @commands.command()
+    async def mfw(self):
+        """It's not really my face though."""
+        mfw = ["https://cdn.discordapp.com/attachments/173967012123377664/200676850446499841/unknown.png",
+                   "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQXg8VU_dEl-z_CwyLHF6QtOoaJJbyS7UBGjCsSJ2b4seE4N5Py"]
+        await self.bot.say(randchoice(mfw))
+        
+    @commands.command()
+    async def delete(self):
+        """Deletes this command when used."""
+        delete = ["http://img13.deviantart.net/c4bb/i/2015/120/9/a/cybermen__quot_delete_quot__campaign_by_degaspiv-d33hjoa.png",
+                   "http://i0.kym-cdn.com/photos/images/facebook/001/107/323/dbb.jpg",
+                   "http://i0.kym-cdn.com/news_feeds/icons/mobile/000/020/528/fa1.jpg",
+                   "https://s-media-cache-ak0.pinimg.com/236x/51/0f/a8/510fa8e2a1874b4916f6ab42d3affabd.jpg",
+                   "https://www.ponychan.net/site/src/1454799320298.png"]
+        await self.bot.say(randchoice(delete))
+        
+    @commands.command()
     async def grandad(self):
         """Or grandmother. I don't care anymore."""
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/198976315930574849/a3173909832_10.jpg')
@@ -236,6 +281,16 @@ class randimages:
         await self.bot.say('http://i.imgur.com/HGGnD03.jpg')
         
     @commands.command()
+    async def frisk(self):
+        """My face is better and more energetic. -_-"""
+        await self.bot.say('http://vignette2.wikia.nocookie.net/vsbattles/images/0/04/Frisk_Render_By_Skodwarde.png/revision/latest?cb=20151119000230')
+
+    @commands.command()
+    async def chara(self):
+        """Now this face is good. = )"""
+        await self.bot.say('http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png')
+        
+    @commands.command()
     async def biggaydance(self):
         """Uhh..."""
         await self.bot.say('http://31.media.tumblr.com/4ea7b737b18ede28490a28a41e2c3f19/tumblr_mp8icf6PhR1s83bdoo2_400.gif')
@@ -256,9 +311,19 @@ class randimages:
         await self.bot.say('http://www.nooooooooooooooo.com/vader.jpg')
         
     @commands.command()
+    async def metashoe(self):
+        """The shoe of a meta knight."""
+        await self.bot.say('http://orig15.deviantart.net/9a5f/f/2011/308/e/9/kirby___the_meta_shoe_by_minon-d4f2bt1.png')
+        
+    @commands.command()
     async def triggered(self):
         """IT'S NO USE!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png')
+        
+    @commands.command()
+    async def throwyourselfout(self):
+        """Why not?"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/199952050312839170/Throw_Yourself_Out.png')
         
     @commands.command()
     async def second(self):
