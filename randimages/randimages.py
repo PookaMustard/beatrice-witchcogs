@@ -288,7 +288,7 @@ class randimages:
     @commands.command()
     async def chara(self):
         """Now this face is good. = )"""
-        await self.bot.say('http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png')
+        await self.bot.say('http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png\n=)')
         
     @commands.command()
     async def biggaydance(self):
