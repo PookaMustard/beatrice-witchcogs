@@ -126,7 +126,7 @@ class randimages:
                      "https://cdn.discordapp.com/attachments/173967012123377664/200830183924695042/unknown.png",
                      "https://cdn.discordapp.com/attachments/173967012123377664/200830713556238347/unknown.png",
                      "https://cdn.discordapp.com/attachments/173967012123377664/200831279153938434/unknown.png",
-                     "https://cdn.discordapp.com/attachments/173967012123377664/200831638467248129/unknown.png"
+                     "https://cdn.discordapp.com/attachments/173967012123377664/200831638467248129/unknown.png",
                      "http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png\nGreetings! I am Chara. What, you expected Frisk? He sold his soul to me. =)"]
         return await self.bot.say(randchoice(friskface))
         
