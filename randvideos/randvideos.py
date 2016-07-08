@@ -50,7 +50,7 @@ class randvideos:
     @commands.command()
     async def dk(self):
         """Dunkey Kung."""
-        await self.bot.say('https://www.youtube.com/watch?v=HG3Wk3CpmoE)
+        await self.bot.say('https://www.youtube.com/watch?v=HG3Wk3CpmoE')
         
     @commands.command()
     async def memesintensify(self):
