@@ -283,7 +283,7 @@ class randimages:
     @commands.command()
     async def frisk(self):
         """My face is better and more energetic. -_-"""
-        await self.bot.say('http://vignette2.wikia.nocookie.net/vsbattles/images/0/04/Frisk_Render_By_Skodwarde.png/revision/latest?cb=20151119000230')
+        await self.bot.say('https://images-1.discordapp.net/.eJwFwdsNwiAUANBdGIB7oZRHP_1wAB2AECCUtAUCGGOMu3vOl7z6STayz9nGBhDy8LUHOmbtLkWaak1ndC0P6usFbk7n9yuWOYAZjkoILaQWyI1ZF-CIWkpUyFahF41Mwb3ncdhHLCF2e_vY51HD2_UQaSuJ_P651imm.BCqThABIVVP-HcQFAecBLgDF9Sc.png?width=362&height=300')
 
     @commands.command()
     async def chara(self):
