@@ -48,6 +48,11 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=hTbXDl5U2rQ')
         
     @commands.command()
+    async def dk(self):
+        """Dunkey Kung."""
+        await self.bot.say('https://www.youtube.com/watch?v=HG3Wk3CpmoE)
+        
+    @commands.command()
     async def memesintensify(self):
         """And San's terrible puns."""
         await self.bot.say('https://www.youtube.com/watch?v=1WXtUisumn8')
@@ -56,6 +61,11 @@ class randvideos:
     async def bubsylovania(self):
         """Bubsy + Megalovania"""
         await self.bot.say('https://soundcloud.com/seishunbeats/megalovania-but-played-entirely-with-bubsy-1-soundfonts')
+        
+    @commands.command()
+    async def ohyes(self):
+        """Want Mettaton?"""
+        await self.bot.say('https://www.youtube.com/watch?v=bLgOL7Wf_Rg')
         
     @commands.command()
     async def knockknock(self):
