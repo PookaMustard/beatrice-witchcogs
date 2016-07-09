@@ -828,5 +828,13 @@ class randimages:
         """SnooPING AS usual, I see?"""
         await self.bot.say("http://i1.kym-cdn.com/entries/icons/original/000/000/209/icon.png")
 
+    @commands.command()
+    async def burneverything(self):
+        """We don't need no water."""
+        clap = ["http://66.media.tumblr.com/b995f1503b36ae77f89a7bc103518f41/tumblr_o8vgzbMOdp1u591fzo1_400.gif",
+            "http://static2.fjcdn.com/thumbnails/comments/Makes+you+just+want+to+burn+everything+_2914a81e5cbc5d99efb17fac58d18cc7.gif",
+            "http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-burn-everything-2.png"]
+        await self.bot.say(randchoice(clap))
+
 def setup(bot):
     bot.add_cog(randimages(bot))
