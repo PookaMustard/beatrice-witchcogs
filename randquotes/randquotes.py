@@ -24,6 +24,11 @@ class randquotes:
         await self.bot.say("But nobody came.")
         
     @commands.command() 
+    async def badtime(self): 
+        """Sans Strikes Back.""" 
+        await self.bot.say("```do you wanna have a bad time? oh well, you do. here you go.```\nhttps://jcw87.github.io/c2-sans-fight/")
+        
+    @commands.command() 
     async def ia(self): 
         """INDIE ASSAULTED""" 
         ia = ["I would like to report this game for Indie Sexual Assault", "Spade was based off Sonic right? Then why is everyone complaining that he has a spindash?",
