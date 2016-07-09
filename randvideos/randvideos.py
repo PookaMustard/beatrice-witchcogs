@@ -72,5 +72,15 @@ class randvideos:
         """Knuckles is saying hi."""
         await self.bot.say('https://www.youtube.com/watch?v=CHCgn5pGoQY')
         
+    @commands.command()
+    async def dick(self):
+        """Be dastardly."""
+        await self.bot.say('https://www.youtube.com/watch?v=RXKJolS9Atg')
+        
+    @commands.command()
+    async def nexttime(self):
+        """I'll get you."""
+        await self.bot.say('https://www.youtube.com/watch?v=-_2_cJxYYhM')
+        
 def setup(bot):
     bot.add_cog(randvideos(bot))
