@@ -818,5 +818,15 @@ class randimages:
         """Where's that dripping coming from?"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/199621074613305355/Leek.JPG")
 
+    @commands.command()
+    async def youdidnttry(self):
+        """Loser."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/200992165848023040/achievement-xbox.png")
+
+    @commands.command()
+    async def pingas(self):
+        """SnooPING AS usual, I see?"""
+        await self.bot.say("http://i1.kym-cdn.com/entries/icons/original/000/000/209/icon.png")
+
 def setup(bot):
     bot.add_cog(randimages(bot))
