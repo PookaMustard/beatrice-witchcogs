@@ -99,7 +99,8 @@ class randimages:
         ovo = ["https://cdn.discordapp.com/attachments/173967012123377664/190571971564666881/Screen_Shot_2015-10-30_at_6.22.16_PM.png",
                "https://cdn.discordapp.com/attachments/173967012123377664/190572657270456321/IMG_0670.jpg",
                "https://cdn.discordapp.com/attachments/173967012123377664/190607662881308683/Bingo_in_FP_CS_Icon_OvO.png",
-               "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png"]
+               "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png",
+               "https://cdn.discordapp.com/attachments/174342349458112512/201461860212408341/OvO-faced_Typhlosion.png"]
         return await self.bot.say(randchoice(ovo))
         
     @commands.command()
@@ -835,6 +836,11 @@ class randimages:
             "http://static2.fjcdn.com/thumbnails/comments/Makes+you+just+want+to+burn+everything+_2914a81e5cbc5d99efb17fac58d18cc7.gif",
             "http://sd.keepcalm-o-matic.co.uk/i/keep-calm-and-burn-everything-2.png"]
         await self.bot.say(randchoice(clap))
+
+    @commands.command()
+    async def seraphna(self):
+        """Everyone's 'favourite' moderator."""
+        await self.bot.say("http://i.imgur.com/eTL6A4k.png")
 
 def setup(bot):
     bot.add_cog(randimages(bot))
