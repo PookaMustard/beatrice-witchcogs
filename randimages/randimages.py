@@ -842,5 +842,10 @@ class randimages:
         """Everyone's 'favourite' moderator."""
         await self.bot.say("http://i.imgur.com/eTL6A4k.png")
 
+    @commands.command()
+    async def thatsthejoke(self):
+        """Now laugh."""
+        await self.bot.say("https://i.imgur.com/utzTCyo.png")
+
 def setup(bot):
     bot.add_cog(randimages(bot))

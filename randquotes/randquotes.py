@@ -83,7 +83,8 @@ class randquotes:
                    "Mighty? Yes. Mega? No.", "http://lvl30psy.thecomicseries.com/images/comics/64/e1fc6f772a6cd154c3b027e3a26671f9948643108.png",
                    "I'd rather have Rock and Roll at my Beck and Call", "poor roahmmythril hes gonna have to perfect run this game someday",
                    "Look at my codpiece! You know you want to.\nhttp://media1.gameinformer.com/filestorage/CommunityServer.Components.SiteFiles/imagefeed/featured/comcept/mightyno9/release-date/MightyNo9RD-610.jpg",
-                   "http://i.imgur.com/byQgSDr.png","https://cdn.discordapp.com/attachments/173967012123377664/201530405877186560/did-you-mean-0686f1224818a4a6520cd99c626f74ee.png"
+                   "http://i.imgur.com/byQgSDr.png","https://cdn.discordapp.com/attachments/173967012123377664/201530405877186560/did-you-mean-0686f1224818a4a6520cd99c626f74ee.png",
+                   "I like my Mighty No. 9 with extra anchovies and a garlic cheese stuffed crust."
                    ]
             return await self.bot.say(randchoice(mn9))
         
