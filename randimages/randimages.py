@@ -847,5 +847,15 @@ class randimages:
         """Now laugh."""
         await self.bot.say("https://i.imgur.com/utzTCyo.png")
 
+    @commands.command()
+    async def kek(self):
+        """Just don't kek yourself."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202081415901216768/798.png")
+
+    @commands.command()
+    async def steam(self):
+        """Turn the valve."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202092452574789633/did-you-mean-eccd6a67e1ca235245b50a61fd879a97.png")
+
 def setup(bot):
     bot.add_cog(randimages(bot))
