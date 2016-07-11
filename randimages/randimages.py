@@ -857,5 +857,10 @@ class randimages:
         """Turn the valve."""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202092452574789633/did-you-mean-eccd6a67e1ca235245b50a61fd879a97.png")
 
+    @commands.command()
+    async def hankey(self):
+        """If you eat fibre on Christmas Eve, he might come to your town!"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202183615164055552/unknown.png")
+
 def setup(bot):
     bot.add_cog(randimages(bot))
