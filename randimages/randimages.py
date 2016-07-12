@@ -94,7 +94,7 @@ class randimages:
         return await self.bot.say(randchoice(salt))
         
     @commands.command()
-    async def OvO(self):
+    async def ovo(self):
         """Bingo!"""
         ovo = ["https://cdn.discordapp.com/attachments/173967012123377664/190571971564666881/Screen_Shot_2015-10-30_at_6.22.16_PM.png",
                "https://cdn.discordapp.com/attachments/173967012123377664/190572657270456321/IMG_0670.jpg",
