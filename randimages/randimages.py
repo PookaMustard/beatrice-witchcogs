@@ -103,6 +103,21 @@ class randimages:
         return await self.bot.say(randchoice(ovo))
         
     @commands.command()
+    async def romanquotes(self):
+        """Starring Roman!"""
+        roman = ["https://cdn.discordapp.com/attachments/173967012123377664/202868725546745856/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202868789149302785/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202868857935888384/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202868896527679489/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202868948822261761/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202868986071744512/unknown.png",
+               "https://cdn.discordapp.com/attachments/173967012123377664/202869014874161152/unknown.png",
+               "https://cdn.discordapp.com/attachments/173965999744221185/202873953377714178/unknown.png",
+               "https://cdn.discordapp.com/attachments/178922264522260480/202874208160579584/unknown.png",
+               "https://cdn.discordapp.com/attachments/189198110042488832/202874464210386945/unknown.png"]
+        return await self.bot.say(randchoice(roman))
+        
+    @commands.command()
     async def friskface(self):
         """This face is overrated. -_-"""
         friskface = ["https://cdn.discordapp.com/attachments/173967012123377664/200813613718437890/unknown.png",
@@ -555,6 +570,16 @@ class randimages:
     async def puppy(self):
         """Mood Milla"""
         await self.bot.say("http://i.imgur.com/mnI1tkU.png")
+        
+    @commands.command()
+    async def plom(self):
+        """..."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/189198110042488832/202902488897028096/unknown.png")
+        
+    @commands.command()
+    async def error(self):
+        """Teleporting...bread?"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202441867575427072/unknown.png")
         
     @commands.command()
     async def iseeit(self):
