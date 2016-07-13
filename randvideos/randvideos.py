@@ -21,6 +21,11 @@ class randvideos:
     async def nostrongfeelings(self):
         """I am neutral."""
         await self.bot.say('https://www.youtube.com/watch?v=CxK_nA2iVXw')
+        
+    @commands.command()
+    async def changeplaces(self):
+        """Changing Pastarama now."""
+        await self.bot.say('https://www.youtube.com/watch?v=8tYXfssLOSM')
 
     @commands.command()
     async def nobodycares(self):
