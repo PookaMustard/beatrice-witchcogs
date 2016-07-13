@@ -58,6 +58,11 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=1WXtUisumn8')
         
     @commands.command()
+    async def grand(self):
+        """Is this a bootleg?"""
+        await self.bot.say('https://soundcloud.com/epicrpgremixes/a-battle-of-grand-proportions')
+        
+    @commands.command()
     async def bubsylovania(self):
         """Bubsy + Megalovania"""
         await self.bot.say('https://soundcloud.com/seishunbeats/megalovania-but-played-entirely-with-bubsy-1-soundfonts')
