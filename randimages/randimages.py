@@ -14,16 +14,15 @@ class randimages:
 
     def __init__(self, bot):
         self.bot = bot
-        self.sonozaki = ["http://images4.fanpop.com/image/photos/22700000/Shion-Sonozaki-sonozaki-fans-22705531-704-396.jpg",
-                         "http://img1.ak.crunchyroll.com/i/spire2/fc24e1a77e12e1e0007185cd42e750541371546895_full.jpg",
-                         "http://img1.ak.crunchyroll.com/i/spire2/fc24e1a77e12e1e0007185cd42e750541371546895_full.jpg",
-                         "http://img1.ak.crunchyroll.com/i/spire2/fc24e1a77e12e1e0007185cd42e750541371546895_full.jpg",]
-
+        self.chance = randint(1,100)
         
     @commands.command()
     async def shion(self):
         """HAHAHAHAHAHAHAHAHAHAHA!"""
-        return await self.bot.say(randchoice(self.sonozaki))
+        if self.chance <= 75:
+            return await self.bot.say('http://img1.ak.crunchyroll.com/i/spire2/fc24e1a77e12e1e0007185cd42e750541371546895_full.jpg')
+        else:
+            return await self.bot.say('ttp://images4.fanpop.com/image/photos/22700000/Shion-Sonozaki-sonozaki-fans-22705531-704-396.jpg')
 
     @commands.command()
     async def freiza(self):
@@ -70,8 +69,7 @@ class randimages:
     @commands.command()
     async def shantae(self):
         """Ever dreamed of censoring Shantae?"""
-        chance=randint(1,100)
-        if chance <= 75:
+        if self.chance <= 95:
             return await self.bot.say('http://i.imgur.com/Fu0P8Zk.png')
         else:
             return await self.bot.say('http://i.imgur.com/E1ZVRnh.png')
