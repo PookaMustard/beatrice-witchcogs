@@ -22,7 +22,7 @@ class randimages:
         if chance <= 75:
             return await self.bot.say('http://img1.ak.crunchyroll.com/i/spire2/fc24e1a77e12e1e0007185cd42e750541371546895_full.jpg')
         else:
-            return await self.bot.say('ttp://images4.fanpop.com/image/photos/22700000/Shion-Sonozaki-sonozaki-fans-22705531-704-396.jpg')
+            return await self.bot.say('http://images4.fanpop.com/image/photos/22700000/Shion-Sonozaki-sonozaki-fans-22705531-704-396.jpg')
 
     @commands.command()
     async def freiza(self):
