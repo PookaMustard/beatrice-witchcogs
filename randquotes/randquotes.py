@@ -92,7 +92,8 @@ class randquotes:
     async def sjw(self): 
         """And you thought Navi was bad?""" 
         sjw = ["You're an SJW? So you're a salty juvenile wiener?","SJW: Shameful Jackass Whiner",
-               "SJW: Supreme Jackass Whiner","SJW: Super-triggered Justiceless Wanker"]
+               "SJW: Supreme Jackass Whiner","SJW: Super-triggered Justiceless Wanker",
+               "https://didyoumean-generator.com/did-you-means/20160714/did-you-mean-66fab343163deb1bac408f4fb30587b4.png"]
         await self.bot.say(randchoice(sjw))
         
     @commands.command()
@@ -104,6 +105,22 @@ class randquotes:
     async def redrant(self):
         """Salt, RedScarf-style"""
         await self.bot.say("```well, that's what happens when blah blah blah battleaxe blah blah blah broken promises blah blah blah abuse of power blah blah blah```")
+        
+    @commands.command() 
+    async def gametheory(self): 
+        """The study of mathematical models of conflict and cooperation between intelligent rational decision-makers. Apparently.""" 
+        gametheory = ["Game Theory: MatPat is a SHAMELESS MONEYGRABBING CUNT?!?!","Why i gave the pope bayonetta"]
+        await self.bot.say(randchoice(gametheory))
 
+    @commands.command()
+    async def giga(self):
+        """Salami the Multivitamin"""
+        await self.bot.say("MMMMMMMMMMH :heart:")
+        
+    @commands.command()
+    async def sonic(self):
+        """GOTTAGOFAST"""
+        await self.bot.say("***YOU'RE TOO SLOW!***")
+        
 def setup(bot):
     bot.add_cog(randquotes(bot))
