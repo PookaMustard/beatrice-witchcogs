@@ -107,7 +107,7 @@ class randquotes:
         await self.bot.say("```well, that's what happens when blah blah blah battleaxe blah blah blah broken promises blah blah blah abuse of power blah blah blah```")
         
     @commands.command() 
-    async def gametheory(self): 
+    async def gametheory(self):
         """The study of mathematical models of conflict and cooperation between intelligent rational decision-makers. Apparently.""" 
         gametheory = ["Game Theory: MatPat is a SHAMELESS MONEYGRABBING CUNT?!?!","Why i gave the pope bayonetta"]
         await self.bot.say(randchoice(gametheory))
@@ -120,7 +120,8 @@ class randquotes:
     @commands.command()
     async def sonic(self):
         """GOTTAGOFAST"""
-        await self.bot.say("***YOU'RE TOO SLOW!***")
-        
+        sonic = ["***YOU'RE TOO SLOW!***","Let's do it to it!","Hands off my chilli dogs!","Way past cool!","Catch you later, Eggman!"]
+        await self.bot.say(randchoice(sonic))
+
 def setup(bot):
     bot.add_cog(randquotes(bot))
