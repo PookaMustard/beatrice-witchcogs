@@ -99,7 +99,8 @@ class randimages:
                "https://cdn.discordapp.com/attachments/173967012123377664/190572657270456321/IMG_0670.jpg",
                "https://cdn.discordapp.com/attachments/173967012123377664/190607662881308683/Bingo_in_FP_CS_Icon_OvO.png",
                "https://cdn.discordapp.com/attachments/173967012123377664/190607776324517890/BstayR_OvO.png",
-               "https://cdn.discordapp.com/attachments/174342349458112512/201461860212408341/OvO-faced_Typhlosion.png"]
+               "https://cdn.discordapp.com/attachments/174342349458112512/201461860212408341/OvO-faced_Typhlosion.png",
+               "https://cdn.discordapp.com/attachments/174342349458112512/202956906346708992/ovom.png"]
         return await self.bot.say(randchoice(ovo))
         
     @commands.command()
@@ -242,7 +243,8 @@ class randimages:
                    "http://i0.kym-cdn.com/photos/images/facebook/001/107/323/dbb.jpg",
                    "http://i0.kym-cdn.com/news_feeds/icons/mobile/000/020/528/fa1.jpg",
                    "https://s-media-cache-ak0.pinimg.com/236x/51/0f/a8/510fa8e2a1874b4916f6ab42d3affabd.jpg",
-                   "https://www.ponychan.net/site/src/1454799320298.png"]
+                   "https://www.ponychan.net/site/src/1454799320298.png",
+                   "http://i3.kym-cdn.com/photos/images/newsfeed/001/146/898/c9c.jpg"]
         await self.bot.say(randchoice(delete))
         
     @commands.command()
@@ -885,6 +887,11 @@ class randimages:
     async def hankey(self):
         """If you eat fibre on Christmas Eve, he might come to your town!"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202183615164055552/unknown.png")
+
+    @commands.command()
+    async def alive(self):
+        """Yep, I'm sure, I can feel a pulse"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/172006506525360129/203214935105339394/pfq7ers3oaowg3o1ik9f.jpg")
 
 def setup(bot):
     bot.add_cog(randimages(bot))
