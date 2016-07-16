@@ -877,7 +877,9 @@ class randimages:
     @commands.command()
     async def kek(self):
         """Just don't kek yourself."""
-        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202081415901216768/798.png")
+        kek = ["https://cdn.discordapp.com/attachments/173967012123377664/202081415901216768/798.png",
+               "http://i1.kym-cdn.com/photos/images/facebook/000/803/712/140.jpg"]
+        return await self.bot.say(randchoice(kek))
 
     @commands.command()
     async def steam(self):
@@ -905,6 +907,16 @@ class randimages:
     async def feelthesalamon(self):
         """Feel it! I command you!"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/203521186863382529/unknown.png")
+
+    @commands.command()
+    async def princessinanothercastle(self):
+        """Toad does trolling."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/203787385270435841/unknown.png")
+
+    @commands.command()
+    async def onlywaytobesure(self):
+        """Nuke it from orbit?"""
+        await self.bot.say("http://stream1.gifsoup.com/view/1010903/iron-man-jericho-o.gif")
 
 def setup(bot):
     bot.add_cog(randimages(bot))
