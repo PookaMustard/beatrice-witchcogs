@@ -102,5 +102,15 @@ class randvideos:
         """Motivational."""
         await self.bot.say('https://www.youtube.com/watch?v=jGatO6vMPqw')
         
+    @commands.command()
+    async def gabe(self):
+        """…"""
+        await self.bot.say('https://www.youtube.com/watch?v=QJa3CcKFUkQ')
+        
+    @commands.command()
+    async def feelingit(self):
+        """Are you now?"""
+        await self.bot.say('https://www.youtube.com/watch?v=hsdIRN6DJo8')
+        
 def setup(bot):
     bot.add_cog(randvideos(bot))
