@@ -422,7 +422,7 @@ class randimages:
     async def zerosystem(self):
         """Startup initiation commence!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/189389254093307905/191661403596259330/tumblr_zerosystem.gif')
-        s
+        
     @commands.command()
     async def examwarning(self):
         """Beware the exam!"""
@@ -572,7 +572,8 @@ class randimages:
     @commands.command()
     async def puppy(self):
         """Mood Milla"""
-        await self.bot.say("http://i.imgur.com/mnI1tkU.png")
+        puppy = ["http://i.imgur.com/mnI1tkU.png", "https://cdn.discordapp.com/attachments/203898055232192512/204015895519952896/unknown.png"]
+        await self.bot.say(randchoice(puppy))
         
     @commands.command()
     async def plom(self):
