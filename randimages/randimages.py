@@ -901,7 +901,8 @@ class randimages:
     async def donewithshit(self):
         """Yeah… no."""
         donewithshit = ["https://cdn.discordapp.com/attachments/173965999744221185/203516719203876864/funny_mew.png",
-               "http://66.media.tumblr.com/db53616551186e6667ed91d70dd930e2/tumblr_naiu91b2r01r2g7mto5_r1_1280.png"]
+               "http://66.media.tumblr.com/db53616551186e6667ed91d70dd930e2/tumblr_naiu91b2r01r2g7mto5_r1_1280.png",
+               "http://pre01.deviantart.net/baed/th/pre/f/2015/364/e/5/just_by_goshaag-d9m0idf.png"]
         return await self.bot.say(randchoice(donewithshit))
         
     @commands.command()
