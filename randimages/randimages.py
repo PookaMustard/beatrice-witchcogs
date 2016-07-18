@@ -920,5 +920,10 @@ class randimages:
         """Nuke it from orbit?"""
         await self.bot.say("http://stream1.gifsoup.com/view/1010903/iron-man-jericho-o.gif")
 
+    @commands.command()
+    async def kitty(self):
+        """Dare you poke the kitty?"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/204725484414697472/Z.png")
+
 def setup(bot):
     bot.add_cog(randimages(bot))
