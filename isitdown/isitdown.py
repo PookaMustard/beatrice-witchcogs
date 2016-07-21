@@ -21,7 +21,7 @@ class isitdown:
             url = "http://" + url
         try:
             loop = asyncio.get_event_loop()
-            response = await loop.run_in_executor(None, requests.get, url, headers = { 'user_agent': headers }, timeout = 15)
+            response = await loop.run_in_executor(None, requests.get, url)
             if response.status_code == 200:
                 await self.bot.say(url + " is up and running.")
             else
