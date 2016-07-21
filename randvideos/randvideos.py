@@ -116,6 +116,16 @@ class randvideos:
     async def oh(self):
         """Oh."""
         await self.bot.say("https://www.youtube.com/watch?v=OsT2g3Xmfak")
+        
+    @commands.command()
+    async def intermission(self):
+        """We'll be right back after these messages."""
+        await self.bot.say("https://www.youtube.com/watch?v=9hmDZz5pDOQ")
+
+    @commands.command()
+    async def sheeit(self):
+        """Sheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeit."""
+        await self.bot.say("https://www.youtube.com/watch?v=70eU840lc38")
 
 def setup(bot):
     bot.add_cog(randvideos(bot))

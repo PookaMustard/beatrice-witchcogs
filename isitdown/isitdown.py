@@ -1,6 +1,5 @@
-import asyncio
+import aiohttp
 import discord
-import requests
 from discord.ext import commands
 
 headers = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.130 Safari/537.36"
@@ -20,15 +19,14 @@ class isitdown:
         if "http://" not in url or "https://" not in url:
             url = "http://" + url
         try:
-            loop = asyncio.get_event_loop()
-            response = await loop.run_in_executor(None, requests.get, url)
-            if response.status_code == 200:
-                await self.bot.say(url + " is up and running.")
-            else:
-                await self.bot.say(url + " is down.")
-        except requests.exceptions.Timeout:
-            await self.bot.say(url + " is down.")
-        except requests.exceptions.ConnectionError:
+            with aiohttp.Timeout(15):
+                await self.bot.say("Testing " + url + "…")
+                response = await aiohttp.get(url, headers = { 'user_agent': headers })
+                if response.status == 200:
+                    await self.bot.say(url + " is up and running.")
+                else:
+                    await self.bot.say(url + " is down.")
+        except asyncio.TimeoutError:
             await self.bot.say(url + " is down.")
             
 

@@ -113,7 +113,7 @@ class randimages:
                "https://cdn.discordapp.com/attachments/173967012123377664/202868948822261761/unknown.png",
                "https://cdn.discordapp.com/attachments/173967012123377664/202868986071744512/unknown.png",
                "https://cdn.discordapp.com/attachments/173967012123377664/202869014874161152/unknown.png",
-               "https://cdn.discordapp.com/attachments/173965999744221185/202873953377714178/unknown.png",
+               #"https://cdn.discordapp.com/attachments/173965999744221185/202873953377714178/unknown.png",
                "https://cdn.discordapp.com/attachments/178922264522260480/202874208160579584/unknown.png",
                "https://cdn.discordapp.com/attachments/189198110042488832/202874464210386945/unknown.png",
                "https://cdn.discordapp.com/attachments/173966944351944704/203594025494773770/unknown.png"]
@@ -902,7 +902,9 @@ class randimages:
         """Yeah… no."""
         donewithshit = ["https://cdn.discordapp.com/attachments/173965999744221185/203516719203876864/funny_mew.png",
                "http://66.media.tumblr.com/db53616551186e6667ed91d70dd930e2/tumblr_naiu91b2r01r2g7mto5_r1_1280.png",
-               "http://pre01.deviantart.net/baed/th/pre/f/2015/364/e/5/just_by_goshaag-d9m0idf.png"]
+               "http://pre01.deviantart.net/baed/th/pre/f/2015/364/e/5/just_by_goshaag-d9m0idf.png",
+               "http://66.media.tumblr.com/180d11323e589413cef030c93b2f9987/tumblr_myrlcqqNox1qe0snzo1_250.gif",
+               "http://orig03.deviantart.net/9633/f/2014/246/3/3/dddd_by_combotron_robot-d7xvq1x.png"]
         return await self.bot.say(randchoice(donewithshit))
         
     @commands.command()
@@ -924,6 +926,52 @@ class randimages:
     async def kitty(self):
         """Dare you poke the kitty?"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/204725484414697472/Z.png")
+
+    @commands.command()
+    async def spittake(self):
+        """Dare you poke the kitty?"""
+        await self.bot.say("http://media2.popsugar-assets.com/files/thumbor/kFAELJd35-6yF4-oVDc6tM3UnNM/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2014/07/02/996/n/1922283/d01950272ef3ac9e_83551143/i/When-Kramer-Does-Epic-Spit-Take.gif")
+
+    @commands.command()
+    async def latetotheparty(self):
+        """And everyone's gone home."""
+        await self.bot.say("http://i3.kym-cdn.com/photos/images/original/000/990/241/902.gif")
+
+    @commands.command()
+    async def nerds(self):
+        """No, not the band…"""
+        await self.bot.say("http://i.imgur.com/680s09d.gif")
+
+    @commands.command()
+    async def cackle(self):
+        """I revel in your misfortune."""
+        cackle = ["http://i.imgur.com/82e7eOE.gif","http://i.imgur.com/fWqFxOL.gif","http://i.imgur.com/4qw3RoV.gif"]
+        return await self.bot.say(randchoice(cackle))
+        
+    @commands.command()
+    async def damnit(self):
+        """Damn it all to hell!"""
+        await self.bot.say("http://i.imgur.com/eELH7YV.gif")
+
+    @commands.command()
+    async def splatoon(self):
+        """Are you a kid or a squid?"""
+        await self.bot.say("http://33.media.tumblr.com/7975df6e6d51a0d30d4d82f18f9e12f2/tumblr_nm4mbvkxDL1ra1vfao1_400.gif")
+
+    @commands.command()
+    async def timtams(self):
+        """We shall set up an exchange programme."""
+        await self.bot.say("http://pre01.deviantart.net/8b15/th/pre/i/2014/312/1/b/freedom_planet_tim_tam_candy_bar_by_novashenron-d85rdvr.jpg")
+
+    @commands.command()
+    async def getthedj(self):
+        """Cocaine habit optional."""
+        await self.bot.say("https://i427.photobucket.com/albums/pp352/GothDraagun/Pokemon/exploud.gif")
+
+    @commands.command()
+    async def shitpost(self):
+        """Only the finest quality!"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/110373943822540800/192833561873743874/shit.gif")
 
 def setup(bot):
     bot.add_cog(randimages(bot))
