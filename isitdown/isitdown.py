@@ -24,7 +24,7 @@ class isitdown:
             response = await loop.run_in_executor(None, requests.get, url, headers = { 'user_agent': headers }, timeout = 15)
             if response.status_code == 200:
                 await self.bot.say(url + " is up and running.")
-            else
+            else:
                 await self.bot.say(url + " is down.")
         except requests.exceptions.Timeout:
             await self.bot.say(url + " is down.")
