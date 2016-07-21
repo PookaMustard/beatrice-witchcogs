@@ -74,7 +74,18 @@ class randimages:
             return await self.bot.say('http://i.imgur.com/Fu0P8Zk.png')
         else:
             return await self.bot.say('http://i.imgur.com/E1ZVRnh.png')
-        
+
+    @commands.command()
+    async def chara(self):
+        """Now this face is good. = )"""
+        chance = randint(1,100)
+        if chance <= 75:
+            return await self.bot.say('=)\nhttp://imgur.com/download/DJGxtu7')
+        elif chance <= 95:
+            return await self.bot.say(':)\nhttp://imgur.com/download/DqPfvHB')
+        else:
+            return await self.bot.say('http://imgur.com/1xrBxjv')
+
     @commands.command()
     async def sakura(self):
         """Ever dreamed of being censored?"""
@@ -319,11 +330,6 @@ class randimages:
     async def frisk(self):
         """My face is better and more energetic. -_-"""
         await self.bot.say('-_-\nhttp://imgur.com/download/SBK02Zy')
-
-    @commands.command()
-    async def chara(self):
-        """Now this face is good. = )"""
-        await self.bot.say('=)\nhttp://imgur.com/download/DJGxtu7')
         
     @commands.command()
     async def biggaydance(self):
