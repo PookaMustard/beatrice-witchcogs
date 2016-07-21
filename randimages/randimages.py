@@ -318,12 +318,12 @@ class randimages:
     @commands.command()
     async def frisk(self):
         """My face is better and more energetic. -_-"""
-        await self.bot.say('https://images-1.discordapp.net/.eJwFwdsNwiAUANBdGIB7oZRHP_1wAB2AECCUtAUCGGOMu3vOl7z6STayz9nGBhDy8LUHOmbtLkWaak1ndC0P6usFbk7n9yuWOYAZjkoILaQWyI1ZF-CIWkpUyFahF41Mwb3ncdhHLCF2e_vY51HD2_UQaSuJ_P651imm.BCqThABIVVP-HcQFAecBLgDF9Sc.png?width=362&height=300')
+        await self.bot.say('-_-\nhttp://imgur.com/download/SBK02Zy')
 
     @commands.command()
     async def chara(self):
         """Now this face is good. = )"""
-        await self.bot.say('http://orig00.deviantart.net/adb6/f/2016/155/0/2/jkidwng_by_goldenaura2015-da519dl.png\n=)')
+        await self.bot.say('=)\nhttp://imgur.com/download/DJGxtu7')
         
     @commands.command()
     async def biggaydance(self):
