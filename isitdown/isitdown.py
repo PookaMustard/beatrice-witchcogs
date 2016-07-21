@@ -19,7 +19,7 @@ class isitdown:
         if "http://" not in url or "https://" not in url:
             url = "http://" + url
         try:
-            with aiohttp.Timeout(0.001):
+            with aiohttp.Timeout(15):
                 await self.bot.say("Testing " + url + "…")
                 response = await aiohttp.get(url, headers = { 'user_agent': headers })
                 if response.status == 200:
