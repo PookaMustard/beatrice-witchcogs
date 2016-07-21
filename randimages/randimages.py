@@ -84,7 +84,7 @@ class randimages:
         elif chance <= 95:
             return await self.bot.say(':)\nhttp://imgur.com/download/DqPfvHB')
         else:
-            return await self.bot.say('http://imgur.com/1xrBxjv')
+            return await self.bot.say('http://imgur.com/download/1xrBxjv')
 
     @commands.command()
     async def sakura(self):
