@@ -231,6 +231,23 @@ class randimages:
         await self.bot.say(randchoice(physics))
         
     @commands.command()
+    async def gottagofast(self):
+        """Or else be left behind!!"""
+        fast = ["http://orig12.deviantart.net/4ae4/f/2011/348/7/1/gotta_go_fast_by_zeurel-d4j3lie.gif",
+                   "http://orig07.deviantart.net/d3a5/f/2011/357/b/3/gota_go_fsat_sanic_by_kynquinhe-d4jyyd5.gif"]
+        await self.bot.say(randchoice(fast))
+        
+    @commands.command()
+    async def sanic(self):
+        """Fastest thing alive! SAAANIC!"""
+        await self.bot.say("http://orig04.deviantart.net/1239/f/2015/186/7/e/oh_sanic_by_reborngamergirl-d8zzixx.gif")
+        
+    @commands.command()
+    async def dinkleberg(self):
+        """Mr. Turner...!!!"""
+        await self.bot.say("http://img01.deviantart.net/4bef/i/2013/008/3/a/dinkleberg__by_akari_61-d5qwvqg.jpg")
+        
+    @commands.command()
     async def mfw(self):
         """It's not really my face though."""
         mfw = ["https://cdn.discordapp.com/attachments/173967012123377664/200676850446499841/unknown.png",
