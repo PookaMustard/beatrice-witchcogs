@@ -19,15 +19,14 @@ class isitdown:
         if "http://" not in url or "https://" not in url:
             url = "http://" + url
         try:
-            await self.bot.say("Testing " + url + "…")
-            response = await aiohttp.get(url, headers = { 'user_agent': headers }, timeout = 15)
-            if response.status_code == 200:
-                await self.bot.say(url + " is up and running.")
-            else:
-                await self.bot.say(url + " is down.")
-        except requests.exceptions.Timeout:
-            await self.bot.say(url + " is down.")
-        except requests.exceptions.ConnectionError:
+            with aiohttp.Timeout(0.001):
+                await self.bot.say("Testing " + url + "…")
+                response = await aiohttp.get(url, headers = { 'user_agent': headers })
+                if response.status == 200:
+                    await self.bot.say(url + " is up and running.")
+                else:
+                    await self.bot.say(url + " is down.")
+        except asyncio.TimeoutError:
             await self.bot.say(url + " is down.")
             
 
