@@ -127,5 +127,10 @@ class randvideos:
         """Sheeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeit."""
         await self.bot.say("https://www.youtube.com/watch?v=70eU840lc38")
 
+    @commands.command()
+    async def lavos(self):
+        """The destroyer of all life."""
+        await self.bot.say("https://www.youtube.com/watch?v=Dfb_n7wjb5k")
+
 def setup(bot):
     bot.add_cog(randvideos(bot))
