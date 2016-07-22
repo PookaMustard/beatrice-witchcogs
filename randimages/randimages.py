@@ -273,7 +273,8 @@ class randimages:
                    "http://i0.kym-cdn.com/news_feeds/icons/mobile/000/020/528/fa1.jpg",
                    "https://s-media-cache-ak0.pinimg.com/236x/51/0f/a8/510fa8e2a1874b4916f6ab42d3affabd.jpg",
                    "https://www.ponychan.net/site/src/1454799320298.png",
-                   "http://i3.kym-cdn.com/photos/images/newsfeed/001/146/898/c9c.jpg"]
+                   "http://i3.kym-cdn.com/photos/images/newsfeed/001/146/898/c9c.jpg",
+                   "http://i3.kym-cdn.com/photos/images/newsfeed/001/149/437/656.jpeg"]
         await self.bot.say(randchoice(delete))
         
     @commands.command()
