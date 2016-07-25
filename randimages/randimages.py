@@ -699,7 +699,22 @@ class randimages:
     async def boo(self):
         """ULTRA SCARY."""
         await self.bot.say("http://i.imgur.com/4HbsKX1.gif")
+        
+    @commands.command()
+    async def boobs(self):
+        """They're actually called 'breasts'."""
+        await self.bot.say("https://images-1.discordapp.net/eyJ1cmwiOiJodHRwczovL2Rpc2NvcmQuc3RvcmFnZS5nb29nbGVhcGlzLmNvbS9hdHRhY2htZW50cy8xOTYwNTE2MjIwNTUzNzg5NTMvMjA2OTYxMTQyODU2Mjg2MjA4L0lNR18wNzA3LkpQRyJ9.e3THm8veQKcypRtpQwDsBxMV-Xk.JPG")
 
+    @commands.command()
+    async def panic(self):
+        """What do I do?"""
+        await self.bot.say("https://66.media.tumblr.com/67a97b5fdc620787d6bf194acdce77f5/tumblr_myxbzcPXGX1qlaxh8o1_400.gif")
+        
+    @commands.command()
+    async def nofucks(self):
+        """Instead of asking doctor who, I present you with a toad."""
+        await self.bot.say("http://66.media.tumblr.com/8cd342cd9f94126ac6bd79f5bb3af7b4/tumblr_mqm5bwyHQR1qlaxh8o1_400.gif")  
+        
     @commands.command()
     async def doge(self):
         """Awww......"""
