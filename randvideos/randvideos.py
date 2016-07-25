@@ -132,5 +132,20 @@ class randvideos:
         """The destroyer of all life."""
         await self.bot.say("https://www.youtube.com/watch?v=Dfb_n7wjb5k")
 
+    @commands.command()
+    async def xfiles(self):
+        """The truth is out there. Also the juice."""
+        await self.bot.say("https://www.youtube.com/watch?v=rbBX6aEzEz8")
+
+    @commands.command()
+    async def hentai(self):
+        """We all know where this is going…"""
+        await self.bot.say("https://www.youtube.com/watch?v=IADecNcyVfg")
+
+    @commands.command()
+    async def smash4(self):
+        """Get smashed."""
+        await self.bot.say("https://www.youtube.com/watch?v=RDgUFMf7V0Y")
+
 def setup(bot):
     bot.add_cog(randvideos(bot))
