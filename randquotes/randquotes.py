@@ -93,7 +93,9 @@ class randquotes:
         """And you thought Navi was bad?""" 
         sjw = ["You're an SJW? So you're a salty juvenile wiener?","SJW: Shameful Jackass Whiner",
                "SJW: Supreme Jackass Whiner","SJW: Super-triggered Justiceless Wanker",
-               "https://didyoumean-generator.com/did-you-means/20160714/did-you-mean-66fab343163deb1bac408f4fb30587b4.png"]
+               "https://didyoumean-generator.com/did-you-means/20160714/did-you-mean-66fab343163deb1bac408f4fb30587b4.png",
+               "https://cdn.discordapp.com/attachments/207125729299791872/207125770290724865/did-you-mean-dae1b82b3c53652f0c39650bb2a4ce15.png",
+               "https://cdn.discordapp.com/attachments/207125729299791872/207125925341560834/did-you-mean-254474a60c4671709b250cafe0a9b9a1.png"]
         await self.bot.say(randchoice(sjw))
         
     @commands.command()
@@ -114,8 +116,9 @@ class randquotes:
 
     @commands.command()
     async def giga(self):
-        """Salami the Multivitamin"""
-        await self.bot.say("MMMMMMMMMMH :heart:")
+        """Salami the Multivitamin""" 
+        giga = ["MMMMMMMMMMH :heart:","https://cdn.discordapp.com/attachments/173967012123377664/207128827971895296/unknown.png"]
+        await self.bot.say(randchoice(giga))
         
     @commands.command()
     async def sonic(self):
