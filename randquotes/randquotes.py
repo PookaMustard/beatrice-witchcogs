@@ -100,6 +100,11 @@ class randquotes:
                "https://cdn.discordapp.com/attachments/207125729299791872/207125925341560834/did-you-mean-254474a60c4671709b250cafe0a9b9a1.png"]
         await self.bot.say(randchoice(sjw))
         
+    commands.command()
+    async def debugquote(self):
+        """But nobody came."""
+        await self.bot.say("Oooooooooi, zentê!")
+        
     @commands.command()
     async def navyseal(self):
         """You read this already, probably."""
