@@ -102,8 +102,13 @@ class randquotes:
         
     commands.command()
     async def debugquote(self):
-        """But nobody came."""
+        """But nobody came remixed."""
         await self.bot.say("Oooooooooi, zentê!")
+        
+    commands.command()
+    async def debugquote2(self):
+        """But nobody came remastered."""
+        await self.bot.say("I love Flowey!") 
         
     @commands.command()
     async def navyseal(self):
