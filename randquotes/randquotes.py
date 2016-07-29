@@ -122,6 +122,28 @@ class randquotes:
         """Provided to you by ElectricSparx""" 
         es = ["```Your hypocrisy is delicious, your stupidity is spicy, and your ignorance is bland.```\n-ElectricSparx"]
         await self.bot.say(randchoice(es))
+        
+    @commands.command() 
+    async def minha(self):
+        """Provided to you by Minha Vida Ordinaria""" 
+        minha = ["```Laughter like that of a sea lion having a stroke.```\n-Minha",
+        "```I am a lot of quotables```\n-Minha",
+        "```Allergic to practically every Liac design.```\n-Minha",
+        "```BAKABAKABAKABAKABAKABAKABAKABAKABAKABAKABAKA```\n-Minha",
+        "```You're going to die until you get killed!```\n-Minha",
+        "```Nananannananaananannaannanananananananananananananananananana's Buried Treasure. Starring Nananananananananananananananannanananananananananananananananananannananana. Nanananananananananananananana. Nanananananannaana.```\n-Minha",
+        "```Enjoy! It's join!```\n-Minha",
+        "```Oooooooooi, zente!```\n-Minha",
+        "```This is zelicious.```\n-Minha",
+        "```The cast of Freedom Planet: Liac, Corol, Butter, Tork, Clover, Gavondorf, Syntagma, Snakeface, Prince Dale, Mayor Jaw, General Panda, Nazeera, and Liac's Dad.```\n-Minha",
+        "```Make them bigger.```\n-Minha",
+        "```Can you make them bigger?```\n-Minha",
+        "```I'd like them bigger please.```\n-Minha",
+        "```My favorite Kirby boss attack: ERASURE CANNON```\n-Minha",
+        "```OFFICIAL LIAC DESIGNS MAKE ME BLEED FROM THE EYES AAAAAAAAAHHHHHHHHH```\n-Minha",
+        "```I was introduced to FP via this shitty porn and all I got was this stupid trauma. And no T-shirt.```\n-Minha",
+        "```You can't be a close friend of mine unless you've seriously hurt me emotionally and we managed to make it up after all. Three times.```\n-Minha"]
+        await self.bot.say(randchoice(minha))
 
     @commands.command()
     async def giga(self):
