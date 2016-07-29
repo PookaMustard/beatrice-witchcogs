@@ -116,6 +116,12 @@ class randquotes:
         """The study of mathematical models of conflict and cooperation between intelligent rational decision-makers. Apparently.""" 
         gametheory = ["Game Theory: MatPat is a SHAMELESS MONEYGRABBING CUNT?!?!","Why i gave the pope bayonetta"]
         await self.bot.say(randchoice(gametheory))
+        
+    @commands.command() 
+    async def esquotes(self):
+        """Provided to you by ElectricSparx""" 
+        es = ["```Your hypocrisy is delicious, your stupidity is spicy, and your ignorance is bland.```\n-ElectricSparx"]
+        await self.bot.say(randchoice(es))
 
     @commands.command()
     async def giga(self):
