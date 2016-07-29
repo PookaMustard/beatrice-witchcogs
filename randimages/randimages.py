@@ -594,9 +594,14 @@ class randimages:
         await self.bot.say("http://i.imgur.com/dGOfP7L.png")
         
     @commands.command()
+    async def poke(self):
+        """Do not poke the Not!Mew"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/207593380937596928/unknown.png")
+        
+    @commands.command()
     async def puppy(self):
         """Mood Milla"""
-        puppy = ["http://i.imgur.com/mnI1tkU.png", "https://cdn.discordapp.com/attachments/203898055232192512/204015895519952896/unknown.png"]
+        puppy = ["http://i.imgur.com/mnI1tkU.png", "https://cdn.discordapp.com/attachments/203898055232192512/204015895519952896/unknown.png", "https://cdn.discordapp.com/attachments/174342349458112512/207727604671840257/Milla_Full-body_-_v1.0.png"]
         await self.bot.say(randchoice(puppy))
         
     @commands.command()
@@ -608,6 +613,11 @@ class randimages:
     async def error(self):
         """Teleporting...bread?"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202441867575427072/unknown.png")
+        
+    @commands.command()
+    async def sadbingo(self):
+        """Ever heard of sad multivas?"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/189888913668571146/208350639850258432/unknown.png")
         
     @commands.command()
     async def iseeit(self):
