@@ -11,38 +11,38 @@ class randquotes:
     def __init__(self, bot): 
         self.bot = bot 
 
-    @commands.command 
+    @commands.command()
     async def steamrant(self): 
         """No. Ice.""" 
         await self.bot.say("In order to use Steam, you have to sign yourself into a contract which basically says \"YOU OWN NOTHING.\" The end result is that you end up buying licenses to games, which they can revoke anytime they wanted. They require the internet for the validation of licenses, which shouldn't be a requirement to play single player games. This results in an ecosystem that basically controls the titles you owned and gives you none of it, forcing you to stay into the ecosystem through the client to play the games you bought even if you don't want the client.")
         await self.bot.say("The best part about all of this is that they can change their contract terms and retroactively apply it onto all the games bought under the previous term. If you don't accept the changes, your account is terminated along with the licenses you've bought under the old terms. You only get to keep the licenses you bought under the old terms IF you agree to them retroactively applying the new terms onto them.")
         await self.bot.say("The end.")
 
-    @commands.command 
+    @commands.command()
     async def callforhelp(self): 
         """I hate Flowey.""" 
         await self.bot.say("But nobody came.")
 
-    @commands.command 
+    @commands.command()
     async def badtime(self): 
         """Sans Strikes Back.""" 
         badtime = ["You don't really want to click this link!\nhttps://jcw87.github.io/c2-sans-fight/",
                    "You don't really want to click this link!\nhttps://joezeng.github.io/endless-sans/"]
         await self.bot.say(randchoice(badtime))
 
-    @commands.command()$
+    @commands.command()
     async def fairdyne(self):
         """The Undying"""
         await self.bot.say("NGAHHH!!\nhttps://joezeng.github.io/fairdyne/")
 
-    @commands.command 
+    @commands.command()
     async def ia(self): 
         """INDIE ASSAULTED""" 
         ia = ["I would like to report this game for Indie Sexual Assault", "Spade was based off Sonic right? Then why is everyone complaining that he has a spindash?",
               "https://youtu.be/5XsLEXSyINs"]
         await self.bot.say(randchoice(ia))
 
-    @commands.command 
+    @commands.command()
     async def fi(self): 
         """And you thought Navi was bad?""" 
         fi = ["YOUR BATTERIES ARE LOW, LINK.", "GOTTA BUY NEW BATTERIES, LINK!",
@@ -90,7 +90,7 @@ class randquotes:
                    ]
             return await self.bot.say(randchoice(mn9))
 
-    @commands.command()$
+    @commands.command()
     async def sjw(self): 
         """And you thought Navi was bad?""" 
         sjw = ["You're an SJW? So you're a salty juvenile wiener?","SJW: Shameful Jackass Whiner",
@@ -100,69 +100,69 @@ class randquotes:
                "https://cdn.discordapp.com/attachments/207125729299791872/207125925341560834/did-you-mean-254474a60c4671709b250cafe0a9b9a1.png"]
         await self.bot.say(randchoice(sjw))
 
-    @commands.command()$
+    @commands.command()
     async def debugquote(self):
         """But nobody came remixed."""
         await self.bot.say("Oooooooooi, zentê!")
 
-    @commands.command()$
+    @commands.command()
     async def debugquote2(self):
         """But nobody came remastered."""
         await self.bot.say("I love Flowey!") 
 
-    @commands.command()$
+    @commands.command()
     async def negotiations(self):
         """The negotiations..."""
         nego = ["NEGOTIATIONS HAS FAILED", "NEGOTIATIONS HAS SUCCEEDED."]
         await self.bot.say(randchoice(nego)) 
 
-    @commands.command()$
+    @commands.command()
     async def bootleg(self):
         """Even I don't know what this command does."""
         bootleg = ["Ribbon Sunflower", "Karen Coffee", "Force", "Mary Shepherd"]
         await self.bot.say(randchoice(bootleg)) 
 
-    @commands.command()$
+    @commands.command()
     async def sonicquotes(self):
         """From a user named Sonic!"""
         sonicu = ["```i have a shirt on.```\n-Sonic"]
         await self.bot.say(randchoice(sonicu)) 
 
-    @commands.command()$
+    @commands.command()
     async def romanlifeadvice(self):
         """Life advice from Roman!"""
         romanlife = ["```Always ask the bot for support. ```\n-Roman", "```The bot knows best. ```\n-Roman",
                      "```When you're lonely, talk to a bot. ```\n-Roman"]
         await self.bot.say(randchoice(romanlife)) 
 
-    @commands.command()$
+    @commands.command()
     async def bingo(self):
         """What is a multiva?"""
         await self.bot.say("WHAT THE FUCK IS A MULTIVA?! ") 
 
-    @commands.command()$
+    @commands.command()
     async def navyseal(self):
         """You read this already, probably."""
         await self.bot.say("```What the fuck did you just fucking say about me, you little bitch? I’ll have you know I graduated top of my class in the Navy Seals, and I’ve been involved in numerous secret raids on Al-Quaeda, and I have over 300 confirmed kills. I am trained in gorilla warfare and I’m the top sniper in the entire US armed forces. You are nothing to me but just another target. I will wipe you the fuck out with precision the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of spies across the USA and your IP is being traced right now so you better prepare for the storm, maggot. The storm that wipes out the pathetic little thing you call your life. You’re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that’s just with my bare hands. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little “clever” comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn’t, you didn’t, and now you’re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You’re fucking dead, kiddo.```")
 
-    @commands.command()$
+    @commands.command()
     async def redrant(self):
         """Salt, RedScarf-style"""
         await self.bot.say("```well, that's what happens when blah blah blah battleaxe blah blah blah broken promises blah blah blah abuse of power blah blah blah```")
 
-    @commands.command 
+    @commands.command()
     async def gametheory(self):
         """The study of mathematical models of conflict and cooperation between intelligent rational decision-makers. Apparently.""" 
         gametheory = ["Game Theory: MatPat is a SHAMELESS MONEYGRABBING CUNT?!?!","Why i gave the pope bayonetta"]
         await self.bot.say(randchoice(gametheory))
 
-    @commands.command 
+    @commands.command()
     async def esquotes(self):
         """Provided to you by ElectricSparx""" 
         es = ["```Your hypocrisy is delicious, your stupidity is spicy, and your ignorance is bland.```\n-ElectricSparx"]
         await self.bot.say(randchoice(es))
 
-    @commands.command 
+    @commands.command()
     async def minha(self):
         """Provided to you by Minha Vida Ordinaria""" 
         minha = ["```Laughter like that of a sea lion having a stroke.```\n-Minha",
@@ -185,13 +185,13 @@ class randquotes:
         "```I'm going to the body shop to change the type of person I am!```\n-Minha"]
         await self.bot.say(randchoice(minha))
 
-    @commands.command()$
+    @commands.command()
     async def giga(self):
         """Salami the Multivitamin""" 
         giga = ["MMMMMMMMMMH :heart:","https://cdn.discordapp.com/attachments/173967012123377664/207128827971895296/unknown.png"]
         await self.bot.say(randchoice(giga))
 
-    @commands.command()$
+    @commands.command()
     async def sonic(self):
         """GOTTAGOFAST"""
         sonic = ["***YOU'RE TOO SLOW!***","Let's do it to it!","Hands off my chilli dogs!","Way past cool!","Catch you later, Eggman!"]
