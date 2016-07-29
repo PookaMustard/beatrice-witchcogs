@@ -110,6 +110,36 @@ class randquotes:
         """But nobody came remastered."""
         await self.bot.say("I love Flowey!") 
         
+    commands.command()
+    async def negotiations(self):
+        """The negotiations..."""
+        nego = ["NEGOTIATIONS HAS FAILED", "NEGOTIATIONS HAS SUCCEEDED."]
+        await self.bot.say(randchoice(nego)) 
+        
+    commands.command()
+    async def bootleg(self):
+        """Even I don't know what this command does."""
+        bootleg = ["Ribbon Sunflower", "Karen Coffee", "Force", "Mary Shepherd"]
+        await self.bot.say(randchoice(bootleg)) 
+        
+    commands.command()
+    async def sonicquotes(self):
+        """From a user named Sonic!"""
+        sonicu = ["```i have a shirt on.```\n-Sonic"]
+        await self.bot.say(randchoice(sonicu)) 
+        
+    commands.command()
+    async def romanlifeadvice(self):
+        """Life advice from Roman!"""
+        romanlife = ["```Always ask the bot for support. ```\n-Roman", "```The bot knows best. ```\n-Roman",
+                     "```When you're lonely, talk to a bot. ```\n-Roman"]
+        await self.bot.say(randchoice(romanlife)) 
+        
+    commands.command()
+    async def bingo(self):
+        """What is a multiva?"""
+        await self.bot.say("WHAT THE FUCK IS A MULTIVA?! ") 
+        
     @commands.command()
     async def navyseal(self):
         """You read this already, probably."""
@@ -151,7 +181,8 @@ class randquotes:
         "```My favorite Kirby boss attack: ERASURE CANNON```\n-Minha",
         "```OFFICIAL LIAC DESIGNS MAKE ME BLEED FROM THE EYES AAAAAAAAAHHHHHHHHH```\n-Minha",
         "```I was introduced to FP via this shitty porn and all I got was this stupid trauma. And no T-shirt.```\n-Minha",
-        "```You can't be a close friend of mine unless you've seriously hurt me emotionally and we managed to make it up after all. Three times.```\n-Minha"]
+        "```You can't be a close friend of mine unless you've seriously hurt me emotionally and we managed to make it up after all. Three times.```\n-Minha",
+        "```I'm going to the body shop to change the type of person I am!```\n-Minha"]
         await self.bot.say(randchoice(minha))
 
     @commands.command()
