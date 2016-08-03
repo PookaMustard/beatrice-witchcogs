@@ -110,7 +110,7 @@ class randquotes:
     @commands.command()
     async def irquotes(self):
         """Presented by Impossible Realms!"""
-        irq = [```"HOW ABOUT AN AU WHERE SHANTAE IS A MALE.```\nMens Rights Activists complain about how she is an objectification of men."]
+        irq = ["```HOW ABOUT AN AU WHERE SHANTAE IS A MALE.```\nMens Rights Activists complain about how she is an objectification of men."]
         await self.bot.say(randchoice(irq)) 
 
     @commands.command()
