@@ -598,6 +598,12 @@ class randimages:
         await self.bot.say(randchoice(sans))
         
     @commands.command()
+    async def toriel(self):
+        """The Caretaker of the Ruins"""
+        gettutorials = ["http://i.imgur.com/U84yd9d.png", "http://i.imgur.com/tiqY2on.png", "http://i.imgur.com/FZRwh86.png"]
+        await self.bot.say(randchoice(gettutorials))
+        
+    @commands.command()
     async def flowey(self):
         """In this world, it's KILL or be KILLED. I think..."""
         flowey = ["http://i.imgur.com/66t5QUc.jpg"]
