@@ -598,6 +598,30 @@ class randimages:
         await self.bot.say(randchoice(sans))
         
     @commands.command()
+    async def flowey(self):
+        """In this world, it's KILL or be KILLED. I think..."""
+        flowey = ["http://i.imgur.com/66t5QUc.jpg"]
+        await self.bot.say(randchoice(flowey))
+        
+    @commands.command()
+    async def asriel(self):
+        """In this world, it's SHRUG or be SHRUGGED. Ho?"""
+        asriel = ["https://67.media.tumblr.com/853f0b2013920b1a660115d538cf83f3/tumblr_nvwaot5Q861r9xrggo3_400.gif"]
+        await self.bot.say(randchoice(asriel))
+        
+    @commands.command()
+    async def nomercy(self):
+        """Bye, MERCY button!"""
+        nomercy = ["http://i.makeagif.com/media/11-22-2015/F2Q8G0.gif"]
+        await self.bot.say(randchoice(nomercy)) 
+        
+    @commands.command()
+    async def asgore(self):
+        """Howdy! Want to have some tea?"""
+        asgore = ["http://vignette2.wikia.nocookie.net/undertale/images/f/f1/Untitled-3.png/revision/latest?cb=20151228183442"]
+        await self.bot.say(randchoice(asgore)) 
+        
+    @commands.command()
     async def papyrus(self):
         """(PAPYRUS FONT): UNDERTALE PAPYRUS"""
         pap = ["https://images-2.discordapp.net/.eJwVx9sNgCAMAMBdGIAWVHws4QwECZqoJbT6Y9xdTO7nHnWVXU1qFck8ASwbByqLZqHiU9SJKO3R5411oAO8iA_rEU9hML1FdF1lu8ahsSNYHFo3mNpf7xBhvmedz6TeD3e2IM8.9CW2o13A9Lm0mQp_HbONhp-igtc.png"]
