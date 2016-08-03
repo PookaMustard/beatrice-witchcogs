@@ -95,6 +95,7 @@ class randquotes:
         """And you thought Navi was bad?""" 
         sjw = ["You're an SJW? So you're a salty juvenile wiener?","SJW: Shameful Jackass Whiner",
                "SJW: Supreme Jackass Whiner","SJW: Super-triggered Justiceless Wanker",
+               "SJW: Sexist Jerkass Whiner",
                "https://didyoumean-generator.com/did-you-means/20160714/did-you-mean-66fab343163deb1bac408f4fb30587b4.png",
                "https://cdn.discordapp.com/attachments/207125729299791872/207125770290724865/did-you-mean-dae1b82b3c53652f0c39650bb2a4ce15.png",
                "https://cdn.discordapp.com/attachments/207125729299791872/207125925341560834/did-you-mean-254474a60c4671709b250cafe0a9b9a1.png"]
@@ -105,6 +106,12 @@ class randquotes:
         """The negotiations..."""
         nego = ["NEGOTIATIONS HAS FAILED", "NEGOTIATIONS HAS SUCCEEDED."]
         await self.bot.say(randchoice(nego)) 
+        
+    @commands.command()
+    async def irquotes(self):
+        """Presented by Impossible Realms!"""
+        irq = [```"HOW ABOUT AN AU WHERE SHANTAE IS A MALE.```\nMens Rights Activists complain about how she is an objectification of men."]
+        await self.bot.say(randchoice(irq)) 
 
     @commands.command()
     async def bootleg(self):
@@ -129,6 +136,11 @@ class randquotes:
     async def bingo(self):
         """What is a multiva?"""
         await self.bot.say("WHAT THE FUCK IS A MULTIVA?! ") 
+        
+    @commands.command()
+    async def ridley(self):
+        """What? What?! WHAT?!"""
+        await self.bot.say("IT'S A-LIVING!") 
 
     @commands.command()
     async def navyseal(self):
@@ -160,6 +172,14 @@ class randquotes:
             return await self.bot.say("```Clearly, thou hast been blessed by the almighty RNGesus.```\n-ElectricSparx")
         else:
             return await self.bot.say(randchoice(es))
+            
+    @commands.command()
+    async def pooka(self):
+        """Provided to you by my master!"""
+        pooka = ["```\"And I think to myself! What a wonderful world!\"```\n-Not a quote from Pooka, ironically.",
+                 "```Never existing is the newest trend in retiring, indeed!```\n-Pooka",
+                 "```I am not triggered. I am gainaxed.```\n-Pooka"]
+        await self.bot.say(randchoice(pooka))
 
     @commands.command()
     async def minha(self):
