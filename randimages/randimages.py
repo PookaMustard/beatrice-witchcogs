@@ -358,9 +358,23 @@ class randimages:
         await self.bot.say('http://orig15.deviantart.net/9a5f/f/2011/308/e/9/kirby___the_meta_shoe_by_minon-d4f2bt1.png')
         
     @commands.command()
+    async def shark(self):
+        """Cliche shark movies. Not?"""
+        await self.bot.say('https://images-ext-2.discordapp.net/eyJ1cmwiOiJodHRwOi8vaTMua3ltLWNkbi5jb20vcGhvdG9zL2ltYWdlcy9uZXdzZmVlZC8wMDEvMTU0LzM3OC9kYWIuZ2lmIn0.5b03lJNfumY4RbDn6kqQ3aP9E7I.gif')
+        
+    @commands.command()
     async def triggered(self):
         """IT'S NO USE!"""
-        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png')
+        trig = ["https://cdn.discordapp.com/attachments/173967012123377664/209860253033037825/chompistriggered.gif",
+                "https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png"]
+        await self.bot.say(randchoice(trig))
+        
+    @commands.command()
+    async def shitstorm(self):
+        """The calm before the typhoon."""
+        trig = ["http://i2.kym-cdn.com/photos/images/facebook/000/358/764/bb0.png",
+                "http://i2.kym-cdn.com/photos/images/facebook/000/091/829/8b1.png"]
+        await self.bot.say(randchoice(trig))
         
     @commands.command()
     async def throwyourselfout(self):
@@ -584,6 +598,12 @@ class randimages:
         await self.bot.say(randchoice(sans))
         
     @commands.command()
+    async def papyrus(self):
+        """(PAPYRUS FONT): UNDERTALE PAPYRUS"""
+        pap = ["https://images-2.discordapp.net/.eJwVx9sNgCAMAMBdGIAWVHws4QwECZqoJbT6Y9xdTO7nHnWVXU1qFck8ASwbByqLZqHiU9SJKO3R5411oAO8iA_rEU9hML1FdF1lu8ahsSNYHFo3mNpf7xBhvmedz6TeD3e2IM8.9CW2o13A9Lm0mQp_HbONhp-igtc.png"]
+        await self.bot.say(randchoice(pap))
+        
+    @commands.command()
     async def getdunkedon(self):
         """(comic sans font): what it says"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173965999744221185/195698701904117761/sansdunk.png")
@@ -592,6 +612,12 @@ class randimages:
     async def saltae(self):
         """What do you call an angry half-genie?"""
         await self.bot.say("http://i.imgur.com/dGOfP7L.png")
+        
+    @commands.command()
+    async def romanabominations(self):
+        """Abominations by Roman!"""
+        roab = ["https://cdn.discordapp.com/attachments/173966944351944704/209431917378928640/unknown.png"]
+        await self.bot.say(randchoice(roab))
         
     @commands.command()
     async def poke(self):
@@ -656,7 +682,7 @@ class randimages:
         await self.bot.say("http://imgur.com/6zcE2Vz")
         
     @commands.command()
-    async def zawurado(self):
+    async def zawarudo(self):
         """Flashing images. Please consult your doctor."""
         await self.bot.say("http://38.media.tumblr.com/c2d4006f53aa908b6de083ee4a7672d3/tumblr_n5xz2qbEmM1r6mrcio3_250.gif")
 
