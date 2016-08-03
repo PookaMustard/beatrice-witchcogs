@@ -156,7 +156,7 @@ class randquotes:
               "```I'm not lazy, just unmotivated.```\n-ElectricSparx",
               "```There is always time for sin.```\n-ElectricSparx"
               ]
-        if chance <= 95:
+        if chance <= 5:
             return await self.bot.say("```Clearly, thou hast been blessed by the almighty RNGesus.```\n-ElectricSparx")
         else:
             return await self.bot.say(randchoice(es))
