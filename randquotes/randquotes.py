@@ -149,8 +149,17 @@ class randquotes:
     @commands.command()
     async def esquotes(self):
         """Provided to you by ElectricSparx""" 
-        es = ["```Your hypocrisy is delicious, your stupidity is spicy, and your ignorance is bland.```\n-ElectricSparx"]
-        await self.bot.say(randchoice(es))
+        chance = randint(1,100)
+        es = ["```Your hypocrisy is delicious, your stupidity is spicy, and your ignorance is bland.```\n-ElectricSparx",
+              "```Unsurprisingly, your edginess is rather painful.```\n-ElectricSparx",
+              "```Ironically, a JonTron voice will not, in fact, work in this situation.```\n-ElectricSparx",
+              "```I'm not lazy, just unmotivated.```\n-ElectricSparx",
+              "```There is always time for sin.```\n-ElectricSparx"
+              ]
+        if chance <= 95:
+            return await self.bot.say("```Clearly, thou hast been blessed by the almighty RNGesus.```\n-ElectricSparx")
+        else:
+            return await self.bot.say(randchoice(es))
 
     @commands.command()
     async def minha(self):
@@ -179,7 +188,7 @@ class randquotes:
         "```I once won a prize for singing a song I hate sung by an artist I hate. At least I wasn't also hungover that year.```\n-Minha",
         "```Or the geckos ate them.```\n-Minha",
         "```...are you ignoring reality again?```\n-Minha",
-        "```I can't approve of that. 's one of the few characters I have zero qualms with. I wonder what I was trying to say there.```\n-Minha",
+        "```I can't approve of that.  's one of the few  characters I have zero qualms with. I wonder what I was trying to say there.```\n-Minha",
         "```Every day a new dream.```\n-Minha"]
         await self.bot.say(randchoice(minha))
 
