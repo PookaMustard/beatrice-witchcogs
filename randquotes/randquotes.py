@@ -101,16 +101,6 @@ class randquotes:
         await self.bot.say(randchoice(sjw))
 
     @commands.command()
-    async def debugquote(self):
-        """But nobody came remixed."""
-        await self.bot.say("Oooooooooi, zentê!")
-
-    @commands.command()
-    async def debugquote2(self):
-        """But nobody came remastered."""
-        await self.bot.say("I love Flowey!") 
-
-    @commands.command()
     async def negotiations(self):
         """The negotiations..."""
         nego = ["NEGOTIATIONS HAS FAILED", "NEGOTIATIONS HAS SUCCEEDED."]
@@ -172,7 +162,7 @@ class randquotes:
         "```You're going to die until you get killed!```\n-Minha",
         "```Nananannananaananannaannanananananananananananananananananana's Buried Treasure. Starring Nananananananananananananananannanananananananananananananananananannananana. Nanananananananananananananana. Nanananananannaana.```\n-Minha",
         "```Enjoy! It's join!```\n-Minha",
-        "```Oooooooooi, zente!```\n-Minha",
+        "```Oooooooooi, zentê!```\n-Minha",
         "```This is zelicious.```\n-Minha",
         "```The cast of Freedom Planet: Liac, Corol, Butter, Tork, Clover, Gavondorf, Syntagma, Snakeface, Prince Dale, Mayor Jaw, General Panda, Nazeera, and Liac's Dad.```\n-Minha",
         "```Make them bigger.```\n-Minha",
@@ -182,7 +172,15 @@ class randquotes:
         "```OFFICIAL LIAC DESIGNS MAKE ME BLEED FROM THE EYES AAAAAAAAAHHHHHHHHH```\n-Minha",
         "```I was introduced to FP via this shitty porn and all I got was this stupid trauma. And no T-shirt.```\n-Minha",
         "```You can't be a close friend of mine unless you've seriously hurt me emotionally and we managed to make it up after all. Three times.```\n-Minha",
-        "```I'm going to the body shop to change the type of person I am!```\n-Minha"]
+        "```I'm going to the body shop to change the type of person I am!```\n-Minha",
+        "```Wubba-lubba-dub-dub!```\n-Minha",
+        "```Welcome to Ell-Eff-Arr's Cue An Ay! I'm Arr, and these are my co-hosts, Ell and Eff!```\n-Minha",
+        "```Camel tax.```\n-Minha",
+        "```I once won a prize for singing a song I hate sung by an artist I hate. At least I wasn't also hungover that year.```\n-Minha",
+        "```Or the geckos ate them.```\n-Minha",
+        "```...are you ignoring reality again?```\n-Minha",
+        "```I can't approve of that. 's one of the few characters I have zero qualms with. I wonder what I was trying to say there.```\n-Minha",
+        "```Every day a new dream.```\n-Minha"]
         await self.bot.say(randchoice(minha))
 
     @commands.command()
