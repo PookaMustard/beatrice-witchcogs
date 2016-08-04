@@ -672,6 +672,11 @@ class randimages:
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202441867575427072/unknown.png")
         
     @commands.command()
+    async def shitgetsreal(self):
+        """You don't want to be involved."""
+        await self.bot.say("http://images.akamai.steamusercontent.com/ugc/1613797962856652704/A8CE21DDA6B488764514BD502EB88014F7892A18/")
+        
+    @commands.command()
     async def sadbingo(self):
         """Ever heard of sad multivas?"""
         await self.bot.say("https://cdn.discordapp.com/attachments/189888913668571146/208350639850258432/unknown.png")
@@ -741,6 +746,11 @@ class randimages:
     async def fuckanime(self):
         """Use this after it enters 'Murica."""
         await self.bot.say("http://www.meh.ro/original/2009_11/meh.ro2857.jpg")
+
+    @commands.command()
+    async def nukejapan(self):
+        """You must do that. Clownpiece is an abomination."""
+        await self.bot.say("https://discordcdn.com/attachments/196051622055378953/210631730208571395/IMG_0631.JPG")
 
     @commands.command()
     async def pizza(self):
