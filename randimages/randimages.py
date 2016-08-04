@@ -692,6 +692,11 @@ class randimages:
         await self.bot.say("https://cdn.discordapp.com/attachments/184816492838256640/190986742227009538/IMG_0291.JPG")
         
     @commands.command()
+    async def disgust(self):
+        """You are very disgusted."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/196051622055378953/210878832012558336/IMG_0494.JPG")
+        
+    @commands.command()
     async def smugmode(self):
         """Smugging harder."""
         await self.bot.say("https://v.dreamwidth.org/27224/52508")
