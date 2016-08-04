@@ -141,6 +141,11 @@ class randquotes:
     async def ridley(self):
         """What? What?! WHAT?!"""
         await self.bot.say("IT'S A-LIVING!") 
+        
+    @commands.command()
+    async def rohan(self):
+        """But it refused?"""
+        await self.bot.say("```But, I refuse!```") 
 
     @commands.command()
     async def navyseal(self):
@@ -178,7 +183,8 @@ class randquotes:
         """Provided to you by my master!"""
         pooka = ["```\"And I think to myself! What a wonderful world!\"```\n-Not a quote from Pooka, ironically.",
                  "```Never existing is the newest trend in retiring, indeed!```\n-Pooka",
-                 "```I am not triggered. I am gainaxed.```\n-Pooka"]
+                 "```I am not triggered. I am gainaxed.```\n-Pooka",
+                 "```Oh. I thought it was a brand of cookies.```\n-Pooka"]
         await self.bot.say(randchoice(pooka))
 
     @commands.command()
