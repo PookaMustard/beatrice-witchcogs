@@ -68,6 +68,11 @@ class randvideos:
         await self.bot.say('https://soundcloud.com/epicrpgremixes/a-battle-of-grand-proportions')
         
     @commands.command()
+    async def granddadlovania(self):
+        """He's in this too."""
+        await self.bot.say('https://soundcloud.com/uncannier/granddadtale-genocide-finale-granelodadia-ft-joel-mega-mashup-remix-credits-in-desc')
+        
+    @commands.command()
     async def bubsylovania(self):
         """Bubsy + Megalovania"""
         await self.bot.say('https://soundcloud.com/seishunbeats/megalovania-but-played-entirely-with-bubsy-1-soundfonts')
