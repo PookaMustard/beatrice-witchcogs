@@ -215,7 +215,10 @@ class randquotes:
         "```Or the geckos ate them.```\n-Minha",
         "```...are you ignoring reality again?```\n-Minha",
         "```I can't approve of that.  's one of the few  characters I have zero qualms with. I wonder what I was trying to say there.```\n-Minha",
-        "```Every day a new dream.```\n-Minha"]
+        "```Every day a new dream.```\n-Minha",
+        "```You're just jealous because she's bigger in Pirate's Curse.```\n-Minha",
+        "```It's like getting Michael Schumacher to complain about how you drive.```\n-Minha",
+        "```ry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sor```\n-Minha"]
         await self.bot.say(randchoice(minha))
 
     @commands.command()
