@@ -179,7 +179,11 @@ class randquotes:
               "```Unsurprisingly, your edginess is rather painful.```\n-ElectricSparx",
               "```Ironically, a JonTron voice will not, in fact, work in this situation.```\n-ElectricSparx",
               "```I'm not lazy, just unmotivated.```\n-ElectricSparx",
-              "```There is always time for sin.```\n-ElectricSparx"
+              "```There is always time for sin.```\n-ElectricSparx",
+              "```Error 615: Intelligence Not Found```\n-ElectricSparx",
+              "```BRAIN has shut down to avoid damage from stupidity. Please reboot.```\n-ElectricSparx",
+              "```ERROR: Brain.dll was unable to be found.```\n-ElectricSparx",
+              "```I lack the ability to even give a nanoshit about whatever the fuck you just said.```\n-ElectricSparx"
               ]
         if chance <= 5:
             return await self.bot.say("```Clearly, thou hast been blessed by the almighty RNGesus.```\n-ElectricSparx")
