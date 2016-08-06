@@ -768,7 +768,7 @@ class randimages:
         await self.bot.say("http://www.tonysfoodphotos.com/data/photos/67_1stuffed_crust_pizza.jpg")
         
     @commands.command()
-    async def piracyself):
+    async def piracy(self):
         """Unskippable comments in your bought website."""
         await self.bot.say("http://farm5.static.flickr.com/4032/4369403959_fe90464b27_o.jpg")
   
