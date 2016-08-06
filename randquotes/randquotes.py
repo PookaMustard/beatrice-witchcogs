@@ -112,6 +112,14 @@ class randquotes:
         """Presented by Impossible Realms!"""
         irq = ["```HOW ABOUT AN AU WHERE SHANTAE IS A MALE.```\nMens Rights Activists complain about how she is an objectification of men."]
         await self.bot.say(randchoice(irq)) 
+        
+    @commands.command()
+    async def ultraquotes(self):
+        """From Ultrablockstar!"""
+        ultra = ["```I'm not very quotable...```\n-Ultrablockstar",
+                 "```I don't fucking care that the Wii and WiiU versions are inverted! Eldin is in the fucking East not the West!```\n-Ultrablockstar",
+                 "```Nintendo hates left-handed people now.```\n-Ultrablockstar"]
+        await self.bot.say(randchoice(ultra)) 
 
     @commands.command()
     async def bootleg(self):
