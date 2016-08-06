@@ -743,6 +743,11 @@ class randimages:
         await self.bot.say("http://robinbrown.co.uk/wp-content/uploads/2012/02/double-facepalm1.jpg")
         
     @commands.command()
+    async def facepaw(self):
+        """When the fail is meow enough."""
+        await self.bot.say("https://66.media.tumblr.com/e32e3b520e81c2cb8d3d88e754991327/tumblr_inline_obd8kq9Bse1t8eu9z_500.gif")
+    
+    @commands.command()
     async def animesucks(self):
         """Use this before it enters 'Murica."""
         await self.bot.say("http://i1.kym-cdn.com/photos/images/newsfeed/000/708/423/caf.jpg")
@@ -761,6 +766,11 @@ class randimages:
     async def pizza(self):
         """Oh boy I'm so hungry."""
         await self.bot.say("http://www.tonysfoodphotos.com/data/photos/67_1stuffed_crust_pizza.jpg")
+        
+    @commands.command()
+    async def piracyself):
+        """Unskippable comments in your bought website."""
+        await self.bot.say("http://farm5.static.flickr.com/4032/4369403959_fe90464b27_o.jpg")
   
     @commands.command()
     async def disappointed(self):
@@ -776,6 +786,16 @@ class randimages:
     async def gowrong(self):
         """What could possibly go wrong?"""
         await self.bot.say("http://i.imgur.com/o1DnKkL.png")
+        
+    @commands.command()
+    async def traitor(self):
+        """You Resistance scum!"""
+        await self.bot.say("http://i3.kym-cdn.com/photos/images/newsfeed/001/058/805/2ba.jpg")
+        
+    @commands.command()
+    async def yeaaaah(self):
+        """Let's do bizzare things!"""
+        await self.bot.say("http://i0.kym-cdn.com/photos/images/newsfeed/000/829/841/5e0.gif")
 
     @commands.command()
     async def boo(self):
