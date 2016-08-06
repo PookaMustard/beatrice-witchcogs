@@ -124,6 +124,14 @@ class randquotes:
         """From a user named Sonic!"""
         sonicu = ["```i have a shirt on.```\n-Sonic"]
         await self.bot.say(randchoice(sonicu)) 
+        
+    @commands.command()
+    async def plomquotes(self):
+        """Yes, the creator of that multiva has quotes too."""
+        plom = ["```does the break the rules?```\n-Plom510",
+                "```Screen my show```\n-Plom510",
+                "```What is the sum of 14 and 21?' I'm sorry, my brain isn't working to its fullest right now.```\n-Plom510"]
+        await self.bot.say(randchoice(plom)) 
 
     @commands.command()
     async def romanlifeadvice(self):
