@@ -138,6 +138,12 @@ class randquotes:
         await self.bot.say(randchoice(sonicu)) 
         
     @commands.command()
+    async def pokefanquotes(self):
+        """From Pokefan!"""
+        pokefan = ["```>7 houndred\nOH GOD, HE'S GOING MAXIMUM DOG, EVERYONE RUN!```\n-Pokefan"]
+        await self.bot.say(randchoice(pokefan)) 
+        
+    @commands.command()
     async def plomquotes(self):
         """Yes, the creator of that multiva has quotes too."""
         plom = ["```does the break the rules?```\n-Plom510",
