@@ -512,6 +512,21 @@ class randimages:
         """Correctly correct!"""
         await self.bot.say('https://cdn.discordapp.com/attachments/173965999744221185/192432893694443522/TBKOC.jpg')
         
+    @commands.command()
+    async def ironysales(self):
+        """A  sale? That's cute..."""
+        await self.bot.say('http://ci.memecdn.com/125/9837125.jpg')
+        
+    @commands.command()
+    async def bananaears(self):
+        """Bananas for your ears."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/196713723182710784/211582717060579328/creationist_asshole.gif')
+        
+    @commands.command()
+    async def exeggutor(self):
+        """You're dimma-tall!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/211648917480144896/CpBhDz5UIAAwS1d.png')
+        
     @commands.command(hidden=True)
     async def cloudi(self):
         """Cloudi"""
