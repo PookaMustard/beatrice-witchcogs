@@ -208,7 +208,7 @@ class randquotes:
         pooka = ["```\"And I think to myself! What a wonderful world!\"```\n-Not a quote from Pooka, ironically.",
                  "```Never existing is the newest trend in retiring, indeed!```\n-Pooka",
                  "```I am not triggered. I am gainaxed.```\n-Pooka",
-                 "***If you complain about us criticizing GT again...may the odds be in your favor.***\n-***Chara***",
+                 "***If you complain about us criticizing GT again...may the odds be in your favor.\n-Pooka***",
                  "```Oh. I thought it was a brand of cookies.```\n-Pooka"]
         await self.bot.say(randchoice(pooka))
 
