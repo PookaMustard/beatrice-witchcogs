@@ -79,9 +79,9 @@ class randimages:
     async def chara(self):
         """Now this face is good. = )"""
         chance = randint(1,1000)
-        if chance <= 750:
+        if chance <= 950:
             return await self.bot.say('=)\nhttp://imgur.com/download/DJGxtu7')
-        elif chance <= 950:
+        elif chance <= 995:
             return await self.bot.say(':)\nhttp://imgur.com/download/DqPfvHB')
         else:
             return await self.bot.say('https://images-1.discordapp.net/.eJwVx10OwiAMAOC7cABqt_KzXcY0DIGEyUKrL8a7G7-372Nes5vdVNVLdoCjSRrzsKJjcsm2jFF65quJTeMEVuVUz_xUAdxwCX7FiCFuK4VIsNzcf-S8jw4xEEF-t55F76nyZFvaw3x_44IlKg.u4gRjc9h4xSj0qE6LRLG_KtxQDA.gif')
