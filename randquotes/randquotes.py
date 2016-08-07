@@ -118,7 +118,11 @@ class randquotes:
         """From Ultrablockstar!"""
         ultra = ["```I'm not very quotable...```\n-Ultrablockstar",
                  "```I don't fucking care that the Wii and WiiU versions are inverted! Eldin is in the fucking East not the West!```\n-Ultrablockstar",
-                 "```Nintendo hates left-handed people now.```\n-Ultrablockstar"]
+                 "```Nintendo hates left-handed people now.```\n-Ultrablockstar",
+                 "```Am I the only one who scrolls up and read dates?```\n-Ultrablockstar",
+                 "```Steam Workshop is a limited piece of crap and sucks all the creativity out of people.```\n-Ultrablockstar",
+                 "```The Anti-DRM God has spoken!!!```\n-Ultrablockstar"
+                 ]
         await self.bot.say(randchoice(ultra)) 
 
     @commands.command()
@@ -204,6 +208,7 @@ class randquotes:
         pooka = ["```\"And I think to myself! What a wonderful world!\"```\n-Not a quote from Pooka, ironically.",
                  "```Never existing is the newest trend in retiring, indeed!```\n-Pooka",
                  "```I am not triggered. I am gainaxed.```\n-Pooka",
+                 "***If you complain about us criticizing GT again...may the odds be in your favor.***\n-***Chara***",
                  "```Oh. I thought it was a brand of cookies.```\n-Pooka"]
         await self.bot.say(randchoice(pooka))
 
@@ -238,7 +243,10 @@ class randquotes:
         "```Every day a new dream.```\n-Minha",
         "```You're just jealous because she's bigger in Pirate's Curse.```\n-Minha",
         "```It's like getting Michael Schumacher to complain about how you drive.```\n-Minha",
-        "```ry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sor```\n-Minha"]
+        "```ry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sor```\n-Minha",
+        "```TELPROT!!111```\n-Minha",
+        "```His mom has bigger legs.```\n-Minha"
+        ]
         await self.bot.say(randchoice(minha))
 
     @commands.command()
