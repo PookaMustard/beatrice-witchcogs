@@ -245,7 +245,8 @@ class randquotes:
         "```It's like getting Michael Schumacher to complain about how you drive.```\n-Minha",
         "```ry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sor```\n-Minha",
         "```TELPROT!!111```\n-Minha",
-        "```His mom has bigger legs.```\n-Minha"
+        "```His mom has bigger legs.```\n-Minha",
+        "```Iglooshrew.```\n-Minha"
         ]
         await self.bot.say(randchoice(minha))
 
