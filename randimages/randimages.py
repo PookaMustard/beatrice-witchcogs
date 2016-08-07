@@ -1047,6 +1047,16 @@ class randimages:
     async def hankey(self):
         """If you eat fibre on Christmas Eve, he might come to your town!"""
         await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/202183615164055552/unknown.png")
+        
+    @commands.command()
+    async def opinion(self):
+        """Your opinion isn't good."""
+        await self.bot.say("https://cdn.discordapp.com/attachments/205815814316752897/211667870927683584/your_opinions_are_shit.jpeg")
+        
+    @commands.command()
+    async def meiou(self):
+        """Hades Attack!"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/173967012123377664/211696199760084992/hadesattack_2.gif") 
 
     @commands.command()
     async def alive(self):
