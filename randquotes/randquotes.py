@@ -34,6 +34,11 @@ class randquotes:
     async def fairdyne(self):
         """The Undying"""
         await self.bot.say("NGAHHH!!\nhttps://joezeng.github.io/fairdyne/")
+        
+    @commands.command()
+    async def am2r(self):
+        """Another Metroid Encore Rem- I mean Another Metroid 2 Remake"""
+        await self.bot.say("https://1drv.ms/f/s!Ar6sDvz1zhVkqE57a-TKs1HznzAF")
 
     @commands.command()
     async def ia(self): 
