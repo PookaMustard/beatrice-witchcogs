@@ -91,7 +91,7 @@ class randimages:
                 return await self.bot.say('https://images-1.discordapp.net/.eJwVx10OwiAMAOC7cABqt_KzXcY0DIGEyUKrL8a7G7-372Nes5vdVNVLdoCjSRrzsKJjcsm2jFF65quJTeMEVuVUz_xUAdxwCX7FiCFuK4VIsNzcf-S8jw4xEEF-t55F76nyZFvaw3x_44IlKg.u4gRjc9h4xSj0qE6LRLG_KtxQDA.gif')
 
     @commands.command()
-    async def arach(self):
+    async def arahc(self):
         """) = .doog si ecaf siht woN"""
         chance = randint(1,100)
         charachance = randint(1,1000)
