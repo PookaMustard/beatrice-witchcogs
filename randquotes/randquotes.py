@@ -225,7 +225,22 @@ class randquotes:
                  "```Never existing is the newest trend in retiring, indeed!```\n-Pooka",
                  "```I am not triggered. I am gainaxed.```\n-Pooka",
                  "***If you complain about us criticizing GT again...may the odds be in your favor.\n-Pooka***",
-                 "```Oh. I thought it was a brand of cookies.```\n-Pooka"]
+                 "```Oh. I thought it was a brand of cookies.```\n-Pooka",
+                 "```In other words...%chara is the only command with two RNGs until now!!!```\nNo longer true. -Pooka",
+                 "```Friendship is not magic. Screw friendship and ponies. MATHEMATICS IS MAGIC.```\n-Pooka",
+                 "```You get your games from Steam? Don't you know that steam floats into the sky and then rains later? Just buy your games from Water instead.```\n-Pooka",
+                 "```Final Fantasy VIII is undertale- I MEAN UNDERRATED!!```\n-Pooka",
+                 "```Valve Steam? WAIT! Steam can come from valves now?! I thought water comes out of valves!!```\n-Pooka",
+                 "```So PC Gamer, you're saying that using the C key for crouching makes me a degenerate? Do not worry. I always crouch with the ESC key, and anyone else is doing it wrong. =)```\n-Pooka",
+                 "```I can never write 'support the developer' and 'the developer uses DRM' on the same sentence. Wait, did I just write them on the same sentence? What was I talking about?```\n-Pooka",
+                 "```How to trigger me: mention anything FNAF.```\nQuote not shamelessly stolen from Sonic. Original quote by Pooka.",
+                 "```You have watched the movie to 'finding' a 'fish'. You now suffer from the short term memory loss status ailment. Please contact the nearest White Mage to cure this ailment.```\n-Pooka",
+                 "```Seeing your email inbox, which has over a thousand unread mails...it fills you with emailmination.```\n-Pooka",
+                 "```I hope my next game will have me invincible to air pumps...```\n-Pooka",
+                 "```And this is where I'd have my Wii U...if I had o- sorry, you never heard a variation of this quote before.```\n-Pooka",
+                 "```VOTE CHARA FOR PRESIDENT 2016! MAKE THE UNDERGROUND GREAT AGAIN!```\n-Pooka",
+                 "```I hope Seraphna isn't reading this quote! For no particular reason at all.```\n-Pooka",
+                 "```From today onwards, if anyone DOES NOT criticize FP2, they will be kicked, and then kicked again, and while kicked, banned. Next will be ultra-banning them. Then final-banning them. Don't ask me how I can kick and ban that much.```\n-Pooka"]
         await self.bot.say(randchoice(pooka))
 
     @commands.command()
