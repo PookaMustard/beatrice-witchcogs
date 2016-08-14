@@ -498,7 +498,7 @@ class randimages:
     @commands.command()
     async def lenny(self):
         """Pure elaborate faces."""
-        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/212743476285145098/Screenshot_291.png)
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/212743476285145098/Screenshot_291.png')
         
     @commands.command()
     async def power(self):
