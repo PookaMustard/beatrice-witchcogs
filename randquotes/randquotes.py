@@ -149,7 +149,9 @@ class randquotes:
     @commands.command()
     async def sonicquotes(self):
         """From a user named Sonic!"""
-        sonicu = ["```i have a shirt on.```\n-Sonic"]
+        sonicu = ["```i have a shirt on.```\n-Sonic",
+                  "
+                  ]
         await self.bot.say(randchoice(sonicu)) 
         
     @commands.command()
@@ -250,7 +252,9 @@ class randquotes:
                  "```VOTE CHARA FOR PRESIDENT 2016! MAKE THE UNDERGROUND GREAT AGAIN!```\n-Pooka",
                  "```I hope Seraphna isn't reading this quote! For no particular reason at all.```\n-Pooka",
                  "```I never knew that garnets were precious stones! Is that what happens when I take free education?```\n-Pooka",
-                 "```From today onwards, if anyone DOES NOT criticize FP2, they will be kicked, and then kicked again, and while kicked, banned. Next will be ultra-banning them. Then final-banning them. Don't ask me how I can kick and ban that much.```\n-Pooka"]
+                 "```From today onwards, if anyone DOES NOT criticize FP2, they will be kicked, and then kicked again, and while kicked, banned. Next will be ultra-banning them. Then final-banning them. Don't ask me how I can kick and ban that much.```\n-Pooka",
+                 "```Draw humans. Anthros are overtale- I mean overrated.```\n-Pooka"
+                 ]
         await self.bot.say(randchoice(pooka))
 
     @commands.command()
@@ -325,7 +329,7 @@ class randquotes:
               "```You know what I hate? Those little jumpin' shits from Sonic Triple Trouble's Atomic Destroyer Zone.```\n-ItalianGamer97",
               "```RNG's being a butt, eh?```\n-ItalianGamer97",
               "```Yeh, ya'd better run. But come back after a few minutes, mmkay? :v```\n-ItalianGamer97",
-              "```I gotta say something worthy of being made into a command...```\n-ItalianGamer97, now a command.",
+              "```I gotta say something worthy of being made into a command...```\n-ItalianGamer97, now a command."
               ]
         await self.bot.say(randchoice(ig))
 
