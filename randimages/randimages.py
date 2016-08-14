@@ -401,7 +401,8 @@ class randimages:
     async def triggered(self):
         """IT'S NO USE!"""
         trig = ["https://cdn.discordapp.com/attachments/173967012123377664/209860253033037825/chompistriggered.gif",
-                "https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png"]
+                "https://cdn.discordapp.com/attachments/173967012123377664/196825883024031747/2c4.png",
+                "https://pbs.twimg.com/media/CpCiJHhW8AApLCL.jpg"]
         await self.bot.say(randchoice(trig))
         
     @commands.command()
