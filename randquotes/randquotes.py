@@ -131,6 +131,11 @@ class randquotes:
                  "```Nintendo hates left-handed people now.```\n-Ultrablockstar",
                  "```Am I the only one who scrolls up and read dates?```\n-Ultrablockstar",
                  "```Steam Workshop is a limited piece of crap and sucks all the creativity out of people.```\n-Ultrablockstar",
+                 "```Negotiations has failed.```\n-Ultrablockstar",
+                 "```Ubisoft is the second worst company in this industry```\n-Ultrablockstar",
+                 "```Jagex are the worst thing to ever happen to the gaming industry (with only one good game)```\n-Ultrablockstar",
+                 "```I'm not good with button mashing, but I can shake an analog stick mighty fast... I'm just about five years out of practice.```\n-Ultrablockstar",
+                 "```The ZXC+Arrow Keys keyboard layout is underrated.```\n-Ultrablockstar",
                  "```The Anti-DRM God has spoken!!!```\n-Ultrablockstar"
                  ]
         await self.bot.say(randchoice(ultra)) 
@@ -240,6 +245,7 @@ class randquotes:
                  "```And this is where I'd have my Wii U...if I had o- sorry, you never heard a variation of this quote before.```\n-Pooka",
                  "```VOTE CHARA FOR PRESIDENT 2016! MAKE THE UNDERGROUND GREAT AGAIN!```\n-Pooka",
                  "```I hope Seraphna isn't reading this quote! For no particular reason at all.```\n-Pooka",
+                 "```I never knew that garnets were precious stones! Is that what happens when I take free education?```\n-Pooka",
                  "```From today onwards, if anyone DOES NOT criticize FP2, they will be kicked, and then kicked again, and while kicked, banned. Next will be ultra-banning them. Then final-banning them. Don't ask me how I can kick and ban that much.```\n-Pooka"]
         await self.bot.say(randchoice(pooka))
 
