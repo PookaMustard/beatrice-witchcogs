@@ -313,7 +313,19 @@ class randquotes:
               "```Maze... is an enigma that we may or may not ever understand.```\n-ItalianGamer97",
               "```Y'know, Minha freaked out over a rubbery-looking Lilac once.```\n-ItalianGamer97",
               "```I kinda-sorta love it that MN9's become a synonym for pizza.```\n-ItalianGamer97",
-              "```Got pesky DNA Cannons bothering you? A fire bomb should do the trick! One hit and BAM, the thing's gone!```\n-ItalianGamer97"
+              "```Got pesky DNA Cannons bothering you? A fire bomb should do the trick! One hit and BAM, the thing's gone!```\n-ItalianGamer97",
+              "```I like the SegaSonic arcade game, but Wild Water Way can go suck it. It seems too damn easy to fall off of the platforms on the river near the end of the stage. Mabye it's because it's something with the trackball-to-analog stick-conversion. I don't even know.```\n-ItalianGamer97",
+              "```With politics these days, you'd have to choose the one who you'd think is less ass.```\n-ItalianGamer97",
+              "```Okay, who's the wiseguy who put two adjacent springs in the middle of a cave?```\n-ItalianGamer97",
+              "```I don't like it when there's a distinct lack of lipsync in a game. That was a thing that bothered me with MN9, by the way.```\n-ItalianGamer97",
+              "```Mighty No. 9? I thought it was mediocre and a tad overly frustrating. The fact that the explosions kinda look like cheap-ass pizza didn't help. I also had no qualms against pirating it.```\n-ItalianGamer97",
+              "```How come no one did the ayy lmao alien thing with Torque yet?```\n-ItalianGamer97",
+              "```The moment you realize the purple hopping robot from Relic Maze looks a bit too much like a certain robot-obstacle-thing from ModNation Racers.```\n-ItalianGamer97",
+              "```Is it me or does almost nobody like Torque? I personally digged his playstyle.```\n-ItalianGamer97",
+              "```You know what I hate? Those little jumpin' shits from Sonic Triple Trouble's Atomic Destroyer Zone.```\n-ItalianGamer97",
+              "```RNG's being a butt, eh?```\n-ItalianGamer97",
+              "```Yeh, ya'd better run. But come back after a few minutes, mmkay? :v```\n-ItalianGamer97",
+              "```I gotta say something worthy of being made into a command...```\n-ItalianGamer97, now a command.",
               ]
         await self.bot.say(randchoice(ig))
 
