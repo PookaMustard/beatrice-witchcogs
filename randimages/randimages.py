@@ -494,6 +494,11 @@ class randimages:
     async def tumbleweed(self):
         """Pure abandonement."""
         await self.bot.say('https://brittnyhabibti.files.wordpress.com/2014/10/tumbleweed.jpg')
+
+    @commands.command()
+    async def lenny(self):
+        """Pure elaborate faces."""
+        await self.bot.say('https://cdn.discordapp.com/attachments/173967012123377664/212743476285145098/Screenshot_291.png)
         
     @commands.command()
     async def power(self):
@@ -677,6 +682,16 @@ class randimages:
     async def saltae(self):
         """What do you call an angry half-genie?"""
         await self.bot.say("http://i.imgur.com/dGOfP7L.png")
+        
+    @commands.command()
+    async def nopower(self):
+        """You have no power here."""
+        await self.bot.say("http://i1.kym-cdn.com/photos/images/original/000/913/758/a12.jpg")
+        
+    @commands.command()
+    async def areyoukiddingme(self):
+        """Say what?!"""
+        await self.bot.say("https://cdn.discordapp.com/attachments/165012316402745344/211553360027975682/IMG_3355.PNG")
         
     @commands.command()
     async def romanabominations(self):
