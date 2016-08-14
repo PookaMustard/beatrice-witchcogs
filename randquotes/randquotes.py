@@ -342,7 +342,7 @@ class randquotes:
               "```Boop da puppy's snoot```\n-GigaLem",
               "```my mother once said 'did you pack your fists in storage?' ```\n-GigaLem",
               "```there's barely any good nsfw art of the puppy, and none with big bouncies```\n-GigaLem",
-              "```when doubt,  pull out your -REDACTED FOR YOUNGISH AUDIENCES```\n-GigaLem",
+              "```when doubt, pull out your -REDACTED FOR YOUNGISH AUDIENCES```\n-GigaLem",
               "```cyclone-tific progress goes boink```\n-GigaLem",
               "```green haired blue tunic = good lemmings,  norm of the North = bad lemmings```\n-GigaLem"
               ]
