@@ -158,7 +158,7 @@ class randquotes:
         pokefan = ["```>7 houndred\nOH GOD, HE'S GOING MAXIMUM DOG, EVERYONE RUN!```\n-Pokefan",
                    "```There will be an HD remake of Sonic 3 & Knuckles where every single graphic is replaced with Knuckles.```\n-Pokefan",
                    "```I am perfectly fine with Team Mystic, as long as everyone agrees that Team Instinct is a bunch of nazis.```\n-Pokefan",
-                   "```It's like calling Ness "Babe Ruth" or Papyrus "Chef Boyardee"```\n-Pokefan"]
+                   "```It's like calling Ness \"Babe Ruth\" or Papyrus \"Chef Boyardee\"```\n-Pokefan"]
         await self.bot.say(randchoice(pokefan)) 
         
     @commands.command()
