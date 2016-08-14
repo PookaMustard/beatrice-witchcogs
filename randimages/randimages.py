@@ -36,7 +36,8 @@ class randimages:
         """Do not post ponies while it is dead."""
         chatded = ["https://cdn.discordapp.com/attachments/173967012123377664/198887286132310017/16sxn0.jpg",
                "https://cdn.discordapp.com/attachments/173967012123377664/198887289336758274/16sxna.jpg",
-               "https://cdn.discordapp.com/attachments/173967012123377664/198887295238012932/16sxmt.jpg"]
+               "https://cdn.discordapp.com/attachments/173967012123377664/198887295238012932/16sxmt.jpg",
+               "http://i.imgur.com/fP4BEOL.png"]
         return await self.bot.say(randchoice(chatded))
         
     @commands.command()
