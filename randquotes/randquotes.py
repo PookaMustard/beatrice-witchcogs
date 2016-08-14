@@ -336,7 +336,17 @@ class randquotes:
     @commands.command()
     async def giga(self):
         """Salami the Multivitamin""" 
-        giga = ["MMMMMMMMMMH :heart:","https://cdn.discordapp.com/attachments/173967012123377664/207128827971895296/unknown.png"]
+        giga = ["MMMMMMMMMMH :heart:","https://cdn.discordapp.com/attachments/173967012123377664/207128827971895296/unknown.png",
+              "```I'm going to order some hot delicious mighty no 9```\n-GigaLem",
+              "``` must I replace a silable in everyone's name with salt?```\n-GigaLem",
+              "```It breaks my heart to see the puppy sad```\n-GigaLem",
+              "```Boop da puppy's snoot```\n-GigaLem",
+              "```my mother once said 'did you pack your fists in storage?' ```\n-GigaLem",
+              "```there's barely any good nsfw art of the puppy, and none with big bouncies```\n-GigaLem",
+              "```when doubt,  pull out your -REDACTED FOR YOUNGISH AUDIENCES```\n-GigaLem",
+              "```cyclone-tific progress goes boink```\n-GigaLem",
+              "```green haired blue tunic = good lemmings,  norm of the North = bad lemmings```\n-GigaLem"
+              ]
         await self.bot.say(randchoice(giga))
 
     @commands.command()
