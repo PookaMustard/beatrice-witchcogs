@@ -53,6 +53,26 @@ class randvideos:
         await self.bot.say('https://www.youtube.com/watch?v=hTbXDl5U2rQ')
         
     @commands.command()
+    async def areyousure(self):
+        """Are you?"""
+        await self.bot.say('https://youtu.be/BLikP6BDH5w')
+        
+    @commands.command()
+    async def bill(self):
+        """Ten hours of torture"""
+        await self.bot.say('https://www.youtube.com/watch?v=a730vEbqpSo&feature=youtu.be')
+        
+    @commands.command()
+    async def whatthef(self):
+        """F-word censored. Please take care of the children."""
+        await self.bot.say('https://www.youtube.com/watch?v=AXzEcwYs8Eo')
+        
+    @commands.command()
+    async def takeonme(self):
+        """Literal video version!"""
+        await self.bot.say('https://www.youtube.com/watch?v=8HE9OQ4FnkQ')
+        
+    @commands.command()
     async def dk(self):
         """Dunkey Kung."""
         await self.bot.say('https://www.youtube.com/watch?v=HG3Wk3CpmoE')
@@ -66,6 +86,11 @@ class randvideos:
     async def grand(self):
         """Is this a bootleg?"""
         await self.bot.say('https://soundcloud.com/epicrpgremixes/a-battle-of-grand-proportions')
+        
+    @commands.command()
+    async def grandestmenu(self):
+        """Now invading your Start Menu! Who the hell uses a Start Menu anyways?"""
+        await self.bot.say('https://soundcloud.com/asdfghjklqwweee/grand-dad-in-the-style-of-start-menu')
         
     @commands.command()
     async def granddadlovania(self):
