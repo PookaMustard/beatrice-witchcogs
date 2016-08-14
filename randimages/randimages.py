@@ -224,7 +224,9 @@ class randimages:
         if server.id=='181225160622342144':
             await self.bot.say('Consultar las reglas del servidor en ' + '<#181228813982760960>' +'!')
         elif server.id=='173965999744221185':
-            await self.bot.say('Consultar las reglas del servidor en ' + '<#173967163344945152>' +'!')
+            await self.bot.say('Consultar las reglas del servidor en ' + '<#214420278334193665>' +'!')
+        elif server.id=='205058315577851904':
+            await self.bot.say('Consultar las reglas del servidor en ' + '<#205058315577851904>' +'!')
 
     @commands.command()
     async def lilac(self):
