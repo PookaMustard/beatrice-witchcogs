@@ -149,7 +149,17 @@ class randquotes:
     @commands.command()
     async def sonicquotes(self):
         """From a user named Sonic!"""
-        sonicu = ["```i have a shirt on.```\n-Sonic"
+        sonicu = ["```i have a shirt on.```\n-Sonic",
+                  "```So how many more memes of me are ya gonna spout out about me in one day?\n-Sonic",
+                  "```If it isn't a chilidog I'm not coming.\n-Sonic",
+                  "```Steam is a lot like politics. Both blow hot air all over the place and take people's money.\n-Sonic",
+                  "```You know what I hate? FUCKING SLICERS ALL OVER THE PLACE.\n-Sonic",
+                  "```PINGAS\n-Sonic",
+                  "```How 'bout them LAKERS!\n-Sonic",
+                  "```Alright, who pissed off Sash and do I need to 'calm her down'?\n-Sonic",
+                  "```How to trigger Pooka: Mention anything FNAF.\n-Sonic",
+                  "```There's a Pooka here... damn, forgot my air pump.\n-Sonic",
+                  "```you have no sympathy from me if you whine about that stupid pit in Mystic Cave.\n-Sonic"
                   ]
         await self.bot.say(randchoice(sonicu)) 
         
