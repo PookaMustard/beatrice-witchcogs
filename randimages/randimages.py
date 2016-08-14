@@ -369,7 +369,22 @@ class randimages:
     @commands.command()
     async def nooo(self):
         """PADME!!!!!!!!!"""
-        await self.bot.say('http://www.nooooooooooooooo.com/vader.jpg')
+        await self.bot.say('http://www.nooooooooooooooo.com/vader.jpg')    
+        
+    @commands.command()
+    async def no(self):
+        """Undramatic!"""
+        await self.bot.say('https://cdn.discordapp.com/attachments/170551952063594497/212916613249368064/IMG_20160810_080216.jpg')
+        
+    @commands.command()
+    async def animeisdisgusting(self):
+        """Very disgusting."""
+        await self.bot.say('http://img.memecdn.com/this-post-is-so-triggering-to-weebs-everywhere-shame-on-you-anita_fb_6581597.jpg')    
+        
+    @commands.command()
+    async def yup(self):
+        """Our plan will come to fruitition..."""
+        await self.bot.say('http://i.imgur.com/JB8VEA9.gif') 
         
     @commands.command()
     async def metashoe(self):
