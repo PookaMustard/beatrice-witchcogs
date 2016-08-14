@@ -149,8 +149,7 @@ class randquotes:
     @commands.command()
     async def sonicquotes(self):
         """From a user named Sonic!"""
-        sonicu = ["```i have a shirt on.```\n-Sonic",
-                  "
+        sonicu = ["```i have a shirt on.```\n-Sonic"
                   ]
         await self.bot.say(randchoice(sonicu)) 
         
