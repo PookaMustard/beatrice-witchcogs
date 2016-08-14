@@ -219,7 +219,8 @@ class randquotes:
               "```Error 615: Intelligence Not Found```\n-ElectricSparx",
               "```BRAIN has shut down to avoid damage from stupidity. Please reboot.```\n-ElectricSparx",
               "```ERROR: Brain.dll was unable to be found.```\n-ElectricSparx",
-              "```I lack the ability to even give a nanoshit about whatever the fuck you just said.```\n-ElectricSparx"
+              "```I lack the ability to even give a nanoshit about whatever the fuck you just said.```\n-ElectricSparx",
+              "```Higher quality humor than SilvaGunner rips.```\n-ElectricSparx"
               ]
         if chance <= 5:
             return await self.bot.say("```Clearly, thou hast been blessed by the almighty RNGesus.```\n-ElectricSparx")
@@ -286,7 +287,11 @@ class randquotes:
         "```ry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sorry. Sor```\n-Minha",
         "```TELPROT!!111```\n-Minha",
         "```His mom has bigger legs.```\n-Minha",
-        "```Iglooshrew.```\n-Minha"
+        "```Iglooshrew.```\n-Minha",
+        "```Stupid cat! I know you look more like a rat, but you're much bigger and stronger than me, aren't you? So that makes me the rat! And guess what? This rat has missiles! So eat missiles, you son of a bitch!```\n-Minha",
+        "```I... guess I survived that?```\n-Minha",
+        "```A PRINCIPAL WRESTLES A DEER```\n-Minha",
+        "```METROID 2 PC IS THE BEST 2D METROID GAME THAT EVER EXISTED```\n-Minha"
         ]
         await self.bot.say(randchoice(minha))
 
