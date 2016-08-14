@@ -294,6 +294,28 @@ class randquotes:
         "```METROID 2 PC IS THE BEST 2D METROID GAME THAT EVER EXISTED```\n-Minha"
         ]
         await self.bot.say(randchoice(minha))
+        
+    @commands.command()
+    async def ig97quotes(self):
+        """Italian Gamer and Italian Quotes""" 
+        ig = ["```Can we just shut up about FP2 until it comes out? Jeez. It wouldn't kill ya to wait, you know.```\n-ItalianGamer97",
+              "```For a moment, I thought Plom broke.```\n-ItalianGamer97",
+              "```inb4 a where's that damn 4th sapphire shard joke```\n-ItalianGamer97",
+              "```You know what would be fantastic? A type that kills Fairy-types without being weak to Ground.```\n-ItalianGamer97",
+              "```Kraftwerk is one of my jams, man. Daft Punk is also cool.```\n-ItalianGamer97",
+              "```Is it me, or is Maze starting to get a bit... I dunno... loopy?```\n-ItalianGamer97",
+              "```I like the SegaSonic arcade game, but Wild Water Way can go suck it. It seems too damn easy to fall off of the platforms on the river near the end of the stage. Maybe it's because it's something with the trackball-to-analog stick-conversion. I don't even know.```\n-ItalianGamer97",
+              "```I'd bet Dazl would like a rifle that shoots colorful bouncy balls that are also edible for some reason. And yes, that's a thing in GMod.```\n-ItalianGamer97",
+              "```You know what's fun? Rifles that shoot colorful bouncy-and-somehow-edible balls. And that's a thing in Gmod.```\n-ItalianGamer97",
+              "```You know what I like to do in Garry's Mod? Kill a bunch of hostile NPCs en masse with a wonderous variety of weapons.```\n-ItalianGamer97",
+              "```You know what would make my day? SiivaGunner high-quality rips of Freedom Planet themes.```\n-ItalianGamer97",
+              "```What if you take a pizza... and put it in a taco? That would be neat, as I've never really tried that before.```\n-ItalianGamer97",
+              "```Maze... is an enigma that we may or may not ever understand.```\n-ItalianGamer97",
+              "```Y'know, Minha freaked out over a rubbery-looking Lilac once.```\n-ItalianGamer97",
+              "```I kinda-sorta love it that MN9's become a synonym for pizza.```\n-ItalianGamer97",
+              "```Got pesky DNA Cannons bothering you? A fire bomb should do the trick! One hit and BAM, the thing's gone!```\n-ItalianGamer97"
+              ]
+        await self.bot.say(randchoice(ig))
 
     @commands.command()
     async def giga(self):
