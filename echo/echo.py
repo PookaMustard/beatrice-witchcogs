@@ -27,7 +27,7 @@ class CogUnloadError(Exception):
     pass
 
 class OwnerUnloadWithoutReloadError(CogUnloadError):
-pass
+    pass
 
 class echo:
     """I'll repeat what you said."""
