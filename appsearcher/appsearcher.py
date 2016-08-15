@@ -103,22 +103,6 @@ class appsearcher:
                     else:
                         plat2 = 'Mac'
                 platformtext = plat1 + ' and ' + plat2
-#            	if windows_support == True:
-#            		windows_checked == 1
-#            		platformtext = platformtext + 'Windows'
-#            	elif linux_support == True:
-#            		linux_checked == 1
-#            		platformtext = platformtext + 'Linux'
-#            	elif mac_support == True:
-#            		mac_checked == 1
-#            		platformtext == platformtext + 'Mac'
-#            	platformtext == platformtext + ' and '
-#            	if (windows_support == True and windows_checked != 1):
-#            		platformtext = platformtext + 'Windows'
-#            	elif (linux_support == True and linux_checked != 1):
-#            		platformtext = platformtext + 'Linux'
-#            	elif (mac_support == True and mac_checked != 1):
-#            		platformtext = platformtext + 'Mac'
             elif platcount == 1:
             	if windows_support == True:
             		platformtext = platformtext + 'Windows'
@@ -133,7 +117,7 @@ class appsearcher:
             	pricetext = 'Free'
             else:
             	if buyable == False:
-            		pricetext = 'Not buyable yet.'
+            		pricetext = 'Not buyable yet'
             	else:
             		pricetext = price
             if iscomingsoon == True:
@@ -141,9 +125,6 @@ class appsearcher:
             
             bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
-
-
-#            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
 
     @commands.command()
     async def itch(self, *text):
