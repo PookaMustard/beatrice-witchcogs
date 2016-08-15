@@ -18,7 +18,7 @@ class appsearcher:
             Type %gog gamecount for the number of games"""
 
         #Your code will go here
-        if text[0]=='gamecount':
+        if text[gamenum]=='gamecount':
             url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
             async with aiohttp.get(url) as response:
                 soupObject = BeautifulSoup(await response.text(), "html.parser") 
@@ -30,12 +30,23 @@ class appsearcher:
             except:
                 return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
-            if text[0]!='randomgame':
+            if text[gamenum]!='randomgame':
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
+                gamenum=0
             else:
                 query='https://www.gog.com/games/ajax/filtered?limit=99999'
+                url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
+                async with aiohttp.get(url) as response:
+                    soupObject = BeautifulSoup(await response.text(), "html.parser") 
+                try:
+                    count_unabridged = soupObject.find(class_='header__title').get_text()
+                    count = count_unabridged.replace('  DRM-FREE GAMES     ', '')
+                    count = count.replace('\n        ', '')
+                except:
+                    count = 1000
+                gamenum = randint(1, count)
             #Loading ajax search URL into variable r
             r = requests.get(query)
             #Loading the text of ajax search URL into variable data
@@ -43,7 +54,7 @@ class appsearcher:
             
             #Checking if game exists
             try:
-            	check = data['products'][0]
+            	check = data['products'][gamenum]
             except IndexError:
             	return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
@@ -61,15 +72,15 @@ class appsearcher:
             
             #Loading game details
             
-            image = 'https:' + data['products'][0]['image'] + '.png'
-            title = data['products'][0]['title']
-            genre = data['products'][0]['originalCategory']
-            url = 'https://www.gog.com' + data['products'][0]['url']
+            image = 'https:' + data['products'][gamenum]['image'] + '.png'
+            title = data['products'][gamenum]['title']
+            genre = data['products'][gamenum]['originalCategory']
+            url = 'https://www.gog.com' + data['products'][gamenum]['url']
             
             #Loading platform support
-            windows_support = data['products'][0]['worksOn']['Windows']
-            linux_support = data['products'][0]['worksOn']['Linux']
-            mac_support = data['products'][0]['worksOn']['Mac']
+            windows_support = data['products'][gamenum]['worksOn']['Windows']
+            linux_support = data['products'][gamenum]['worksOn']['Linux']
+            mac_support = data['products'][gamenum]['worksOn']['Mac']
             if windows_support == True:
             	platcount = platcount + 1
             if linux_support == True:
@@ -79,11 +90,11 @@ class appsearcher:
             
             #Loading price details
             
-            isdiscounted = data['products'][0]['isDiscounted']
-            iscomingsoon = data['products'][0]['isComingSoon']
-            isfree = data['products'][0]['price']['isFree']
-            price = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
-            buyable = data['products'][0]['buyable']
+            isdiscounted = data['products'][gamenum]['isDiscounted']
+            iscomingsoon = data['products'][gamenum]['isComingSoon']
+            isfree = data['products'][gamenum]['price']['isFree']
+            price = data['products'][gamenum]['price']['symbol'] + data['products'][gamenum]['price']['finalAmount']
+            buyable = data['products'][gamenum]['buyable']
             
             #THE REAL CODE BEGINS.
             # Formatting platform text. If platcount = 3, all platforms are added into the text. If 1, only one platform is added. If two, the first platform is added, followed by a ' and ' string, and then by the second platform finally.
