@@ -87,22 +87,21 @@ class appsearcher:
             if platcount == 3:
             	platformtext = 'Windows, Linux and Mac.'
             elif platcount == 2:
-            	if windows_support == True:
-            		if plat1 == '':
-            		    plat1 = Windows
-            		else:
-            		    plat2 = Windows
-            	if linux_support == True:
-            		if plat1 == '':
-            		    plat1 = Linux
-            		else:
-            		    plat2 = Linux
-            	if mac_support == True:
-            		if plat1 == '':
-            		    plat1 = Mac
-            		else:
-            		    plat2 = Mac
-                platformtext = plat1 + " and " + plat2
+                if windows_support == True:
+                    if plat1 == '':
+                        plat1 = 'Windows'
+                    else:
+                        plat2 = 'Windows'
+                if linux_support == True:
+                    if plat1 == '':
+                        plat1 = 'Linux'
+                    else:
+                        plat2 = 'Linux'
+                if mac_support == True:
+                    if plat1 == '':
+                        plat1 = 'Mac'
+                    else:
+                        plat2 = 'Mac'
 #            	if windows_support == True:
 #            		windows_checked == 1
 #            		platformtext = platformtext + 'Windows'
