@@ -44,6 +44,14 @@ class appsearcher:
             except IndexError:
             	return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
+            #Loading placeholder variables
+            platcount = 0
+            bottext = ''
+            platformtext = ''
+            windows_checked = ''
+            linux_checked = ''
+            mac_checked = ''
+            	
             #Loading all required details into variables
             
             #Loading game details
@@ -54,8 +62,6 @@ class appsearcher:
             url = 'https://www.gog.com' + data['products'][0]['url']
             
             #Loading platform support
-            platcount = 0
-            platformtext = ''
             windows_support = data['products'][0]['worksOn']['Windows']
             linux_support = data['products'][0]['worksOn']['Linux']
             mac_support = data['products'][0]['worksOn']['Mac']
@@ -115,7 +121,6 @@ class appsearcher:
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
-            bottext = 'null'
             bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
 
