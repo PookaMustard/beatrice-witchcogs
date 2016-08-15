@@ -52,7 +52,7 @@ class echo:
         A modified version of the debug command, with help from Calebj."""
 
         #Your code will go here
-        text = " ".join(text[])
+        text = " ".join(text[0])
         text = text.replace("\'", "\\\'")
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
