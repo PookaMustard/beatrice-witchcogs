@@ -68,7 +68,7 @@ class appsearcher:
             isdiscounted = data['products'][0]['isDiscounted']
             iscomingsoon = data['products'][0]['isComingSoon']
             isfree = data['products'][0]['price']['isFree']
-            price = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
+            str(price) = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
             buyable = data['products'][0]['buyable']
             
             #THE REAL CODE BEGINS.
