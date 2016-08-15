@@ -52,6 +52,7 @@ class appsearcher:
             
             #Loading platform support
             platcount = 0
+            platformtext = 0
             windows_support = data['products'][0]['worksOn']['Windows']
             if windows_support == 'True':
             	platcount = platcount + 1
