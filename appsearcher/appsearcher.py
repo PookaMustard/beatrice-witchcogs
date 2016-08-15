@@ -86,17 +86,23 @@ class appsearcher:
             	platformtext = 'Windows, Linux and Mac.'
             elif platcount == 2:
             	if windows_support == True:
-            		platformtext = platformtext + 'Windows, '
+            		platformtext = platformtext + 'Windows and '
+            		windows_checked = 1
             	elif linux_support == True:
-            		platformtext = platformtext + 'Linux, '
+            		platformtext = platformtext + 'Linux and '
+            		linux_checked = 1
             	elif mac_support == True:
-            		platformtext == platformtext + 'Mac, '	
+            		platformtext == platformtext + 'Mac and '
+            		mac_checked = 1
             	if windows_support == True:
-            		platformtext = platformtext + 'Windows'
+            	    if windows_checked == 0:
+            		    platformtext = platformtext + 'Windows'
             	elif linux_support == True:
-            		platformtext = platformtext + 'Linux'
+            	    if linux_checked == 0:
+                		platformtext = platformtext + 'Linux'
             	elif mac_support == True:
-            		platformtext == platformtext + 'Mac'	
+            	    if mac_checked == 0:
+                		platformtext == platformtext + 'Mac'	
 #            	if windows_support == True:
 #            		windows_checked == 1
 #            		platformtext = platformtext + 'Windows'
