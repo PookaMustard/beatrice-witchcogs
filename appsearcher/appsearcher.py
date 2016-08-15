@@ -94,9 +94,12 @@ class appsearcher:
             #Loading price details
             
             isdiscounted = data['products'][gamenum]['isDiscounted']
+            discount=data['products'][0]['price']['discountDifference']
+            baseprice=data['products'][0]['price']['baseAmount']
             iscomingsoon = data['products'][gamenum]['isComingSoon']
             isfree = data['products'][gamenum]['price']['isFree']
             price = data['products'][gamenum]['price']['symbol'] + data['products'][gamenum]['price']['finalAmount']
+            pricesymbol = data['products'][gamenum]['price']['symbol']
             buyable = data['products'][gamenum]['buyable']
             
             #THE REAL CODE BEGINS.
@@ -137,6 +140,8 @@ class appsearcher:
             		pricetext = 'Not buyable yet'
             	else:
             		pricetext = price
+            if isdiscounted == True:
+                pricetext = pricetext + " (discounted by " + pricesymbol + discount + ", base price is " + baseprice + ")"
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
