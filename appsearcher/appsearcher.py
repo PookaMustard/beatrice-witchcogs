@@ -31,15 +31,18 @@ class appsearcher:
                 await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
             text = " ".join(text)
-            query=text.replace(" ", "%20")
-
-            r = requests.get('https://www.gog.com/games/ajax/filtered?limit=5&ssearch=' + text)
-#Loading the text of ajax search URL into variable data
+            text = text.replace(" ", "%20")
+            query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
+            #Loading ajax search URL into variable r
+            r = requests.get('https://www.gog.com/games/ajax/filtered?limit=5&search=')
+            #Loading the text of ajax search URL into variable data
             data = json.loads(r.text)
+            
+            #Checking if game exists
             try:
             	check = data['products'][0]
             except IndexError:
-            	return self.bot.say("No games found under that name on GOG.com. Try another search result.")
+            	await.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
             #Loading all required details into variables
             
@@ -52,15 +55,15 @@ class appsearcher:
             
             #Loading platform support
             platcount = 0
-            platformtext = 0
+            platformtext = 'ready! to die'
             windows_support = data['products'][0]['worksOn']['Windows']
-            if windows_support == 'True':
-            	platcount = platcount + 1
             linux_support = data['products'][0]['worksOn']['Linux']
-            if linux_support == 'True':
-            	platcount = platcount + 1
             mac_support = data['products'][0]['worksOn']['Mac']
-            if mac_support == 'True':
+            if windows_support == True:
+            	platcount = platcount + 1
+            if linux_support == True:
+            	platcount = platcount + 1
+            if mac_support == True:
             	platcount = platcount + 1
             
             #Loading price details
@@ -69,7 +72,6 @@ class appsearcher:
             iscomingsoon = data['products'][0]['isComingSoon']
             isfree = data['products'][0]['price']['isFree']
             price = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
-            price = ''.join(price)
             buyable = data['products'][0]['buyable']
             
             #THE REAL CODE BEGINS.
@@ -77,43 +79,45 @@ class appsearcher:
             if platcount == 3:
             	platformtext = 'Windows, Linux and Mac.'
             elif platcount == 2:
-            	if windows_support == 'True':
-            		windows_checked == 'True'
+            	if windows_support == True:
+            		windows_checked == True
             		platformtext = platformtext + 'Windows'
-            	elif linux_support == 'True':
-            		linux_checked == 'True'
+            	elif linux_support == True:
+            		linux_checked == True
             		platformtext = platformtext + 'Linux'
-            	elif mac_support == 'True':
-            		mac_checked == 'True'
+            	elif mac_support == True:
+            		mac_checked == True
             		platformtext == platformtext + 'Mac'
             	platformtext == platformtext + ' and '
-            	if (windows_support == 'True' and windows_checked != 'True'):
+            	if (windows_support == True and windows_checked != True):
             		platformtext = platformtext + 'Windows'
-            	elif (linux_support == 'True' and linux_checked != 'True'):
+            	elif (linux_support == True and linux_checked != True):
             		platformtext = platformtext + 'Linux'
-            	elif (mac_support == 'True' and mac_checked != 'True'):
+            	elif (mac_support == True and mac_checked != True):
             		platformtext = platformtext + 'Mac'
             elif platcount == 1:
-            	if windows_support == 'True':
+            	if windows_support == True:
             		platformtext = platformtext + 'Windows'
-            	elif linux_support == 'True':
+            	elif linux_support == True:
             		platformtext = platformtext + 'Linux'
-            	elif mac_support == 'True':
+            	elif mac_support == True:
             		platformtext == platformtext + 'Mac'
             	platformtext == platformtext + ' only'
             
             #Formatting price text.
-            if isfree == 'True':
+            if isfree == True:
             	pricetext = 'Free'
             else:
-            	if buyable == 'False':
+            	if buyable == False:
             		pricetext = 'Not buyable yet.'
             	else:
             		pricetext = price
-            if iscomingsoon == 'True':
+            if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
+            
+            bottext = 'null'
             bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
-            return self.bot.say(bottext)
+            return await.bot.say(bottext)
 
 
 #            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
