@@ -102,6 +102,7 @@ class appsearcher:
                         plat1 = 'Mac'
                     else:
                         plat2 = 'Mac'
+                platformtext = plat1 + ' and ' + plat2
 #            	if windows_support == True:
 #            		windows_checked == 1
 #            		platformtext = platformtext + 'Windows'
