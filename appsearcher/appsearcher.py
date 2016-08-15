@@ -68,6 +68,7 @@ class appsearcher:
             iscomingsoon = data['products'][0]['isComingSoon']
             isfree = data['products'][0]['price']['isFree']
             price = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
+            buyable = data['products'][0]['buyable']
             
             #THE REAL CODE BEGINS.
             # Formatting platform text. If platcount = 3, all platforms are added into the text. If 1, only one platform is added. If two, the first platform is added, followed by a ' and ' string, and then by the second platform finally.
