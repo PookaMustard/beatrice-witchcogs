@@ -18,6 +18,8 @@ class appsearcher:
             Type %gog gamecount for the number of games"""
 
         #Your code will go here
+        try:
+            
         except IndexError:
             text[0] = 'randomgameabc123'
         if text[0]=='gamecount':
