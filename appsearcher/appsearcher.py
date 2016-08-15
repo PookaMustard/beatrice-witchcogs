@@ -34,7 +34,7 @@ class appsearcher:
             text = text.replace(" ", "%20")
             query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
             #Loading ajax search URL into variable r
-            r = requests.get('https://www.gog.com/games/ajax/filtered?limit=5&search=')
+            r = requests.get(query)
             #Loading the text of ajax search URL into variable data
             data = json.loads(r.text)
             
@@ -48,7 +48,7 @@ class appsearcher:
             
             #Loading game details
             
-            image = 'https' + data['products'][0]['image'] + '.png'
+            image = 'https:' + data['products'][0]['image'] + '.png'
             title = data['products'][0]['title']
             genre = data['products'][0]['originalCategory']
             url = 'https://www.gog.com' + data['products'][0]['url']
