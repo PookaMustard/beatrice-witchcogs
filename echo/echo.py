@@ -46,7 +46,7 @@ class echo:
 
     @commands.command()
     @checks.is_owner()
-    async def sonar(self, serv, *text):
+    async def sonar(self, serv, text):
         """I'll repeat what you said and where you want it.
         
         A modified version of the debug command, with help from Calebj."""
