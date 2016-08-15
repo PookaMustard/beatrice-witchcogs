@@ -52,7 +52,6 @@ class commandrequest:
         server = ctx.message.server
         command = command + " -- Command requested by " + author.name + " from " + "{}".format(server.name)
         command = command.replace("\'", "\\\'")
-        command = command.replace("   ", "\n")
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
         code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+"')"
