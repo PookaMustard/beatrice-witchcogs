@@ -30,12 +30,12 @@ class appsearcher:
             except:
                 return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
-            if text[0]=='':
-                query='https://www.gog.com/games/ajax/filtered?limit=99999'
-            else:
+            try:
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
+            except IndexError:
+                query='https://www.gog.com/games/ajax/filtered?limit=99999'
             #Loading ajax search URL into variable r
             r = requests.get(query)
             #Loading the text of ajax search URL into variable data
