@@ -26,9 +26,9 @@ class appsearcher:
                 count_unabridged = soupObject.find(class_='header__title').get_text()
                 count = count_unabridged.replace('  DRM-FREE GAMES     ', '')
                 count = count.replace('\n        ', '')
-                await self.bot.say("There are " + count + " games on GOG today.")
+                return await self.bot.say("There are " + count + " games on GOG today.")
             except:
-                await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
+                return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
             text = " ".join(text)
             text = text.replace(" ", "%20")
@@ -42,7 +42,7 @@ class appsearcher:
             try:
             	check = data['products'][0]
             except IndexError:
-            	await.bot.say("No games found under that name on GOG.com. Try another search result.")
+            	return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
             #Loading all required details into variables
             
@@ -117,7 +117,7 @@ class appsearcher:
             
             bottext = 'null'
             bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
-            return await.bot.say(bottext)
+            return await self.bot.say(bottext)
 
 
 #            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
