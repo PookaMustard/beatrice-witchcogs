@@ -19,7 +19,7 @@ class appsearcher:
 
         #Your code will go here
         try:
-            continue
+            ultimecia='rinoa'
         except IndexError:
             text[0] = 'randomgameabc123'
         if text[0]=='gamecount':
