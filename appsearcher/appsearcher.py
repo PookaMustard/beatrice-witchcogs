@@ -141,7 +141,7 @@ class appsearcher:
             	else:
             		pricetext = price
             if isdiscounted == True:
-                pricetext = pricetext + " (discounted by " + pricesymbol + discount + ", base price is " + baseprice + ")"
+                pricetext = pricetext + " (discounted by " + pricesymbol + discount + ", base price is " + pricesymbol + baseprice + ")"
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
