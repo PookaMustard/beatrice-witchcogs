@@ -48,9 +48,9 @@ class appsearcher:
             platcount = 0
             bottext = ''
             platformtext = ''
-            windows_checked = ''
-            linux_checked = ''
-            mac_checked = ''
+            windows_checked = False
+            linux_checked = False
+            mac_checked = False
             	
             #Loading all required details into variables
             
