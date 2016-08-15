@@ -65,7 +65,10 @@ class echo:
         except Exception as e:
             await self.bot.say(python.format(type(e).__name__ + ': ' + str(e)))
             return
-        
+                    
+        if asyncio.iscoroutine(result):
+            result = await result
+
         result = python.format(result)
         censor = (settings.email, settings.password)
         r = "[EXPUNGED]"
@@ -74,9 +77,6 @@ class echo:
                 result = result.replace(w, r)
                 result = result.replace(w.lower(), r)
                 result = result.replace(w.upper(), r)
-                    
-        if asyncio.iscoroutine(result):
-            result = await result
 
 def setup(bot):
     bot.add_cog(echo(bot))
