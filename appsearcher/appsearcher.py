@@ -18,6 +18,8 @@ class appsearcher:
             Type %gog gamecount for the number of games"""
 
         #Your code will go here
+        except IndexError:
+            text[0] = 'randomgameabc123'
         if text[0]=='gamecount':
             url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
             async with aiohttp.get(url) as response:
@@ -30,7 +32,7 @@ class appsearcher:
             except:
                 return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
-            if text[0]!='random':
+            if text[0]!='randomgameabc123':
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
