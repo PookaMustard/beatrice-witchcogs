@@ -92,7 +92,6 @@ class appsearcher:
             		    plat1 = Windows
             		else:
             		    plat2 = Windows
-            		windows_checked = 1
             	if linux_support == True:
             		if plat1 == '':
             		    plat1 = Linux
