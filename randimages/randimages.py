@@ -629,9 +629,9 @@ class randimages:
     @commands.command()
     async def mlp(self):
         """Friendship is Magic!"""
-        spoilers = ["https://geekgirlmagazine.files.wordpress.com/2012/02/aeris-death.jpg\nIn *Final Fantasy VII*, Aeris(th) dies with no return."
-                    "http://cloud-3.steamusercontent.com/ugc/613919720080121549/1FC6871EC21CFF7C1F325214BE973F8AF04B0944/\nIn *Eversion*, you learn in the good ending that Zee Tee was an eldritch abomination all along."
-                    "http://66.media.tumblr.com/ee844a8777ca03043d52ae6b39b5c85a/tumblr_mz0exoZCpm1tn5y1lo4_250.gif\nIn *Final Fantasy VIII*, you learn that Sorceress Edea used to be the Matron of the party, hence why Irvine was reluctant to kill her. And that the big bad is Sorceress Ultimecia.\nhttp://vignette2.wikia.nocookie.net/p__/images/3/34/Cid_and_Edea_Kramer.png/revision/latest?cb=20140704104304&path-prefix=protagonist\nAlso, you learn that she was the wife of Cid."
+        spoilers = ["https://geekgirlmagazine.files.wordpress.com/2012/02/aeris-death.jpg\nIn *Final Fantasy VII*, Aeris(th) dies with no return.",
+                    "http://cloud-3.steamusercontent.com/ugc/613919720080121549/1FC6871EC21CFF7C1F325214BE973F8AF04B0944/\nIn *Eversion*, you learn in the good ending that Zee Tee was an eldritch abomination all along.",
+                    "http://66.media.tumblr.com/ee844a8777ca03043d52ae6b39b5c85a/tumblr_mz0exoZCpm1tn5y1lo4_250.gif\nIn *Final Fantasy VIII*, you learn that Sorceress Edea used to be the Matron of the party, hence why Irvine was reluctant to kill her. And that the big bad is Sorceress Ultimecia.\nhttp://vignette2.wikia.nocookie.net/p__/images/3/34/Cid_and_Edea_Kramer.png/revision/latest?cb=20140704104304&path-prefix=protagonist\nAlso, you learn that she was the wife of Cid.",
                     "https://images-2.gog.com/1c53ba37fb09f2ef0484fa28e833ca0f1e15cfc24abf55a59bfac36faaee1874.png\nIn Undertale, you learn that:\n-Flowey used to be Asriel Dreemurr\n-Chara (or whatever you name them) is the personification of a power hungry player\n-Your human player is called Frisk\nAlphys experimented on live monsters, resulting in the Amalgamates\n-LV means Level of Violence and EXP means Execution Points\n-Asgore is not evil, and he doesn't want power. He even hates killing the humans\n-Chara died to buttercup poisoning\n-Asriel died due to getting attacked from the humans\n-Asriel was struggling in control with Chara when their souls combined"
                     ]
         await self.bot.say(randchoice(spoilers))
