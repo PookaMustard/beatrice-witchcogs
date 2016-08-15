@@ -2,6 +2,7 @@ import discord
 import re
 import json
 import requests
+import random
 from bs4 import BeautifulSoup
 import aiohttp
 from discord.ext import commands
