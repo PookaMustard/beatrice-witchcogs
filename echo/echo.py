@@ -46,7 +46,7 @@ class echo:
 
     @commands.command()
     @checks.is_owner()
-    async def sonar(self, ctx, serv, text):
+    async def sonar(self, serv, text):
         """I'll repeat what you said and where you want it.
         
         A modified version of the debug command, with help from Calebj."""
@@ -68,16 +68,6 @@ class echo:
 
         if asyncio.iscoroutine(result):
             result = await result
-
-        result = python.format(result)
-        if not ctx.message.channel.is_private:
-            censor = (settings.email, settings.password)
-            r = "[EXPUNGED]"
-            for w in censor:
-                if w != "":
-                    result = result.replace(w, r)
-                    result = result.replace(w.lower(), r)
-                    result = result.replace(w.upper(), r)
 
 def setup(bot):
     bot.add_cog(echo(bot))
