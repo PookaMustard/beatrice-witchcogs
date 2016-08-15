@@ -1,5 +1,7 @@
 import discord
 import re
+import json
+import requests
 from bs4 import BeautifulSoup
 import aiohttp
 from discord.ext import commands
@@ -30,7 +32,88 @@ class appsearcher:
         else:
             text = " ".join(text)
             query=text.replace(" ", "%20")
-            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
+
+            r = requests.get('https://www.gog.com/games/ajax/filtered?limit=5&ssearch=' + text)
+#Loading the text of ajax search URL into variable data
+            data = json.loads(r.text)
+            try:
+            	check = data['products'][0]
+            except IndexError:
+            	return await.bot.say("No games found under that name on GOG.com. Try another search result.")
+            	
+            #Loading all required details into variables
+            
+            #Loading game details
+            
+            image = 'https' + data['products'][0]['image'] + '.png'
+            title = data['products'][0]['title']
+            genre = data['products'][0]['originalCategory']
+            url = 'https://www.gog.com' + data['products'][0]['url']
+            
+            #Loading platform support
+            
+            windows_support = data['products'][0]['worksOn']['Windows']
+            if windows_support == 'True':
+            	platcount = platcount + 1
+            linux_support = data['products'][0]['worksOn']['Linux']
+            if linux_support == 'True':
+            	platcount = platcount + 1
+            mac_support = data['products'][0]['worksOn']['Mac']
+            if mac_support == 'True':
+            	platcount = platcount + 1
+            
+            #Loading price details
+            
+            isdiscounted = data['products'][0]['isDiscounted']
+            iscomingsoon = data['products'][0]['isComingSoon']
+            isfree = data['products'][0]['price']['isFree']
+            price = data['products'][0]['price']['symbol'] + data['products'][0]['price']['finalAmount']
+            
+            #THE REAL CODE BEGINS.
+            # Formatting platform text. If platcount = 3, all platforms are added into the text. If 1, only one platform is added. If two, the first platform is added, followed by a ' and ' string, and then by the second platform finally.
+            if platcount == 3:
+            	platformtext = 'Windows, Linux and Mac.'
+            elif platcount == 2:
+            	if windows_support == 'True':
+            		windows_checked == 'True'
+            		platformtext = platformtext + 'Windows'
+            	elif linux_support == 'True':
+            		linux_checked == 'True'
+            		platformtext = platformtext + 'Linux'
+            	elif mac_support == 'True':
+            		mac_checked == 'True'
+            		platformtext == platformtext + 'Mac'
+            	platformtext == platformtext + ' and '
+            	if windows_support == 'True' && windows_checked != 'True':
+            		platformtext = platformtext + 'Windows'
+            	elif linux_support == 'True' && linux_checked != 'True':
+            		platformtext = platformtext + 'Linux'
+            	elif mac_support == 'True' && mac_checked != 'True':
+            		platformtext = platformtext + 'Mac'
+            elif platcount == 1:
+            	if windows_support == 'True':
+            		platformtext = platformtext + 'Windows'
+            	elif linux_support == 'True':
+            		platformtext = platformtext + 'Linux'
+            	elif mac_support == 'True':
+            		platformtext == platformtext + 'Mac'
+            	platformtext == platformtext + ' only'
+            
+            #Formatting price text.
+            if isfree == 'True':
+            	pricetext = 'Free'
+            else:
+            	if buyable == 'False':
+            		pricetext = 'Not buyable yet.'
+            	else:
+            		pricetext = price
+            if iscomingsoon == 'True':
+            	pricetext = pricetext + ", coming soon!"
+
+
+bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
+return await.bot.say(bottext)
+#            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
 
     @commands.command()
     async def itch(self, *text):
