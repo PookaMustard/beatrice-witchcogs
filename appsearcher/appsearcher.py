@@ -46,6 +46,7 @@ class appsearcher:
                     count_unabridged = soupObject.find(class_='header__title').get_text()
                     count = count_unabridged.replace('  DRM-FREE GAMES     ', '')
                     count = count.replace('\n        ', '')
+                    count = int(count)
                 except:
                     count = 1000
                 gamenum = randint(1, count)
