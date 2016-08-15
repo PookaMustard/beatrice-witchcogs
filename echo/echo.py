@@ -52,8 +52,8 @@ class echo:
         A modified version of the debug command, with help from Calebj."""
 
         #Your code will go here
-        text = " ".join(text)
         text = text.replace("\'", "\\\'")
+        text = " ".join(text)
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
         code = "bot.send_message(bot.get_channel(serv),'"+text+"')"
