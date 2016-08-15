@@ -51,7 +51,7 @@ class appsearcher:
             url = 'https://www.gog.com' + data['products'][0]['url']
             
             #Loading platform support
-            
+            platcount = 0
             windows_support = data['products'][0]['worksOn']['Windows']
             if windows_support == 'True':
             	platcount = platcount + 1
