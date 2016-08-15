@@ -55,7 +55,7 @@ class appsearcher:
             
             #Loading platform support
             platcount = 0
-            platformtext = 'ready! to die'
+            platformtext = ''
             windows_support = data['products'][0]['worksOn']['Windows']
             linux_support = data['products'][0]['worksOn']['Linux']
             mac_support = data['products'][0]['worksOn']['Mac']
