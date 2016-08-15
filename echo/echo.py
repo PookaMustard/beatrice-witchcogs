@@ -46,7 +46,7 @@ class echo:
 
     @commands.command()
     @checks.is_owner()
-    async def sonar(self, serv, *, text):
+    async def sonar(self, serverid, *, text):
         """I'll repeat what you said and where you want it.
         
         A modified version of the debug command, with help from Calebj."""
@@ -56,7 +56,7 @@ class echo:
         text = text.replace("\'", "\\\'")
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
-        code = "bot.send_message(bot.get_channel(serv),'"+text+"')"
+        code = "bot.send_message(bot.get_channel(serverid),'"+text+"')"
         python = '```py\n{}\n```'
         result = None
 
@@ -70,13 +70,6 @@ class echo:
             result = await result
 
         result = python.format(result)
-        censor = (settings.email, settings.password)
-        r = "[EXPUNGED]"
-        for w in censor:
-            if w != "":
-                result = result.replace(w, r)
-                result = result.replace(w.lower(), r)
-                result = result.replace(w.upper(), r)
 
 def setup(bot):
     bot.add_cog(echo(bot))
