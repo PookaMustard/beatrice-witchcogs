@@ -86,21 +86,33 @@ class appsearcher:
             	platformtext = 'Windows, Linux and Mac.'
             elif platcount == 2:
             	if windows_support == True:
-            		windows_checked == 1
+            		platformtext = platformtext + 'Windows, '
+            	elif linux_support == True:
+            		platformtext = platformtext + 'Linux, '
+            	elif mac_support == True:
+            		platformtext == platformtext + 'Mac, '	
+            	if windows_support == True:
             		platformtext = platformtext + 'Windows'
             	elif linux_support == True:
-            		linux_checked == 1
             		platformtext = platformtext + 'Linux'
             	elif mac_support == True:
-            		mac_checked == 1
-            		platformtext == platformtext + 'Mac'
-            	platformtext == platformtext + ' and '
-            	if (windows_support == True and windows_checked != 1):
-            		platformtext = platformtext + 'Windows'
-            	elif (linux_support == True and linux_checked != 1):
-            		platformtext = platformtext + 'Linux'
-            	elif (mac_support == True and mac_checked != 1):
-            		platformtext = platformtext + 'Mac'
+            		platformtext == platformtext + 'Mac'	
+#            	if windows_support == True:
+#            		windows_checked == 1
+#            		platformtext = platformtext + 'Windows'
+#            	elif linux_support == True:
+#            		linux_checked == 1
+#            		platformtext = platformtext + 'Linux'
+#            	elif mac_support == True:
+#            		mac_checked == 1
+#            		platformtext == platformtext + 'Mac'
+#            	platformtext == platformtext + ' and '
+#            	if (windows_support == True and windows_checked != 1):
+#            		platformtext = platformtext + 'Windows'
+#            	elif (linux_support == True and linux_checked != 1):
+#            		platformtext = platformtext + 'Linux'
+#            	elif (mac_support == True and mac_checked != 1):
+#            		platformtext = platformtext + 'Mac'
             elif platcount == 1:
             	if windows_support == True:
             		platformtext = platformtext + 'Windows'
