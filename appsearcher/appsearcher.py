@@ -39,7 +39,7 @@ class appsearcher:
             try:
             	check = data['products'][0]
             except IndexError:
-            	return await.bot.say("No games found under that name on GOG.com. Try another search result.")
+            	return self.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
             #Loading all required details into variables
             
@@ -109,10 +109,10 @@ class appsearcher:
             		pricetext = price
             if iscomingsoon == 'True':
             	pricetext = pricetext + ", coming soon!"
+            bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
+            return self.bot.say(bottext)
 
 
-bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
-return await.bot.say(bottext)
 #            await self.bot.say("https://www.gog.com/games?sort=bestselling&search="+query)
 
     @commands.command()
