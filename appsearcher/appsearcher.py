@@ -44,7 +44,7 @@ class appsearcher:
                     retries = retries + 1
                     try:
                         gamename[retries] = data['products'][retries]['title']
-                        print (gamename[retries])
+                        othergames = othergames + "\n" + (gamename[retries])
                     except:
                         retries = 6
             #Loading the text of ajax search URL into variable data
@@ -157,7 +157,7 @@ class appsearcher:
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
-            bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
+            bottext = othergames + "\n" + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
 
     @commands.command()
