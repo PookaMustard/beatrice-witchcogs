@@ -158,7 +158,7 @@ class appsearcher:
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
-            bottext = othergames + "\n" + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
+            bottext = "test:" + othergames + "\n" + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
 
     @commands.command()
