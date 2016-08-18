@@ -35,19 +35,22 @@ class appsearcher:
             if text[0]!='randomgame':
                 retries=0
                 gamenum=0
+                gamename=[]
                 othergames = ''
-                text = " ".join(text)
+                text = "".join(text)
                 text = text.replace(" ", "%20")
-                query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
+                query= 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
                 r = requests.get(query)
                 data = json.loads(r.text)
                 while retries <= 5:
-                    retries = retries + 1
-                    try:
-                        gamename[retries] = data['products'][retries]['title']
-                        othergames = othergames + "\n" + (gamename[retries])
-                    except:
-                        retries = 6
+                	try:
+                		gamene = data['products'][retries]['title']
+                		gamename.append(gamene)
+                		othergames = othergames + "\n" + (gamename[retries])
+                		retries = retries + 1
+                	except:
+                		maxnum=retries
+                		retries = 6
             #Loading the text of ajax search URL into variable data
             
             else:
