@@ -35,6 +35,7 @@ class appsearcher:
             if text[0]!='randomgame':
                 retries=0
                 gamenum=0
+                othergames = ''
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
