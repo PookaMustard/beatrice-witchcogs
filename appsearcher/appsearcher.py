@@ -47,8 +47,8 @@ class appsearcher:
                 	try:
                 		gamene = data['products'][retries]['title']
                 		gamename.append(gamene)
-                		othergames = retries + 1 + ') ' + othergames + "\n" + (gamename[retries])
                 		retries = retries + 1
+                		othergames = retries + ') ' + othergames + "\n" + (gamename[retries])
                 	except:
                 		maxnum=retries
                 		retries = 6
