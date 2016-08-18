@@ -159,12 +159,11 @@ class appsearcher:
                 platformtext = plat1 + ' and ' + plat2
             elif platcount == 1:
             	if windows_support == True:
-            		platformtext = platformtext + 'Windows'
+            		platformtext = 'Windows only'
             	elif linux_support == True:
-            		platformtext = platformtext + 'Linux'
+            		platformtext = 'Linux only'
             	elif mac_support == True:
-            		platformtext == platformtext + 'Mac'
-            	platformtext == platformtext + ' only'
+            		platformtext == 'Mac only'
             
             #Formatting price text.
             if isfree == True:
