@@ -15,9 +15,10 @@ class appsearcher:
         self.bot = bot
 
     @commands.command()
-    async def gog(self, *text):
+    async def gog(self, ctx, *text):
         """Returns GOG search results using game name
             Type %gog gamecount for the number of games"""
+        message = ctx.message
 
         #Your code will go here
         if text[0]=='gamecount':
