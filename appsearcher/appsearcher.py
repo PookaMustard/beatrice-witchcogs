@@ -33,10 +33,21 @@ class appsearcher:
                 return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
             if text[0]!='randomgame':
+                retries=0
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
-                gamenum=0
+                r = requests.get(query)
+                data = json.loads(r.text)
+                while retries <= 5:
+                    retries = retries + 1
+                    try:
+                        gamename[retries] = data['products][retries]['title']
+                        print gamename[retries]
+                    else:
+                        retries = 6
+            #Loading the text of ajax search URL into variable data
+            
             else:
                 query='https://www.gog.com/games/ajax/filtered?limit=99999'
                 url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
