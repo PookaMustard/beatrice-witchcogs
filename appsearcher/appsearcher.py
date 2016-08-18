@@ -52,6 +52,8 @@ class appsearcher:
                         retries = retries + 1
                         retriesnum = retriesnum + 1
                     except:
+                        if retries == 0:
+                            return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
                         maxnum = retries
                         retries = 6
                 if maxnum!=1:
