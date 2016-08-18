@@ -51,6 +51,9 @@ class appsearcher:
                 	except:
                 		maxnum=retries
                 		retries = 6
+                if maxnum!=1:
+                    await self.bot.say("Found the following games on GOG:\n" + othergames +"\n Please choose the game you want.")
+                    response = await self.bot.wait_for_message(author=message.author)
             #Loading the text of ajax search URL into variable data
             
             else:
