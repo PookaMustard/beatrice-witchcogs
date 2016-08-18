@@ -15,7 +15,7 @@ class appsearcher:
         self.bot = bot
 
     @commands.command()
-    async def gog(self, ctx, *text):
+    async def gog(self, *text):
         """Returns GOG search results using game name
             Type %gog gamecount for the number of games"""
 
@@ -54,7 +54,6 @@ class appsearcher:
                         retries = 6
                 if maxnum!=1:
                     await self.bot.say("Found the following games on GOG:\n" + othergames +"\n Please choose the game you want.")
-                    response = await self.bot.wait_for_ctx.message(author=ctx.message.author)
             #Loading the text of ajax search URL into variable data
             
             else:
