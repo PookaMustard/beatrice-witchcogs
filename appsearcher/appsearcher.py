@@ -43,7 +43,7 @@ class appsearcher:
                     retries = retries + 1
                     try:
                         gamename[retries] = data['products'][retries]['title']
-                        print gamename[retries]
+                        print (gamename[retries])
                     else:
                         retries = 6
             #Loading the text of ajax search URL into variable data
