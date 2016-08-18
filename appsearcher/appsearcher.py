@@ -42,7 +42,7 @@ class appsearcher:
                 while retries <= 5:
                     retries = retries + 1
                     try:
-                        gamename[retries] = data['products][retries]['title']
+                        gamename[retries] = data['products'][retries]['title']
                         print gamename[retries]
                     else:
                         retries = 6
