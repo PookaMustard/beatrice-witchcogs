@@ -61,7 +61,7 @@ class appsearcher:
                     response = await self.bot.wait_for_message(author=message.author)
                     try:
                         gamenum = int(response.content) - 1
-                        if (gamenum > maxnum) or (gamenum < 0):
+                        if (gamenum >= maxnum) or (gamenum < 0):
                             await self.bot.say("Chosen number invalid. Assuming first search result.")
                             gamenum=0
                     except:
