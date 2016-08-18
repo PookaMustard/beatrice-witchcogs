@@ -41,10 +41,10 @@ class appsearcher:
                 othergames = ''
                 text = "".join(text)
                 text = text.replace(" ", "%20")
-                query= 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
+                query= 'https://www.gog.com/games/ajax/filtered?limit=10&search=' + text
                 r = requests.get(query)
                 data = json.loads(r.text)
-                while retries <= 5:
+                while retries <= 10:
                     try:
                         gamene = data['products'][retries]['title']
                         gamename.append(gamene)
@@ -55,7 +55,7 @@ class appsearcher:
                         if retries == 0:
                             return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
                         maxnum = retries
-                        retries = 6
+                        retries = 11
                 if maxnum!=1:
                     await self.bot.say("Found the following games on GOG:" + othergames +"\n\nPlease choose the game you want.")
                     response = await self.bot.wait_for_message(author=message.author)
