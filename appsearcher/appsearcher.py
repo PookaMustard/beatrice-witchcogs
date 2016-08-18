@@ -18,6 +18,7 @@ class appsearcher:
     async def gog(self, *text):
         """Returns GOG search results using game name
             Type %gog gamecount for the number of games"""
+        message = ctx.message
 
         #Your code will go here
         if text[0]=='gamecount':
@@ -44,7 +45,8 @@ class appsearcher:
                 data = json.loads(r.text)
                 while retries <= 5:
                 	try:
-                		gamene = data['products'][retries]['title']
+                	    num = retries + 1
+                		gamene = num + ') ' + data['products'][retries]['title']
                 		gamename.append(gamene)
                 		othergames = othergames + "\n" + (gamename[retries])
                 		retries = retries + 1
