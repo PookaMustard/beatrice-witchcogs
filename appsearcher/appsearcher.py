@@ -44,15 +44,15 @@ class appsearcher:
                 r = requests.get(query)
                 data = json.loads(r.text)
                 while retries <= 5:
-                	try:
-                	    num = retries + 1
-                		gamene = num + ') ' + data['products'][retries]['title']
-                		gamename.append(gamene)
-                		othergames = othergames + "\n" + (gamename[retries])
-                		retries = retries + 1
-                	except:
-                		maxnum=retries
-                		retries = 6
+                    try:
+                        num = retries + 1
+                        gamene = num + ') ' + data['products'][retries]['title']
+                        gamename.append(gamene)
+                        othergames = othergames + "\n" + (gamename[retries])
+                        retries = retries + 1
+                    except:
+                        maxnum=retries
+                        retries = 6
                 if maxnum!=1:
                     await self.bot.say("Found the following games on GOG:\n" + othergames +"\n Please choose the game you want.")
                     response = await self.bot.wait_for_message(author=message.author)
