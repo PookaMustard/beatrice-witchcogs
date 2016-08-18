@@ -57,7 +57,7 @@ class appsearcher:
                         maxnum = retries
                         retries = 11
                 if maxnum!=1:
-                    await self.bot.say("Found the following games on GOG:" + othergames +"\n\nPlease choose the game you want.")
+                    await self.bot.say("Found the following games on GOG:" + othergames +"\n\nPlease type the number of the game you want, then send.")
                     response = await self.bot.wait_for_message(author=message.author)
                     try:
                         gamenum = int(response.content) - 1
@@ -90,10 +90,10 @@ class appsearcher:
             data = json.loads(r.text)
             
             #Checking if game exists
-            try:
-            	check = data['products'][gamenum]
-            except IndexError:
-            	return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
+#            try:
+#            	check = data['products'][gamenum]
+#            except IndexError:
+#            	return await self.bot.say("No games found under that name on GOG.com. Try another search result.")
             	
             #Loading placeholder variables
             platcount = 0
