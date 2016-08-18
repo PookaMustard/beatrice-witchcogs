@@ -34,6 +34,7 @@ class appsearcher:
         else:
             if text[0]!='randomgame':
                 retries=0
+                gamenum=0
                 text = " ".join(text)
                 text = text.replace(" ", "%20")
                 query = 'https://www.gog.com/games/ajax/filtered?limit=5&search=' + text
@@ -44,7 +45,6 @@ class appsearcher:
                     try:
                         gamename[retries] = data['products'][retries]['title']
                         print (gamename[retries])
-                        gamenum=1
                     except:
                         retries = 6
             #Loading the text of ajax search URL into variable data
