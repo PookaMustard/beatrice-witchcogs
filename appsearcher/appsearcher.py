@@ -21,7 +21,7 @@ class appsearcher:
         message = ctx.message
 
         #Your code will go here
-        if text[0]=='gamecount':
+        if text =='gamecount':
             url = "https://www.gog.com/games?sort=bestselling&page=1" #build the web adress
             async with aiohttp.get(url) as response:
                 soupObject = BeautifulSoup(await response.text(), "html.parser") 
@@ -33,7 +33,7 @@ class appsearcher:
             except:
                 return await self.bot.say("Couldn't load amount of DRM-free games on GOG. There must be an error.")
         else:
-            if text[0]!='randomgame':
+            if text !='randomgame':
                 retries=0
                 retriesnum=1
                 gamenum=0
