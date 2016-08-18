@@ -45,7 +45,7 @@ class appsearcher:
                 r = requests.get(query)
                 data = json.loads(r.text)
                 while retries <= 5:
-                	try:
+                    try:
                         gamene = data['products'][retries]['title']
                         gamename.append(gamene)
                         othergames = othergames + "\n" + str(retriesnum) + ") "  + gamename[retries]
