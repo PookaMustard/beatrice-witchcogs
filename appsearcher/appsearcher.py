@@ -57,7 +57,14 @@ class appsearcher:
                 if maxnum!=1:
                     await self.bot.say("Found the following games on GOG:" + othergames +"\n\nPlease choose the game you want.")
                     response = await self.bot.wait_for_message(author=message.author)
-                    gamenum = int(response.content) - 1
+                    try:
+                        gamenum = int(response.content) - 1
+                        if gamenum > maxnum or gamenum < 1:
+                            await self.bot.say("Chosen number invalid. Assuming first search result.")
+                            gamenum=0
+                    except:
+                        await self.bot.say("Cannot accept strings for choosing search results. Assuming first search result.")
+                        gamenum=0
                 else:
                     gamenum = 0
             #Loading the text of ajax search URL into variable data
@@ -170,7 +177,7 @@ class appsearcher:
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             
-            bottext = "test:" + othergames + "\n" + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
+            bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
 
     @commands.command()
