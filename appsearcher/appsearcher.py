@@ -177,12 +177,13 @@ class appsearcher:
                 pricetext = pricetext + " (discounted by " + pricesymbol + discount + ", base price is " + pricesymbol + baseprice + ")"
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
-            	
+            
+            #Checking for whether the title in question is NSFW or not.
             nsfwcheck=0
-            nsfwtitle = ["Witcher", "Lula", "Leisure Suit Larry"]
-            while nsfwcheck <= 2:
+            nsfwtitle = ["Witcher", "Lula", "Leisure Suit Larry", "HuniePop"]
+            while nsfwcheck <= 3:
                 if nsfwtitle[nsfwcheck] in title:
-                    bottext = bottext + "This title is not safe for work" + "\n"
+                    bottext = bottext + "**This title is not safe for work. View at your own discretion.**" + "\n"
                 nsfwcheck = nsfwcheck + 1
             
             bottext = bottext + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
