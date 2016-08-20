@@ -178,8 +178,12 @@ class appsearcher:
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
             	
-            if ("Witcher" or "Lula" or "Leisure Suit Larry") in title:
-                bottext = bottext + "This title is not safe for work" + "\n"
+            nsfwcheck=0
+            nsfwtitle = ["Witcher", "Lula", "Leisure Suit Larry"]
+            while nsfwcheck <= 2:
+                if nsfwtitle[nsfwcheck] in title:
+                    bottext = bottext + "This title is not safe for work" + "\n"
+                nsfwcheck = nsfwcheck + 1
             
             bottext = bottext + "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
