@@ -177,6 +177,10 @@ class appsearcher:
                 pricetext = pricetext + " (discounted by " + pricesymbol + discount + ", base price is " + pricesymbol + baseprice + ")"
             if iscomingsoon == True:
             	pricetext = pricetext + ", coming soon!"
+            	
+            gognsfw = ["witcher", "lula", "leisure suit larry"]
+            if gognsfw in title:
+                bottext = bottext + "This title is not safe for work" + "\n"
             
             bottext = "Title: " + title + "\n" + "Game URL: " + url + "\n" + "Game Image URL: " + image + "\n" + "Genre: " + genre + "\n" + "Platforms: " + platformtext + "\n"  + "Price: " + pricetext
             return await self.bot.say(bottext)
