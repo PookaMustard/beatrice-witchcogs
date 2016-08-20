@@ -46,15 +46,30 @@ class commandrequest:
     @commands.command(pass_context=True)
     async def commandrequest(self, ctx, *, command):
         """Sends a request for a new command.
+            A modified version of the debug command, with help from Calebj."""
+            
+        ######################################################################
+        #   THIS NEEDS TO BE CONFIGURED TO REPRESENT YOUR COMMAND REQUEST    #
+        #  RECEIVER. IT MUST BE A CHANNEL'S ID ON A DISCORD SERVER. YOU CAN  #
+        # GET THEM BY ACTIVATING DEVELOPER MODE IN DISCORD'S SETTINGS IN THE #
+        #  APPEARANCES SECTION, AND THEN RIGHT-CLICKING ANY CHANNEL TO COPY  #
+        #     THE ID TO YOUR CLIPBOARD. YOU CAN ALSO OBTAIN IT BY SAYING     #
+        #     <PREFIX>channelid IN YOUR CHANNEL, USEFUL FOR MOBILE USERS,    #
+        #     WHERE <PREFIX> IS YOUR BOT'S PREFIX, AVAILABLE IN THIS COG.    #
+        ######################################################################
+        channelidstring = '123456789123456789'
+        ######################################################################
+        ######################################################################
+        ######################################################################
+        ######################################################################
         
-        A modified version of the debug command, with help from Calebj."""
         author = ctx.message.author
         server = ctx.message.server
         command = command + " -- Command requested by " + author.name + " from " + "{}".format(server.name)
         command = command.replace("\'", "\\\'")
         local_vars = locals().copy()
         local_vars['bot'] = self.bot
-        code = "bot.send_message(bot.get_channel('190590897480663040'),'"+command+"')"
+        code = "bot.send_message(bot.get_channel(channelidstring),'"+command+"')"
         python = '```py\n{}\n```'
         result = None
 
