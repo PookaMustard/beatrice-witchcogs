@@ -128,8 +128,8 @@ class appsearcher:
             #Loading price details
             
             isdiscounted = data['products'][gamenum]['isDiscounted']
-            discount=data['products'][0]['price']['discountDifference']
-            baseprice=data['products'][0]['price']['baseAmount']
+            discount=data['products'][gamenum]['price']['discountDifference']
+            baseprice=data['products'][gamenum]['price']['baseAmount']
             iscomingsoon = data['products'][gamenum]['isComingSoon']
             isfree = data['products'][gamenum]['price']['isFree']
             price = data['products'][gamenum]['price']['symbol'] + data['products'][gamenum]['price']['finalAmount']
