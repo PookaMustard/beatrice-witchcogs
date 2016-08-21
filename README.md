@@ -16,13 +16,18 @@ Fetches search results from various application sites. Currently supports:
 - `[p]ps [gamename]` - Fetches a search link on PlayStation Store
 - `[p]nintendo [gamename]` - Fetches a search link on Nintendo Store
 - `[p]steamsearch [gamename]` - Fetches a search link on steam
-- `[p]stemaid [gameid]` - Makes a link out of the specified steam game id
+- `[p]steamid [gameid]` - Makes a link out of the specified steam game id
 
 ###Bing
-Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
+Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search, which requires an API key which you can set via `[p]apikey_bing`. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
 - `[p]bing [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Moderate.
 - `[p]bingstrict [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Strict. 
 - `[p]bingadult [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Off. Must be enabled by admins on a server and/or channel basis using `[p]bingadultsets` for servers and `[p]bingadultsetc` for channels.
 - `[p]bingsearch [optional:random] [websearch]` - Looks up Bing for a web URL and embeds it into Discord.
 - `[p]bingvideo [optional:random] [videosearch]` - Looks up Bing for a video URL and embeds it into Discord
 - `[p]bingnews [optional:random] [newsearch]` - Looks Bing for a news URL and embeds it into Discord along with a short headline, date and time and a summary of the headline.
+
+###Command Request
+If you're a bot owner who frequently adds new commands on the community's call and you have your private bot development server, Command Request takes command requests from your target community and sends them into one channel for easier bot development. Currently supports:
+- `[p]commandrequest [command]` - Relays requested command to your current server. The `channelidstring` variable in the cog must be changed to reflect your current requests channel.
+- `[p]channelid [#channelname]` - Fetches the channnel name. Useful if on Mobile Discord.
