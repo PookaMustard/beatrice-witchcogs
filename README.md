@@ -33,6 +33,11 @@ If you're a bot owner who frequently adds new commands on the community's call a
 - `[p]channelid [#channelname]` - Fetches the channnel name. Useful if on Mobile Discord.
 
 ###Echo
-Makes the bot repeat what you say, and only works for the owner of the bot. Supports spaces but not newlines. Currently supports:
+Makes the bot repeat what you say, while taking into account that only the bot owner can use Echo. Supports spaces but not newlines. Currently supports:
 - `[p]echo [text]` - Repeats what you said after the command in the same channel.
 - `[p]sonar [channelid] [text]` - Repeats what you said in a specific channel using the channel's ID.
+
+###Is It Down
+Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question.
+- `[p]isitdown [url]
+ 
