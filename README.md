@@ -1,6 +1,5 @@
 # beatrice-witchcogs
-General-purpose cogs made for Red-DiscordBot, mostly search cogs.
-They're all made to be used with Red-DiscordBot. It is assumed you know how to use Red-DiscordBot.
+General-purpose cogs made for Red-DiscordBot, mostly search cogs, occasionally themed after Beatrice, the Golden Witch of Umineko no Naku Koro ni. They're all made to be used with Red-DiscordBot. It is assumed you know how to use Red-DiscordBot and how to install and download cogs.
 
 ##Cogs
 ###Appsearcher
@@ -49,3 +48,7 @@ Makes the bot generate links for MAL search results. Currently supports:
 - `[p]malcharacter [charactername]` - Generates search link for the specified character
 - `[p]mangalist [username]` - Generates mangalist link for the specified user
 - `[p]animelist [username]` - Generates animelist link for the specified user
+
+###Beatrice's Nineball
+Allows you to use an 8-ball like command that's themed after Beatrice. Unlike Red-DiscordBot's `[p]8ball [question?]` command, there are no "Please ask later" type of responses, and there are as much negative responses as there positive responses. Usage:
+- `[p]9ball [question?]` - The question mark is required, otherwise the bot will not recognize it as a question and won't provide an answer for it.
