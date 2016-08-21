@@ -50,5 +50,11 @@ Makes the bot generate links for MAL search results. Currently supports:
 - `[p]animelist [username]` - Generates animelist link for the specified user
 
 ###Beatrice's Nineball
-Allows you to use an 8-ball like command that's themed after Beatrice. Unlike Red-DiscordBot's `[p]8ball [question?]` command, there are no "Please ask later" type of responses, and there are as much negative responses as there positive responses. Usage:
+Allows you to use an 8-ball like command that's themed after Beatrice. Unlike Red-DiscordBot's `[p]8ball [question?]` command, there are no "Please ask later"-like responses, and there are as much negative responses as there are positive responses. Usage:
 - `[p]9ball [question?]` - The question mark is required, otherwise the bot will not recognize it as a question and won't provide an answer for it.
+
+###Pokémon
+Fetches the Pokédex entry, name and image of a Pokémon and embeds them into Discord. Usage:
+- `[p]pokedex` - Sends the entirety of the Pokédex in a DM to the user.
+- `[p]pokemon [optional: pokémonname OR pokedéx entry]` - Fetches a Pokémon. If there are no parameters provided, the bot will assume a random Pokémon. Otherwise, the bot will fetch the Pokémon listed under the specified Pokédex entry or EXACT Pokémon name.
+
