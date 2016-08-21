@@ -38,6 +38,14 @@ Makes the bot repeat what you say, while taking into account that only the bot o
 - `[p]sonar [channelid] [text]` - Repeats what you said in a specific channel using the channel's ID.
 
 ###Is It Down
-Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question.
-- `[p]isitdown [url]
+Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. Usage:
+- `[p]isitdown [url]`
  
+###MyAnimeList Search
+Makes the bot generate links for MAL search results. Currently supports:
+- `[p]mal [searchname]` - Generates all-purpose search link for the specified string
+- `[p]manga [manganame]` - Generates search link for the specified manga
+- `[p]anime [animename]` - Generates search link for the specified anime
+- `[p]malcharacter [charactername]` - Generates search link for the specified character
+- `[p]mangalist [username]` - Generates mangalist link for the specified user
+- `[p]animelist [username]` - Generates animelist link for the specified user
