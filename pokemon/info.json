@@ -1,6 +1,7 @@
- { 
-     "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "A cog for Pokemon. Lists Pokemon names, Pokedex entries and images for them.", 
-     "DISABLED" : false, 
-     "NAME" : "Pokemon" 
+{ 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "Pokemon cog installed. Use [p]help pokemon to get started.",
+    "NAME" : "Pokemon",
+    "SHORT" : "A cog for Pokemon. Lists Pokemon names, Pokedex entries and images for them.",
+    "DESCRIPTION" : "A cog for Pokemon. Lists Pokemon names, Pokedex entries and images for them, and even sends a copy of the Pokedex to your DMs."
 } 
