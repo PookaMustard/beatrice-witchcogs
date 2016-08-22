@@ -1,6 +1,7 @@
  { 
-     "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Search Bing, a front-end for py-bing-search made for Red/Discord", 
-     "DISABLED" : false, 
-     "NAME" : "Bing" 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "Bing cog installed. To start, use %bing. You can also set %bingadultsets for server and %bingadultsetc for channel to allow for searches without SafeSearch enabled.",
+    "NAME" : "Bing",
+    "SHORT" : "Bing cog that searches Bing for web, images, videos and news.",
+    "DESCRIPTION" : "Bing cog that searches Bing for web, images, videos and news, with a larger focus on image search. JSON code copied from Mash's IMDb cog, complete with permission to use it."
 } 
