@@ -1,6 +1,6 @@
  { 
      "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Command request!", 
+     "DESCRIPTION" : "Cog for collecting command requests and sending them into one channel.", 
      "DISABLED" : false, 
-     "NAME" : "Command request" 
+     "NAME" : "Command Request" 
 } 
