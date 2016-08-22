@@ -57,3 +57,6 @@ Fetches the Pokédex entry, name and image of a Pokémon and embeds them into Di
 ###The Pirate Bay
 Makes the bot generate links for TPB search results. Selected search entry may or may not be NSFW. Usage:
 - `[p]tpb [searchname]`
+
+##Contact
+The cogs should generally work fine, but sometimes there might be an unexpected error or bug that hinders the experience. In case you do find such an issue, either leave an issue on this repo, or contact me on Discord at Pooka#2892.
