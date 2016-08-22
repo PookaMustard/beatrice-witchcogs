@@ -1,6 +1,7 @@
- { 
-     "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Cog for collecting command requests and sending them into one channel.", 
-     "DISABLED" : false, 
-     "NAME" : "Command Request" 
+{ 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "Command Request cog installed. You can now use [p]commandrequest to accept community command requests into your bot development channel. Make sure your development channel is set via editing the \"channelidstring\" variable in commandrequest.py, otherwise the command will not work.",
+    "NAME" : "Command Request",
+    "SHORT" : "Cog for collecting command requests and sending them into one channel.",
+    "DESCRIPTION" : "Cog for collecting command requests and sending them into one channel, useful if you add commands for the community."
 } 
