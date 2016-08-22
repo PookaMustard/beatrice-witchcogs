@@ -1,6 +1,6 @@
  { 
      "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Pokemon cog!", 
+     "DESCRIPTION" : "A cog for Pokemon. Lists Pokemon names, Pokedex entries and images for them.", 
      "DISABLED" : false, 
      "NAME" : "Pokemon" 
 } 
