@@ -3,8 +3,8 @@ General-purpose cogs made for Red-DiscordBot, mostly search cogs, occasionally t
 
 ##Cogs
 ###Appsearcher
-Fetches search results from various application sites. Currently supports:
-- `[p]gog [[gamename]/gamecount/random]` - Fetches a list of games on GOG. Allows you to choose from the available first 10 results and lists contextual info about the game such as pricing and platforms. Currently the most advanced command in Appsearcher.
+Fetches search results from various application sites. It currently requires requests, JSON, re, bs4 and aiohttp. Currently supports:
+- `[p]gog [[gamename]/gamecount/random]` - Fetches a list of games on GOG. Allows you to choose from the available first 10 results and lists contextual info about the game such as pricing and platforms. Currently the most advanced command in Appsearcher. Known NSFW games (such as The Witcher series, Leisure Suit Larry series, HuniePop and Lula: The Sexy Empire) are marked as such when embedded into Discord.
 - `[p]humblebundle [gamename]` - Fetches a search link on Humble using your gamename
 - `[p]itch [gamename]` - Fetches a search link on itch.io
 - `[p]origin [gamename]` - Fetches a search link on Origin
@@ -18,10 +18,10 @@ Fetches search results from various application sites. Currently supports:
 - `[p]steamid [gameid]` - Makes a link out of the specified steam game id
 
 ###Bing
-Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search, which requires an API key which you can set via `[p]apikey_bing`. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
+Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search (a required dependency), which requires an API key which you can set via `[p]apikey_bing`. It requires py-bing-search and requests to work. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
 - `[p]bing [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Moderate.
 - `[p]bingstrict [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Strict. 
-- `[p]bingadult [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Off. Must be enabled by admins on a server and/or channel basis using `[p]bingadultsets` for servers and `[p]bingadultsetc` for channels.
+- `[p]bingadult [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Off. Must be enabled by admins on a server and/or channel basis using `[p]bingadultsets` for servers and `[p]bingadultsetc` for channels. This command is NSFW.
 - `[p]bingsearch [optional:random] [websearch]` - Looks up Bing for a web URL and embeds it into Discord.
 - `[p]bingvideo [optional:random] [videosearch]` - Looks up Bing for a video URL and embeds it into Discord
 - `[p]bingnews [optional:random] [newsearch]` - Looks Bing for a news URL and embeds it into Discord along with a short headline, date and time and a summary of the headline.
@@ -37,7 +37,7 @@ Makes the bot repeat what you say, while taking into account that only the bot o
 - `[p]sonar [channelid] [text]` - Repeats what you said in a specific channel using the channel's ID.
 
 ###Is It Down
-Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. Usage:
+Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. It requires the dependencies asyncio and aiohttp Usage:
 - `[p]isitdown [url]`
  
 ###MyAnimeList Search
@@ -58,3 +58,6 @@ Fetches the Pokédex entry, name and image of a Pokémon and embeds them into Di
 - `[p]pokedex` - Sends the entirety of the Pokédex in a DM to the user.
 - `[p]pokemon [optional: pokémonname OR pokedéx entry]` - Fetches a Pokémon. If there are no parameters provided, the bot will assume a random Pokémon. Otherwise, the bot will fetch the Pokémon listed under the specified Pokédex entry or EXACT Pokémon name.
 
+###The Pirate Bay
+Makes the bot generate links for TPB search results. Selected search entry may or may not be NSFW. Usage:
+- `[p]tpb [searchname]`
