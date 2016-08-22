@@ -1,6 +1,7 @@
-{   
-     "AUTHOR" : "PookaMustard",   
-     "DESCRIPTION" : "The Pirate Bay script for searching torrent files",   
-     "DISABLED" : false,   
-     "NAME" : "thepiratebay"   
-}   
+{ 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "The Pirate Bay installed. Use [p]tpb to start.",
+    "NAME" : "The Pirate Bay",
+    "SHORT" : "The Pirate Bay script for searching torrent files.", 
+    "DESCRIPTION" : "The Pirate Bay script for searching torrent files."
+} 
