@@ -1,6 +1,4 @@
 import discord
-from bs4 import BeautifulSoup
-import aiohttp
 from discord.ext import commands
 
 class MyAnimeListSearch:
