@@ -1,6 +1,6 @@
  { 
      "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Echo", 
+     "DESCRIPTION" : "Repeats what you said, either in the current channel or a specified one.", 
      "DISABLED" : false, 
      "NAME" : "Echo" 
 } 
