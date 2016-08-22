@@ -1,6 +1,7 @@
- { 
-     "AUTHOR" : "PookaMustard", 
-     "DESCRIPTION" : "Cog to check if a site is down or up.", 
-     "DISABLED" : false, 
-     "NAME" : "Isitdown" 
+{ 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "Is It Down cog installed. Start using it with [p]isitdown",
+    "NAME" : "Is It Down",
+    "SHORT" : "Cog that checks if a site is down or not.",
+    "DESCRIPTION" : "Cog that checks if a site is down or not."
 } 
