@@ -1,6 +1,7 @@
-  {  
-2      "AUTHOR" : "PookaMustard",  
-3      "DESCRIPTION" : "MyAnimeList Search",  
-4      "DISABLED" : false,  
-5      "NAME" : "myanimelistsearch"  
-6 }  
+{ 
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "MyAnimeList cog installed. To start, use %manga, %anime, %mal, %malcharacter, %mangalist or %animelist.",
+    "NAME" : "MyAnimeList Search",
+    "SHORT" : "Cog to search MyAnimeList.",
+    "DESCRIPTION" : "Cog to search MyAnimeList, including anime, manga, characters and lists."
+} 
