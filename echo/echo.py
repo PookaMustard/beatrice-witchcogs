@@ -71,5 +71,12 @@ class echo:
 
         result = python.format(result)
 
+    @commands.command(pass_context=True)
+    @checks.is_owner()
+    async def channelidget(self, ctx):
+        """Gets current channel ID immediately."""
+        channel = ctx.message.channel
+        return await self.bot.say(channel.id)
+
 def setup(bot):
     bot.add_cog(echo(bot))
