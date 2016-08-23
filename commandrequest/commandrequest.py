@@ -1,104 +1,72 @@
 import discord
 from discord.ext import commands
 from cogs.utils import checks
-from __main__ import set_cog, send_cmd_help, settings
-
-import importlib
-import traceback
-import logging
-import asyncio
-import threading
-import datetime
-import glob
+from .utils.dataIO import fileIO
+import json
 import os
-import time
 
-
-log = logging.getLogger("red.owner")
-
-
-class CogNotFoundError(Exception):
-    pass
-
-
-class CogLoadError(Exception):
-    pass
-
-
-class NoSetupError(CogLoadError):
-    pass
-
-
-class CogUnloadError(Exception):
-    pass
-
-
-class OwnerUnloadWithoutReloadError(CogUnloadError):
-    pass
-
-
-class commandrequest:
+class CommandRequest:
 
     def __init__(self, bot):
         self.bot = bot
-        self.setowner_lock = False
 
     @commands.command(pass_context=True)
     async def commandrequest(self, ctx, *, command):
         """Sends a request for a new command.
-            A modified version of the debug command, with help from Calebj."""
-            
-        ######################################################################
-        #   THIS NEEDS TO BE CONFIGURED TO REPRESENT YOUR COMMAND REQUEST    #
-        #  RECEIVER. IT MUST BE A CHANNEL'S ID ON A DISCORD SERVER. YOU CAN  #
-        # GET THEM BY ACTIVATING DEVELOPER MODE IN DISCORD'S SETTINGS IN THE #
-        #  APPEARANCES SECTION, AND THEN RIGHT-CLICKING ANY CHANNEL TO COPY  #
-        #     THE ID TO YOUR CLIPBOARD. YOU CAN ALSO OBTAIN IT BY SAYING     #
-        #     <PREFIX>channelid IN YOUR CHANNEL, USEFUL FOR MOBILE USERS,    #
-        #     WHERE <PREFIX> IS YOUR BOT'S PREFIX, AVAILABLE IN THIS COG.    #
-        ######################################################################
-        channelidstring = '123456789123456789'
-        ######################################################################
-        ######################################################################
-        ######################################################################
-        ######################################################################
-        
+        A modified version of the debug command, with help from Calebj."""
+        channelid = loadauth()
+        if channelid == '':
+            return await self.bot.say("You haven't set the channel ID for command requests correctly. " +
+                "Use `[p]savechannelid [your channel ID here]` to set the command request channel. Use " +
+                "Discord's Developer Mode to copy the ID of the channel you wish to set for receiving " +
+                "command requests.")
         author = ctx.message.author
         server = ctx.message.server
         command = command + " -- Command requested by " + author.name + " from " + "{}".format(server.name)
         command = command.replace("\'", "\\\'")
-        local_vars = locals().copy()
-        local_vars['bot'] = self.bot
-        code = "bot.send_message(bot.get_channel(channelidstring),'"+command+"')"
-        python = '```py\n{}\n```'
-        result = None
-
-        try:
-            result = eval(code, globals(), local_vars)
-        except Exception as e:
-            await self.bot.say(python.format(type(e).__name__ + ': ' + str(e)))
-            return
-
-        if asyncio.iscoroutine(result):
-            result = await result
-
-        result = python.format(result)
-        if not ctx.message.channel.is_private:
-            censor = (settings.email, settings.password)
-            r = "[EXPUNGED]"
-            for w in censor:
-                if w != "":
-                    result = result.replace(w, r)
-                    result = result.replace(w.lower(), r)
-                    result = result.replace(w.upper(), r)
+        channelid = self.bot.get_channel(str(channelid))
+        return await self.bot.send_message(channelid, command)
         
-   
-   
-    @commands.command(pass_context=True, hidden=True)
-    async def channelid(self, ctx, *, channel : discord.Channel):
-        """Returns channel id"""
+    @commands.command()
+    @checks.is_owner()
+    async def savechannelid(self, channelid):
+        """Saves this channel for commandrequests."""
+        saveauth(channelid)
+        channelidstring = loadauth()
+        return await self.bot.say("Saved. Now using " + channelidstring + " as the channel id for " +
+            "command requests.")
         
-        await self.bot.say(channel.id)
-        
+### GLOBAL JSON FUNCTIONS
+
+DATADIR = "data/commandrequests"
+SETTINGS = DATADIR + "/data.json"
+
+def saveauth(channelid):
+    channelid = channelid
+    with open(SETTINGS, 'w') as f:
+        json.dump(channelid, f)
+    return
+
+def loadauth():
+    channelid = ''
+    with open(SETTINGS, 'r') as f:
+        channelid = json.load(f)
+    return channelid
+
+def check_folders():
+    if not os.path.exists(DATADIR):
+        print("Creating data directory for Command Request cog")
+        os.mkdir(DATADIR)
+            
+def check_files():
+    if not fileIO(SETTINGS, "check"):
+        channelid = ''
+        print("Creating blank data file for Command Request cog")
+        fileIO(SETTINGS, "save", channelid)
+
+### BOT SETUP
+
 def setup(bot):
-    bot.add_cog(commandrequest(bot))
+    check_folders()
+    check_files()
+    bot.add_cog(CommandRequest(bot))
