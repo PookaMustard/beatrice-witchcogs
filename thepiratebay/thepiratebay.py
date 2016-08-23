@@ -18,4 +18,4 @@ class ThePirateBay:
         await self.bot.say("***WARNING:*** May or may not include NSFW content\nhttps://thepiratebay.org/search/" + query + "/0/99/0")
 
 def setup(bot):
-    bot.add_cog(thepiratebay(bot))
+    bot.add_cog(ThePirateBay(bot))
