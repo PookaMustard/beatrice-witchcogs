@@ -3,5 +3,5 @@
     "INSTALL_MSG" : "Echo cog installed. Use [p]echo to repeat what you said, and [p]sonar to repeat what you said in the specified channel (throught the channel.id). Only the owner can use it.",
     "NAME" : "Echo",
     "SHORT" : "Repeats what you said where you want it, owner only.",
-    "DESCRIPTION" : "Repeats what you said where you want it, owner only, either in the current channel or in a specified channel."
+    "DESCRIPTION" : "Repeats what you said where you want it, owner only, either in the current channel or in a specified channel. Credits to calebj for the original debug command."
 } 
