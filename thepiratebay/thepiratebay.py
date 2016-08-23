@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class thepiratebay:
+class ThePirateBay:
     """Search for files on thepiratebay.org"""
 
     def __init__(self, bot):
