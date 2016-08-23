@@ -1,5 +1,4 @@
 import discord
-import re
 import json
 import requests
 from random import randint
@@ -8,7 +7,7 @@ from bs4 import BeautifulSoup
 import aiohttp
 from discord.ext import commands
 
-class appsearcher:
+class Appsearcher:
     """Search for apps on popular application stores"""
 
     def __init__(self, bot):
@@ -303,6 +302,5 @@ class appsearcher:
         query=text.replace(" ", "+")
         await self.bot.say("http://www.nintendo.com/search/#/results/"+query+"/1")
 
-
 def setup(bot):
-    bot.add_cog(appsearcher(bot))
+    bot.add_cog(Appsearcher(bot))
