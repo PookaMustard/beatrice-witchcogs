@@ -20,7 +20,7 @@ from py_bing_search import PyBingNewsSearch
 DIR_DATA = "data/bing"
 SETTINGS = DIR_DATA+"/settings.json"
         
-class bing:
+class Bing:
     """Fetches search results from Bing.
     
     Uses the Python module py_bing_search as a frontend for Red"""
@@ -385,5 +385,5 @@ def check_files():
 def setup(bot):
     check_folders()
     check_files()
-    n = bing(bot)
+    n = Bing(bot)
     bot.add_cog(n)
