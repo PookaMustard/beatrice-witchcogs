@@ -3,7 +3,7 @@ from discord.ext import commands
 from random import randint
 from random import choice as randchoice
 
-class pokemon:
+class Pokemon:
     """Random Pokemon images!"""
 
     def __init__(self, bot):
@@ -774,4 +774,4 @@ class pokemon:
             return await self.bot.say("There is no Pokédex entry under that number. Try a lower positive number (Pokédex entries range from 1 to 721), or enter a full Pokémon name")
     
 def setup(bot):
-    bot.add_cog(pokemon(bot))
+    bot.add_cog(Pokemon(bot))
