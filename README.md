@@ -27,9 +27,9 @@ Fetches search results from Bing and embeds them into Discord. It is a Red-Disco
 - `[p]bingnews [optional:random] [newsearch]` - Looks Bing for a news URL and embeds it into Discord along with a short headline, date and time and a summary of the headline.
 
 ###Command Request
-If you're a bot owner who frequently adds new commands on the community's call and you have your private bot development server, Command Request takes command requests from your target community and sends them into one channel for easier bot development. Currently supports:
-- `[p]commandrequest [command]` - Relays requested command to your current server. The `channelidstring` variable in the cog must be changed to reflect your current requests channel.
-- `[p]channelid [#channelname]` - Fetches the channnel name. Useful if on Mobile Discord.
+If you're a bot owner who frequently adds new commands on the community's call and you have your private bot development server, Command Request takes command requests from your target community and sends them into one channel for easier bot development (which is saved via a command). Currently supports:
+- `[p]commandrequest [command]` - Relays requested command to your current server. The `channelidstring` variable in the cog must be changed to reflect your current requests channel. The command request channel ID must be set through the next command.
+- `[p]savechannelid [channelid]` - Saves the channel ID of the desired command request channel. Use Discord Developer Mode to copy the desired command request channel's ID.
 
 ###Echo
 Makes the bot repeat what you say, while taking into account that only the bot owner can use Echo. Supports spaces but not newlines. Currently supports:
