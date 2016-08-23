@@ -3,5 +3,5 @@
     "INSTALL_MSG" : "Appsearcher cog installed. To start, type [p]help appsearcher and read your bot's DMs.",
     "NAME" : "Appsearcher",
     "SHORT" : "Cog that searches through popular application download sites.",
-    "DESCRIPTION" : "Cog that searches through popular application download sites, with embedding support for [p]gog"
+    "DESCRIPTION" : "Cog that searches through popular application download sites, with embedding support for [p]gog. Requires Beutiful Soup 4 to work."
 } 
