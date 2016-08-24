@@ -1,7 +1,5 @@
 from .utils.dataIO import fileIO
 from .utils import checks
-from __main__ import send_cmd_help
-from __main__ import settings as bot_settings
 import json
 import os
 import discord
@@ -18,7 +16,6 @@ class Bing:
 	
 	def __init__(self, bot):
 		self.bot = bot
-		self.PREFIXES = bot_settings.prefixes 
 		
 	def getfrombing(self, apikey, text, limit, operation):
 		if operation == 'moderateimagesearch':
