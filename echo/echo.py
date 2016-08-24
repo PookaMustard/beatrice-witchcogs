@@ -1,5 +1,4 @@
 from cogs.utils import checks
-import discord
 from discord.ext import commands
 
 class Echo:
