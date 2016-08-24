@@ -18,13 +18,14 @@ Fetches search results from various application sites. It currently requires req
 - `[p]steamid [gameid]` - Makes a link out of the specified steam game id
 
 ###Bing
-Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search (a required dependency), which requires an API key which you can set via `[p]apikey_bing`. It requires py-bing-search and requests to work. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
+Fetches search results from Bing and embeds them into Discord. It is a Red-DiscordBot frontend for py-bing-search (a required dependency), which requires an API key which you can set via `[p]apikey_bing`. It requires the Python module py-bing-search to work. Supports fetching the first result and a random operation from at max 100 results. Currently supports:
 - `[p]bing [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Moderate.
 - `[p]bingstrict [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Strict. 
-- `[p]bingadult [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Off. Must be enabled by admins on a server and/or channel basis using `[p]bingadultsets` for servers and `[p]bingadultsetc` for channels. This command is NSFW.
+- `[p]bingadult [optional:random] [imagesearch]` - Looks up Bing for an image and embeds it into Discord in full resolution, with Safe Search set to Off. Must be enabled by admins on a server and/or channel basis using `[p]bingset adult [channel/server]` for either servers or channels, with the channel settings prioritized before the server settings.
 - `[p]bingsearch [optional:random] [websearch]` - Looks up Bing for a web URL and embeds it into Discord.
 - `[p]bingvideo [optional:random] [videosearch]` - Looks up Bing for a video URL and embeds it into Discord
 - `[p]bingnews [optional:random] [newsearch]` - Looks Bing for a news URL and embeds it into Discord along with a short headline, date and time and a summary of the headline.
+- `[p]bing_clearsettings` - Clears saved adult channels and servers as well as the Bing API key.
 
 ###Command Request
 If you're a bot owner who frequently adds new commands on the community's call and you have your private bot development server, Command Request takes command requests from your target community and sends them into one channel for easier bot development (which is saved via a command). Currently supports:
