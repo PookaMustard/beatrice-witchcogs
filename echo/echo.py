@@ -1,6 +1,7 @@
 from cogs.utils import checks
 from discord.ext import commands
 
+
 class Echo:
     """I'll repeat what you said."""
 
@@ -31,6 +32,7 @@ class Echo:
         """Gets current channel ID immediately."""
         channel = ctx.message.channel
         return await self.bot.say(channel.id)
+
 
 def setup(bot):
     bot.add_cog(Echo(bot))
