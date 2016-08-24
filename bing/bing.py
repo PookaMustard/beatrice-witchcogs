@@ -5,7 +5,11 @@ import os
 import discord
 from discord.ext import commands
 from random import randint
-from py_bing_search import PyBingImageSearch, PyBingWebSearch, PyBingVideoSearch, PyBingNewsSearch
+try:
+	from py_bing_search import PyBingImageSearch, PyBingWebSearch, PyBingVideoSearch, PyBingNewsSearch
+	bingavailable = True
+except:
+	bingavailable = False
 
 DATADIR = "data/bing"
 SETTINGS = DATADIR + "/settings.json"
@@ -270,6 +274,9 @@ def check_files():
 		fileIO(SETTINGS, "save", settings)
 
 def setup(bot):
-	check_folders()
-	check_files()
-	bot.add_cog(Bing(bot))
+	if bingavailable:
+		check_folders()
+		check_files()
+		bot.add_cog(Bing(bot))
+	else:
+		raise RuntimeError("You need to run 'pip3 install py-bing-search', as it is needed for this cog to run.")
