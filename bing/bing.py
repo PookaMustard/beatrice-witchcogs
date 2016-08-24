@@ -2,388 +2,277 @@ from .utils.dataIO import fileIO
 from .utils import checks
 from __main__ import send_cmd_help
 from __main__ import settings as bot_settings
-import requests, requests.utils
-import time
 import json
-import aiohttp
-import asyncio
 import os
 import discord
 from discord.ext import commands
 from random import randint
-from py_bing_search import PyBingImageSearch
-from py_bing_search import PyBingWebSearch
-from py_bing_search import PyBingVideoSearch
-from py_bing_search import PyBingNewsSearch
+from py_bing_search import PyBingImageSearch, PyBingWebSearch, PyBingVideoSearch, PyBingNewsSearch
 
+DATADIR = "data/bing"
+SETTINGS = DATADIR + "/settings.json"
 
-DIR_DATA = "data/bing"
-SETTINGS = DIR_DATA+"/settings.json"
-        
 class Bing:
-    """Fetches search results from Bing.
-    
-    Uses the Python module py_bing_search as a frontend for Red"""
+	"""Fetches search results from Bing.
+	Uses the Python module py_bing_search as a frontend for Red"""
+	
+	def __init__(self, bot):
+		self.bot = bot
+		self.PREFIXES = bot_settings.prefixes 
+		
+	def getfrombing(self, apikey, text, limit, operation):
+		if operation == 'moderateimagesearch':
+			bing_obj = PyBingImageSearch(apikey, text, custom_params="&Adult='Moderate'")
+		elif operation == 'strictimagesearch':
+			bing_obj = PyBingImageSearch(apikey, text, custom_params="&Adult='Strict'")
+		elif operation == 'adultimagesearch':
+			bing_obj = PyBingImageSearch(apikey, text, custom_params="&Adult='Off'")
+		elif operation == 'websearch':
+			bing_obj = PyBingWebSearch(apikey, text, web_only=False)
+		elif operation == 'videosearch':
+			bing_obj = PyBingVideoSearch(apikey, text)
+		elif operation == 'newssearch':
+			bing_obj = PyBingNewsSearch(apikey, text)
+		result = bing_obj.search(limit=limit, format='json')
+		return result
+		
+	def obtainresult(self, result, operation):
+		maxnum = len(result)
+		if operation == 'moderateimagesearch' or operation == 'videosearch' or \
+			operation == 'strictimagesearch' or operation == 'adultimagesearch':
+			try:
+				return result[randint(1, maxnum) - 1].media_url
+			except ValueError:
+				return "Search failed."
+		elif operation == 'websearch':
+			try:
+				return result[randint(1, maxnum) - 1].url
+			except ValueError:
+				return "Search failed."
+		elif operation == 'newssearch':
+			num = randint(1, maxnum) - 1
+			try:
+				time = result[num].date
+			except ValueError:
+				return "Search failed."
+			time = "Date: " + time
+			time = time.replace('T', '\nTime: ').replace('Z', '')
+			bottext = result[num].title + "\n" + result[num].url + "\n" + time + "\n" + \
+				result[num].description
+			return bottext
+			
+	def limitget(self, text):
+		if text.split(' ', 1)[0].lower() == 'random':
+			text = text.replace('random ', '', 1)
+			limit = 100
+		else:
+			limit = 1
+		return text, limit
+		
+	def setadultchannel(self, channel, status):
+		settings = loadauth()
+		settings['adult']['channels'][channel.id] = status
+		saveauth(settings)
+		return settings
+		
+	def setadultserver(self, server, status):
+		settings = loadauth()
+		settings['adult']['servers'][server.id] = status
+		saveauth(settings)
+		return settings
+		
+	def checkadult(self, server, channel, settings):
+		if channel.id not in settings['adult']['channels']:
+			adultchannel = 'Unknown'
+		else:
+			adultchannel = settings['adult']['channels'][channel.id]
+		if server.id not in settings['adult']['servers']:
+			adultserver = 'False'
+		else:
+			adultserver = settings['adult']['servers'][server.id]
+		if adultchannel == 'False':
+			return False
+		elif (adultchannel == 'True' or adultchannel == 'Unknown') and adultserver == 'True':
+			return True
+		elif adultchannel == 'True' and adultserver == 'False':
+			return True
+		elif adultchannel == 'Unknown' and adultserver == 'False':
+			return False
+			
+	@commands.command(pass_context=True)
+	@checks.is_owner()
+	async def apikey_bing(self, ctx, key):
+		"""Set the Bing API key."""
+		settings = loadauth()
+		settings['apikey'] = key
+		saveauth(settings)
+		return await self.bot.say("Bing API key saved.")
+		
+	@commands.command(pass_context=True)
+	@checks.is_owner()
+	async def bing_clearsettings(self, ctx):
+		"""Clears all Bing settings, including API key and %bingadult access"""
+		message = ctx.message
+		await self.bot.say("Are you sure you want to delete all of the Bing cog's settings?\n(y/n)")
+		response = await self.bot.wait_for_message(author=message.author)
+		if response.content.lower().strip() == "y":
+			clearauth()
+			return await self.bot.say("Settings successfully cleared. You need to reset the API key before " +
+				"using the Bing cog again.")
+		else:
+			return await self.bot.say("Cancelled clear operation.")
+		
+	@commands.command(pass_context=True)
+	@checks.admin_or_permissions(manage_server=True)
+	async def bingsetadult(self, ctx, setting):
+		"""Sets %bingadult status.
+		[setting] can either be server or channel."""
+		
+		channel = ctx.message.channel
+		server = ctx.message.server
+		message = ctx.message
+		if setting == 'channel':
+			await self.bot.say("Do you want to enable %bingadult for this channel? This will enable this  " +
+				"channel to use the %bingadult command, which image searches Bing with Safe Search " +
+				"turned off. Do note that this setting will override the global server setting and " +
+				"thus will allow %bingadult in this channel even if the global server setting is off. " +
+				"\n**ARE YOU SURE YOU WANT TO TOGGLE %bingadult?**\n(y/n)")
+		elif setting == 'server':
+			await self.bot.say("Do you want to enable %bingadult for this server? This will enable your " +
+				"server to use the %bingadult command, which image searches Bing with Safe Search " +
+				"turned off. Do note that this setting will be overriden per channel if a channel " +
+				"is set to accept usage of %bingadult. **ARE YOU SURE YOU WANT TO TOGGLE %bingadult?**\n" +
+				"(y/n)")
+		else:
+			return await self.bot.say("```This command accepts either server or channel. Please use it again.```")
+		response = await self.bot.wait_for_message(author=message.author)
+		if response.content.lower().strip() == "y":
+			if setting == 'channel':
+				settings = self.setadultchannel(channel, 'True')
+				return await self.bot.say("Enabled %bingadult settings for this channel.")
+			elif setting == 'server':
+				settings = self.setadultserver(server, 'True')
+				return await self.bot.say("Enabled %bingadult settings for this server.")
+		else:
+			if setting  == 'channel':
+				settings = self.setadultchannel(channel, 'False')
+				return await self.bot.say("Disabled %bingadult settings for this channel.")
+			elif setting == 'server':
+				settings = self.setadultserver(server, 'False')
+				return await self.bot.say("Disabled %bingadult settings for this server.")
+		
+	@commands.command()
+	async def bing(self, *, text):
+		"""Searches Bing for images."""
+		settings = loadauth()
+		operation = 'moderateimagesearch'
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
+		
+	@commands.command()
+	async def bingstrict(self, *, text):
+		"""Searches Bing for images with a strict Safe Search."""
+		settings = loadauth()
+		operation = 'strictimagesearch'
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
+		
+	@commands.command(pass_context=True)
+	async def bingadult(self, ctx,  *, text):
+		"""Searches Bing for images with Safe Search off."""
+		settings = loadauth()
+		channel = ctx.message.channel
+		server = ctx.message.server
+		operation = 'adultimagesearch'
+		check = self.checkadult(server, channel, settings)
+		if check == False:
+			return await self.bot.say("Usage of %bingadult is disabled in this server and/or channel.")
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
+		
+	@commands.command()
+	async def bingsearch(self, *, text):
+		"""Searches Bing for web results."""
+		settings = loadauth()
+		operation = 'websearch'
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
+		
+	@commands.command()
+	async def bingvideo(self, *, text):
+		"""Searches Bing for video results."""
+		settings = loadauth()
+		operation = 'videosearch'
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
+		
+	@commands.command()
+	async def bingnews(self, *, text):
+		"""Searches Bing for video results."""
+		settings = loadauth()
+		operation = 'newssearch'
+		if settings['apikey'] == '' or settings['apikey'] == 'blank':
+			return await self.bot.say("Missing or incorrect API key. Please contact the owner to add an API key.")
+		apikey = settings['apikey']
+		text, limit = self.limitget(text)
+		result = self.getfrombing(apikey, text, limit, operation)
+		bottext = self.obtainresult(result, operation)
+		return await self.bot.say(bottext)
 
-    def __init__(self, bot):
-        self.bot = bot
-        self.settings = fileIO(SETTINGS, "load")
-        if self.settings["api_key"] == "":
-            print("Cog error: bing, No API key found, please configure me!")
-        else:
-                self.api_key = self.settings["api_key"]
-        self.PREFIXES = bot_settings.prefixes 
+def saveauth(settings):
+	settings = settings
+	with open(SETTINGS, 'w') as f:
+		json.dump(settings, f)
+	return
 
-    def setadultserver(self, server, status):
-        if 'adult' not in self.settings:
-               self.settings['adult'] = {}
-        if 'servers' not in self.settings['adult']:
-               self.settings['adult']['servers'] = {}
-        self.settings['adult']['servers'][server.id] = status
-        fileIO(SETTINGS, "save", self.settings)
-        
-    def setadultchannel(self, channel, status):
-        if 'adult' not in self.settings:
-               self.settings['adult'] = {}
-        if 'channels' not in self.settings['adult']:
-               self.settings['adult']['channels'] = {}
-        self.settings['adult']['channels'][channel.id] = status
-        fileIO(SETTINGS, "save", self.settings)
-        
-    def getadultserver(self, server):
-        if 'adult' not in self.settings or 'servers' not in self.settings['adult'] or server.id not in self.settings['adult']['servers']:
-                return False
-        return self.settings['adult']['servers'][server.id]
-        
-    def getadultchannel(self, channel):
-        if 'adult' not in self.settings or 'channels' not in self.settings['adult'] or channel.id not in self.settings['adult']['channels']:
-                return False
-        return self.settings['adult']['channels'][channel.id]
-
-    @commands.command()
-    async def bing(self, *, text):
-        """Fetches an image from Bing, with a moderate SafeSearch setting"""
-
-        retries = 0
-        check=''
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Moderate'")
-                result= bing_image.search(limit=99, format='json')
-                limit=99
-        else:
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Moderate'")
-                result= bing_image.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].media_url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results. Try using %bingadult to disable Bing Safe Search."
-        else:
-                bottext = result[randint(0, limit - 1)].media_url
-        await self.bot.say(bottext)
-        
-    @commands.command()
-    async def bingstrict(self, *, text):
-        """Fetches an image from Bing, with a strict SafeSearch setting"""
-
-        retries = 0
-        check=''
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Strict'")
-                result= bing_image.search(limit=99, format='json')
-                limit=99
-        else:
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Strict'")
-                result= bing_image.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].media_url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results. Try using %bingadult to disable Bing Safe Search."
-        else:
-                bottext = result[randint(0, limit - 1)].media_url
-        await self.bot.say(bottext)
-        
-    @commands.command(pass_context=True)
-    async def bingadult(self, ctx, *, text):
-        """Fetches an image from Bing, with SafeSearch turned off. Only usable if admin enabled it."""
-
-        retries = 0
-        check=''
-        server = ctx.message.server
-        message = ctx.message
-        channel = ctx.message.channel
-        safesearchserver = self.getadultserver(server)
-        safesearchchannel = self.getadultchannel(channel)
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if safesearchchannel == False and safesearchserver == False:
-                return await self.bot.say("You cannot use this command on this server.")
-        elif safesearchchannel == True and safesearchserver == True:
-                success = True
-        elif safesearchchannel == True and safesearchserver == False:
-                success = True
-        elif safesearchchannel == False and safesearchserver == True:
-                return await self.bot.say("You cannot use this command on this channel.")
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Off'")
-                result= bing_image.search(limit=99, format='json')
-                limit=99
-        else:
-                bing_image = PyBingImageSearch(self.api_key, text, custom_params="&Adult='Off'")
-                result= bing_image.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].media_url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results. Try using %bingadult to disable Bing Safe Search."
-        else:
-                bottext = result[randint(0, limit - 1)].media_url
-        await self.bot.say(bottext)
-        
-    @commands.command(pass_context=True,no_pm=True)
-    @checks.admin_or_permissions(manage_server=True)
-    async def bingadultsets(self, ctx):
-        """Sets %bingadult for entire server"""
-            
-        server = ctx.message.server
-        message = ctx.message
-        strat = self.getadultserver(server)
-        if strat == True:
-                await self.bot.say("```This server has %bingadult enabled.```")
-        else:
-                await self.bot.say("```This server has %bingadult disabled.```")
-        await self.bot.say("```Do you want to enable %bingadult for this server? This will enable your server to use " +
-                        "the %bingadult command, which image searches Bing with Safe Search turned off. Do note that " +
-                        "this setting will be overriden per channel if a channel is set to accept usage of %bingadult. " +
-                        "ARE YOU SURE YOU WANT TO TOGGLE %bingadult?\n(y/n)```")
-        response = await self.bot.wait_for_message(author=message.author)
-        if response.content.lower().strip() == "y":
-                self.setadultserver(server, True)
-                await self.bot.say("`Saving server settings now.`")
-                strat = self.getadultserver(server)
-                if strat == True:
-                        await self.bot.say("`Settings saved. %bingadult enabled for this server.`")
-                else:
-                        await self.bot.say("`Settings not saved. Please contact a bot admin.`")
-        else:
-                self.setadultserver(server, False)
-                await self.bot.say("`Saving server settings now.`")
-                strat = self.getadultserver(server)
-                if strat == False:
-                        await self.bot.say("`Settings saved. %bingadult disabled for this server.`")
-                else:
-                        await self.bot.say("`Settings not saved. Please contact a bot admin.`")
-                
-    @commands.command(pass_context=True)
-    @checks.admin_or_permissions(manage_server=True)
-    async def bingadultsetc(self, ctx):
-        """Sets %bingadult for the current channel"""
-            
-        server = ctx.message.server
-        message = ctx.message
-        channel = ctx.message.channel
-        strat = self.getadultchannel(channel)
-        if strat == True:
-                await self.bot.say("```This channel has %bingadult enabled.```")
-        else:
-                await self.bot.say("```This channel has %bingadult disabled.```")
-        await self.bot.say("```Do you want to enable %bingadult for this channel? This will enable this channel to use " +
-                        "the %bingadult command, which image searches Bing with Safe Search turned off. Do note that " +
-                        "this setting will override the global server setting and thus will allow %bingadult in this " +
-                        "channel even if the global server setting is off. " +
-                        "ARE YOU SURE YOU WANT TO TOGGLE %bingadult?\n(y/n)```")
-        
-        response = await self.bot.wait_for_message(author=message.author)
-        if response.content.lower().strip() == "y":
-                self.setadultchannel(channel, True)
-                await self.bot.say("`Saving channel settings now.`")
-                strat = self.getadultchannel(channel)
-                if strat == True:
-                        await self.bot.say("`Settings saved. %bingadult enabled for this channel.`")
-                else:
-                        await self.bot.say("`Settings not saved. Please contact a bot admin.`")
-        else:
-                self.setadultchannel(channel, False)
-                await self.bot.say("`Saving channel settings now.`")
-                strat = self.getadultchannel(channel)
-                if strat == False:
-                        await self.bot.say("`Settings saved. %bingadult disabled for this channel.`")
-                else:
-                        await self.bot.say("`Settings not saved. Please contact a bot admin.`")
-        
-    @commands.command()
-    async def bingsearch(self, *, text):
-        """Fetches a search result from Bing"""
-
-        retries = 0
-        check=''
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_web = PyBingWebSearch(self.api_key, text, web_only=False)
-                result= bing_web.search(limit=99, format='json')
-                limit=99
-        else:
-                bing_web = PyBingWebSearch(self.api_key, text, web_only=False)
-                result= bing_web.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results. Try using %bingadult to disable Bing Safe Search."
-        else:
-                RNG = randint(0, limit-1)
-                bottext = result[RNG].url + "\n" + result[RNG].title + "\n" + result[RNG].description
-        await self.bot.say(bottext)
-        
-    @commands.command()
-    async def bingvideo(self, *, text):
-        """Fetches a video from Bing"""
-
-        #Your code will go here
-        retries = 0
-        attempts = 0
-        check=''
-        if self.settings["api_key"] == "":
-                await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-                return
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_video = PyBingVideoSearch(self.api_key, text)
-                result= bing_video.search(limit=99, format='json')
-                limit=99
-        else:
-                bing_video = PyBingVideoSearch(self.api_key, text)
-                result= bing_video.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].media_url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results.."
-        else:
-                bottext = result[randint(0, limit - 1)].media_url
-        while "http://store.steampowered.com/" in bottext or "ign.com" in bottext:
-                rng = randint(0, limit - 1)
-                bottext = result[rng].media_url
-                attempts = attempts + 1
-                if attempts <= 20:
-                        bottext = "Filtering error. Try this search again."
-        await self.bot.say(bottext)
-        
-    @commands.command()
-    async def bingnews(self, *, text):
-        """Fetches a news article from Bing"""
-
-        retries = 0
-        check=''
-        if self.settings["api_key"] == "":
-                return await self.bot.say("` This cog wasn't configured properly. If you're the owner, add your API key.`")
-        if text.split(' ', 1)[0].lower() == 'random':
-                text = text.replace('random ', '', 1)
-                bing_news = PyBingNewsSearch(self.api_key, text)
-                result= bing_news.search(limit=9, format='json')
-                limit=99
-        else:
-                bing_news = PyBingNewsSearch(self.api_key, text)
-                result= bing_news.search(limit=1, format='json')
-                limit=0
-        while retries <= limit:
-                try:
-                        check = result[retries].url
-                        retries = retries + 1
-                        limit = retries
-                except IndexError:
-                        limit = retries
-                        break
-        if retries == 0:
-                bottext = "Cannot find any search results."
-        else:
-                num = randint(0, limit - 1)
-                time = result[num].date
-                time = "Date: " + time
-                time = time.replace('T', '\nTime: ')
-                time = time.replace('Z', '')
-                bottext = result[num].title + "\n" + result[num].url + "\n" + time + "\n" + result[num].description
-        await self.bot.say(bottext)
-        
-    @commands.command(pass_context=True, no_pm=False)
-    @checks.admin_or_permissions(manage_server=True)
-    async def apikey_bing(self, ctx, key):
-        """Set the Bing API key.
-        
-        Code copied from Mash's IMDB apikey_imdb command"""
-        user = ctx.message.author
-        if self.settings["api_key"] != "":
-            await self.bot.say("{} ` Bing API key found, overwrite it? y/n`".format(user.mention))
-            response = await self.bot.wait_for_message(author=ctx.message.author)
-            if response.content.lower().strip() == "y":
-                self.settings["api_key"] = key
-                fileIO(SETTINGS, "save", self.settings)
-                await self.bot.say("{} ` Bing API key saved...`".format(user.mention))
-            else:
-                await self.bot.say("{} `Canceled API key opertation...`".format(user.mention))
-        else:
-            self.settings["api_key"] = key
-            fileIO(SETTINGS, "save", self.settings)
-            await self.bot.say("{} ` imdb API key saved...`".format(user.mention))
-        self.settings = fileIO(SETTINGS, "load") 
-        self.api_key = self.settings["api_key"]
+def loadauth():
+	settings = {}
+	with open(SETTINGS, 'r') as f:
+		settings = json.load(f)
+	return settings
+	
+def clearauth():
+	settings = { 'apikey': 'blank', 'adult' : {'servers': {}, 'channels': {}}}
+	fileIO(SETTINGS, "save", settings)
+	return
 
 def check_folders():
-    if not os.path.exists(DIR_DATA):
-        print("Creating data/bing folder...")
-        os.makedirs(DIR_DATA)
-
+	if not os.path.exists(DATADIR):
+		print("Creating data directory for Command Request cog")
+		os.mkdir(DATADIR)
+			
 def check_files():
-    settings = {"api_key": ""}
-
-    if not fileIO(SETTINGS, "check"):
-        print("Creating settings.json")
-        fileIO(SETTINGS, "save", settings)
+	if not fileIO(SETTINGS, "check"):
+		settings = { 'apikey': 'blank', 'adult' : {'servers': {}, 'channels': {}}}
+		print("Creating blank data file for Command Request cog")
+		fileIO(SETTINGS, "save", settings)
 
 def setup(bot):
-    check_folders()
-    check_files()
-    n = Bing(bot)
-    bot.add_cog(n)
+	check_folders()
+	check_files()
+	bot.add_cog(Bing(bot))
