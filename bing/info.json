@@ -1,7 +1,7 @@
  { 
     "AUTHOR" : "PookaMustard",
-    "INSTALL_MSG" : "Bing cog installed. To start, use %bing. You can also set %bingadultsets for server and %bingadultsetc for channel to allow for searches without SafeSearch enabled.",
+    "INSTALL_MSG" : "Bing cog installed. To start, use [b]help Bing. You can also set [p]bingsetadult [channel/server] to allow for searches without SafeSearch enabled.",
     "NAME" : "Bing",
     "SHORT" : "Bing cog that searches Bing for web, images, videos and news.",
-    "DESCRIPTION" : "Bing cog that searches Bing for web, images, videos and news, with a larger focus on image search. JSON code copied from Mash's IMDb cog, complete with permission to use it. Requires py-bing-search to work."
+    "DESCRIPTION" : "Bing cog that searches Bing for web, images, videos and news, with a larger focus on image search. Requires Python module py-bing-search to work, and API key from the Azure Marketplace."
 } 
