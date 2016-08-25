@@ -22,6 +22,7 @@ class Dictionary:
             while counter <= count:
                 text = text + "\n• " + str(result[function][counter])
                 counter = counter + 1
+            text = text + "\n"
             return text
         except KeyError:
             text = ""
@@ -50,8 +51,7 @@ class Dictionary:
         except TypeError:
             return await self.bot.say("No results found. Are you " +
                                       "searching for a valid word?")
-        text = "\n" + nountext + "\n" + verbtext + "\n" + adjtext + "\n" + \
-               advtext
+        text = "\n" + nountext + verbtext + adjtext + advtext
         definition = "Found the following definitions for **" + word + "**:" \
                      + text
         return await self.bot.say(definition)
