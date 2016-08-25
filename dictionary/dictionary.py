@@ -46,10 +46,12 @@ class Dictionary:
             nountext = self.meaningtextformat("Noun", result)
             verbtext = self.meaningtextformat("Verb", result)
             adjtext = self.meaningtextformat("Adjective", result)
+            advtext = self.meaningtextformat("Adverb", result)
         except TypeError:
             return await self.bot.say("No results found. Are you " +
                                       "searching for a valid word?")
-        text = "\n" + nountext + "\n" + verbtext + "\n" + adjtext
+        text = "\n" + nountext + "\n" + verbtext + "\n" + adjtext + "\n" + \
+               advtext
         definition = "Found the following definitions for **" + word + "**:" \
                      + text
         return await self.bot.say(definition)
