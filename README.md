@@ -1,10 +1,10 @@
+
 # beatrice-witchcogs
 General-purpose cogs made for Red-DiscordBot, mostly search cogs, occasionally themed after Beatrice, the Golden Witch of Umineko no Naku Koro ni. They're all made to be used with Red-DiscordBot. It is assumed you know how to use Red-DiscordBot and how to install and download cogs.
 
 ##Cogs
 ###Appsearcher
-Fetches search results from various application sites. It currently requires requests, JSON, re, bs4 and aiohttp. Currently supports:
-- `[p]gog [[gamename]/gamecount/random]` - Fetches a list of games on GOG. Allows you to choose from the available first 10 results and lists contextual info about the game such as pricing and platforms. Currently the most advanced command in Appsearcher. Known NSFW games (such as The Witcher series, Leisure Suit Larry series, HuniePop and Lula: The Sexy Empire) are marked as such when embedded into Discord.
+Fetches search results from various application sites. Currently supports:
 - `[p]humblebundle [gamename]` - Fetches a search link on Humble using your gamename
 - `[p]itch [gamename]` - Fetches a search link on itch.io
 - `[p]origin [gamename]` - Fetches a search link on Origin
@@ -36,6 +36,12 @@ If you're a bot owner who frequently adds new commands on the community's call a
 Makes the bot repeat what you say, while taking into account that only the bot owner can use Echo. Supports spaces but not newlines. Currently supports:
 - `[p]echo [text]` - Repeats what you said after the command in the same channel.
 - `[p]sonar [channelid] [text]` - Repeats what you said in a specific channel using the channel's ID.
+
+###GOG
+Fetches games or movies from GOG.com and displays information about them such as the prices and the platforms. Requires requests and BeautifulSoup4 to operate. Currently supports:
+- `[p]gog [searchname]` - Search and display information for the specified game or movie. Will ask the user which result they want if more than one result is detected.
+- `[p]gog [randomgame]` - Will display any random game from GOG.com.
+- `[p]gog [gamecount]` - Will display the amount of DRM-free games on GOG.com
 
 ###Is It Down
 Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. It requires the dependencies asyncio and aiohttp Usage:
