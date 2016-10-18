@@ -65,7 +65,7 @@ class GOG:
                         retriesnum = retriesnum + 1
                     except:
                         if retries == 0:
-                            return await self.bot.say("No games found" +
+                            return await self.bot.say("No games found " +
                                                       "under that name on " +
                                                       "GOG.com. Try another " +
                                                       "search result.")
@@ -160,9 +160,8 @@ class GOG:
                        data['products'][gamenum]['forumUrl'] + ">"
 
             timeraw = data['products'][gamenum]['releaseDate']
-            #reldate = time.strftime("%d %B, %Y", timeraw)
             reldate = datetime.datetime.fromtimestamp(int(timeraw)) \
-                      .strftime("%B %d, %Y")
+                .strftime("%B %d, %Y")
 
             if isfree:
                 pricetext = 'Free'
@@ -191,7 +190,7 @@ class GOG:
                         "View at your own discretion.**" + "\n"
             bottext = bottext + "Title: " + title + "\nGame URL: " + url + \
                 "\nGame Image URL: " + image + "\nForum URL: " + forumurl + \
-                "\nRelease Date: " +reldate + \
+                "\nOriginal Release Date: " + reldate + \
                 "\nGenre: " + genre + "\nPlatforms: " + platformtext + \
                 "\nRating: " + rating + "\nPrice: " + pricetext
             return await self.bot.say(bottext)
