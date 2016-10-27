@@ -160,8 +160,11 @@ class GOG:
                        data['products'][gamenum]['forumUrl'] + ">"
 
             timeraw = data['products'][gamenum]['releaseDate']
-            reldate = datetime.datetime.fromtimestamp(int(timeraw)) \
-                .strftime("%B %d, %Y")
+            if timeraw is not None:
+                reldate = datetime.datetime.fromtimestamp(int(timeraw)) \
+                    .strftime("%B %d, %Y")
+            else:
+                reldate = "Unknown"
 
             if isfree:
                 pricetext = 'Free'
