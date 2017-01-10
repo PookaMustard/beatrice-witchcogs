@@ -1,19 +1,8 @@
 from discord.ext import commands
+import requests
 import json
-import datetime
-import re
-from random import randint
-from urllib.request import urlopen
-try:
-    from bs4 import BeautifulSoup
-    bs4ava = True
-except:
-    bs4ava = False
-try:
-    import requests
-    reqava = True
-except:
-    reqava = False
+import html
+import discord
 
 
 class GOG:
@@ -24,194 +13,133 @@ class GOG:
 
     @commands.command(pass_context=True)
     async def gog(self, ctx, *, text):
-        """Returns GOG search results using game name
-            Type %gog gamecount for the number of games"""
+        """Returns GOG search results using game name"""
+
+        # First, defining variables, query included
         message = ctx.message
+        retries, retriesnum, = 0, 1
+        gamename = []
+        othergames = ''
+        query = "http://www.an-ovel.com/cgi-bin/magog.cgi?ver=772" + \
+            "&scp=gdspuio&dsp=ipgfsorcmbaS&ord=&flt=tcs~{}~" + \
+            "&opt=nj&myf=MonJan92310072017_empty_VYXnZcKoKJFTY"
+        query = query.format(text)
 
-        # First we check which operation we need. We either get the gamecount
-        # of GOG's titles, pick a random title, or pick a specific title.
-        if text == 'gamecount':
-            # try:
-            count = str(self.get_game_count())
-            # If all is successful, the gamecount is sent by the bot.
-            return await self.bot.say("There are " + count + " games on GOG.")
-            # except:
-            # An error is thrown if unable to load the gamecount.
-            return await self.bot.say("Couldn't load amount of games on" +
-                                      " GOG. There must be an error.")
+        # Loading query into memory
+        r = requests.get(query)
+        data = json.loads(html.unescape(r.text))
+        data = data['magog_search_results']
+
+        # Loading at maximum 10 games into memory
+        while retries <= 10:
+            try:
+                gamene = data[retries]['title']
+                gamename.append(gamene)
+                othergames = othergames + "\n" + \
+                    str(retriesnum) + ") " + gamename[retries]
+                retries = retries + 1
+                retriesnum = retriesnum + 1
+            except:
+                if retries == 0:
+                    return await self.bot.say("No games found " +
+                                              "under that name on " +
+                                              "GOG.com. Try another " +
+                                              "search result.")
+                maxnum = retries
+                break
+
+        # If there were more than one game, ask user to choose from them
+        if maxnum != 1:
+            await self.bot.say("Found the following games on GOG:" +
+                               othergames + "\n\nPlease type the " +
+                               "number of the game you want, " +
+                               "then send.")
+            rp = await self.bot.wait_for_message(author=message.author)
+            try:
+                num = int(rp.content) - 1
+                if (num >= maxnum) or (num < 0):
+                    await self.bot.say("Chosen number invalid. " +
+                                       "Assuming first search " +
+                                       "result.")
+                    num = 0
+            except:
+                await self.bot.say("Cannot accept strings for " +
+                                   "choosing search results. " +
+                                   "Assuming first search result.")
+                num = 0
         else:
-            if text != 'randomgame':
-                retries, gamenum, retriesnum, = 0, 0, 1
-                gamename = []
-                othergames = ''
-                text = text.replace(" ", "%20")
-                # This is the AJAX query link for GOG searches. We need it to
-                # search for the required content.
-                query = "https://www.gog.com/games/ajax/" + \
-                    "filtered?limit=10&search=" + text
-                r = requests.get(query)
-                data = json.loads(r.text)
-                # Attempting to query. It can hold a maximum of 10 results.
-                # Once there are no more results, the retries variable
-                # becomes out of the comparison range to
-                # abort operation and continue execution.
-                while retries <= 10:
-                    try:
-                        gamene = data['products'][retries]['title']
-                        gamename.append(gamene)
-                        othergames = othergames + "\n" + \
-                            str(retriesnum) + ") " + gamename[retries]
-                        retries = retries + 1
-                        retriesnum = retriesnum + 1
-                    except:
-                        if retries == 0:
-                            return await self.bot.say("No games found " +
-                                                      "under that name on " +
-                                                      "GOG.com. Try another " +
-                                                      "search result.")
-                        maxnum = retries
-                        break
-                # If the maximum amount of results generated by the query is 1,
-                # we only list the only product's data right away. Else, we ask
-                # the user which result they want.
-                if maxnum != 1:
-                    await self.bot.say("Found the following games on GOG:" +
-                                       othergames + "\n\nPlease type the " +
-                                       "number of the game you want, " +
-                                       "then send.")
-                    rp = await self.bot.wait_for_message(author=message.author)
-                    try:
-                        gamenum = int(rp.content) - 1
-                        if (gamenum >= maxnum) or (gamenum < 0):
-                            await self.bot.say("Chosen number invalid. " +
-                                               "Assuming first search " +
-                                               "result.")
-                            gamenum = 0
-                    except:
-                        await self.bot.say("Cannot accept strings for " +
-                                           "choosing search results. " +
-                                           "Assuming first search result.")
-                        gamenum = 0
-                else:
-                    gamenum = 0
+            num = 0
 
-            # If text is 'randomgame.' A query of 99999 results and
-            # gamecount is loaded. If gamecount fails, the query will
-            # be 1000. Final random result decremented by 1.
-            else:
-                query = 'https://www.gog.com/games/ajax/filtered?limit=99999'
-                try:
-                    count = self.get_game_count()
-                except:
-                    count = 1000
-                gamenum = randint(1, count) - 1
-            # Loading ajax search URL into variable r
-            r = requests.get(query)
-            # Loading the text of ajax search URL into variable data
-            data = json.loads(r.text)
+        # Extracting basic data
+        title = data[num]['title']
+        url = data[num]['link']
+        image = data[num]['image'].replace("_100.jpg", ".png")
+        os = data[num]['os']
+        genres = data[num]['genres']
+        gogdate = data[num]['add_date']
+        reldate = data[num]['rls_date']
+        filesize = data[num]['file_size']
+        features = data[num]['features']
 
-            # Loading placeholder variables
-            platcount = 0
-            bottext, platformtext = '', ''
+        # Extracting publisher and developer
+        companies = data[num]['companies'].split(' / ')
+        dev = companies[0]
+        pub = companies[1]
+        if pub == dev:
+            comtext = "Published and developed by **{}**".format(
+                dev)
+        else:
+            comtext = "Published by **{}** and developed by **{}**".format(
+                pub, dev)
 
-            # Loading all required details into variables
-            # Loading game details
+        # Extracting goodies count
+        goodies = data[num]['bonuses']
+        if goodies == '':
+            boncount = 'None'
+        else:
+            boncount = str(len(goodies.split(',')))
 
-            image = 'https:' + data['products'][gamenum]['image'] + '.png'
-            title = data['products'][gamenum]['title']
-            genre = data['products'][gamenum]['originalCategory']
-            url = '<https://www.gog.com' + \
-                data['products'][gamenum]['url'] + '>'
+        # Extracting pricing
+        curprice = data[num]['cur_price']
+        savings = data[num]['you_save']
+        if savings != 0:
+            fullprice = curprice + savings
+            price = "${} (discounted by {}, base price is {})".format(
+                curprice, savings, fullprice)
+        else:
+            price = "${}".format(curprice)
 
-            # Loading platform support and formatting platform information
-            windows_support = data['products'][gamenum]['worksOn']['Windows']
-            linux_support = data['products'][gamenum]['worksOn']['Linux']
-            mac_support = data['products'][gamenum]['worksOn']['Mac']
-            platcount = windows_support + linux_support + mac_support
+        # Extracting coming soon or released status
+        soon = data[num]['is_upcoming']
+        if soon:
+            rating = 'Not rated yet.'
+            price = price + ", coming soon!"
+        else:
+            rating = data[num]['stars']
 
-            for num in range(0, platcount):
-                if windows_support:
-                    platformtext = platformtext + "Windows"
-                    windows_support = 0
-                elif linux_support:
-                    platformtext = platformtext + "Linux"
-                    linux_support = 0
-                elif mac_support:
-                    platformtext = platformtext + "Mac"
-                    mac_support = 0
-                if platcount == 3 and num == 0:
-                    platformtext = platformtext + ", "
-                if platcount == 3 and num == 1 or platcount == 2 and num == 0:
-                    platformtext = platformtext + " and "
+        # Extracting whether the game is NOT on Steam
+        steam = data[num]['steam']
+        if steam == 'NOT':
+            steam = "\nThis game is NOT on Steam."
+        else:
+            steam = ''
 
-            # Loading price details
+        # Defining what the bot will say and formatting it
+        bottext = "{}\n**Price:** {}\n**Genres:** {}\n**Rating:** {}" + \
+            "\n**Operating Systems:** {}\n**Features:** {}" + \
+            "\n**File Size:** {}\n**Goodies included:** {}" + \
+            "\n**Original Release Date:** {}\n**GOG Release Date:** {}{}"
+        bottext = bottext.format(
+            comtext, price, genres, rating, os, features, filesize, boncount,
+            reldate, gogdate, steam)
 
-            isdiscounted = data['products'][gamenum]['isDiscounted']
-            discount = data['products'][gamenum]['price']['discountDifference']
-            baseprice = data['products'][gamenum]['price']['baseAmount']
-            iscomingsoon = data['products'][gamenum]['isComingSoon']
-            isfree = data['products'][gamenum]['price']['isFree']
-            price = data['products'][gamenum]['price']['symbol'] + \
-                data['products'][gamenum]['price']['finalAmount']
-            pricesymbol = data['products'][gamenum]['price']['symbol']
-            buyable = data['products'][gamenum]['buyable']
-            rating = str(data['products'][gamenum]['rating']) + "/50"
-            forumurl = "<https://www.gog.com" + \
-                       data['products'][gamenum]['forumUrl'] + ">"
+        # Finally embedding all the acquired information into an embed
+        em = discord.Embed(title=title, url=url, description=bottext)
+        em.set_image(url=image)
 
-            timeraw = data['products'][gamenum]['releaseDate']
-            if timeraw is not None:
-                reldate = datetime.datetime.fromtimestamp(int(timeraw)) \
-                    .strftime("%B %d, %Y")
-            else:
-                reldate = "Unknown"
-
-            if isfree:
-                pricetext = 'Free'
-            else:
-                if not buyable:
-                    pricetext = 'Not buyable yet'
-                else:
-                    pricetext = price
-            if isdiscounted:
-                pricetext = pricetext + \
-                    " (discounted by " + pricesymbol + discount + \
-                    ", base price is " + pricesymbol + baseprice + ")"
-            if iscomingsoon:
-                pricetext = pricetext + ", coming soon!"
-
-            # Checking NSFW status. As GOG doesn't help with that, specific
-            # titles are tagged as NSFW. This definition of NSFW includes
-            # nudity and/or sexual content only, whether as easter eggs
-            # or as a major scope of the game.
-            nsfwtitle = ["Witcher", "Lula", "Leisure Suit Larry",
-                         "HuniePop", "Shadow Warrior"]
-            for nsfwcheck in nsfwtitle:
-                if nsfwcheck in title:
-                    bottext = bottext + "**This title is not safe for " + \
-                        "work and family unfriendly due to adult content. " + \
-                        "View at your own discretion.**" + "\n"
-            bottext = bottext + "Title: " + title + "\nGame URL: " + url + \
-                "\nGame Image URL: " + image + "\nForum URL: " + forumurl + \
-                "\nOriginal Release Date: " + reldate + \
-                "\nGenre: " + genre + "\nPlatforms: " + platformtext + \
-                "\nRating: " + rating + "\nPrice: " + pricetext
-            return await self.bot.say(bottext)
-
-    def get_game_count(self):
-        # We build the web address which includes the gamecount.
-        url = "https://www.gog.com/games?sort=bestselling&page=1"
-        soupObject = BeautifulSoup(urlopen(url).read())
-        # We get the gamecount.
-        count_unabridged = soupObject.find(class_='header__title').get_text()
-        count = re.findall('\d+', count_unabridged)
-        return int(count[0])
+        # Sending the final result
+        return await self.bot.say(embed=em)
 
 
 def setup(bot):
-    if not bs4ava:
-        raise RuntimeError("You need to run 'pip install bs4' to run GOG")
-    if not reqava:
-        raise RuntimeError("You need to run 'pip install requests' to run GOG")
-    else:
-        bot.add_cog(GOG(bot))
+    bot.add_cog(GOG(bot))
