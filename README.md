@@ -1,4 +1,4 @@
-
+ 
 # beatrice-witchcogs
 General-purpose cogs made for Red-DiscordBot, mostly search cogs, occasionally themed after Beatrice, the Golden Witch of Umineko no Naku Koro ni. They're all made to be used with Red-DiscordBot. It is assumed you know how to use Red-DiscordBot and how to install and download cogs.
 
@@ -39,9 +39,8 @@ Makes the bot repeat what you say, while taking into account that only the bot o
 
 ###GOG
 Fetches games or movies from GOG.com and displays information about them such as the prices and the platforms. Requires requests and BeautifulSoup4 to operate. Currently supports:
-- `[p]gog [searchname]` - Search and display information for the specified game or movie. Will ask the user which result they want if more than one result is detected.
-- `[p]gog [randomgame]` - Will display any random game from GOG.com.
-- `[p]gog [gamecount]` - Will display the amount of DRM-free games on GOG.com
+- `[p]gog [searchname]` - Search and display information for the specified game or movie. Will ask the user which result they want if more than one result is detected. Used for up-to-date searches.
+- `[p]magog [searchname]` - Searches GOG using the MaGog search engine by mrkgnao, which provides more detailed information on the games.
 
 ###Is It Down
 Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. It requires the dependencies asyncio and aiohttp Usage:
@@ -62,7 +61,7 @@ Fetches the Pokédex entry, name and image of a Pokémon and embeds them into Di
 - `[p]pokemon [optional: pokémonname OR pokedéx entry]` - Fetches a Pokémon. If there are no parameters provided, the bot will assume a random Pokémon. Otherwise, the bot will fetch the Pokémon listed under the specified Pokédex entry or EXACT Pokémon name.
 
 ###The Pirate Bay
-Makes the bot generate links for TPB search results. Selected search entry may or may not be NSFW. Usage:
+Fetches up to five possible matching torrents from The Pirate Bay using web crawling, and provides basic information on the torrents and the search URL if more than five results were found. Torrents may be NSFW. Usage:
 - `[p]tpb [searchname]`
 
 ##Contact
