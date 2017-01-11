@@ -1,6 +1,6 @@
 { 
     "AUTHOR" : "PookaMustard",
-    "INSTALL_MSG" : "GOG cog installed. To start usage, type `[p]gog <game you want to search here>`. You can also use `[p]gog gamecount` to retrieve the amount of games on GOG and `[p]gog random` to find a random game.",
+    "INSTALL_MSG" : "GOG cog installed. To start usage, type `[p]gog <game you want to search here> for up-to-date searches or `[p]magog <game you want to search here> for detailed searches.
     "NAME" : "GOG",
     "SHORT" : "Search GOG.com",
     "DESCRIPTION" : "Cog for searching games and movies on GOG.com, with visual in-chat information about the game such as its price and platforms supported. Requests required to operate."
