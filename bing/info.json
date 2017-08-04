@@ -1,7 +1,0 @@
- { 
-    "AUTHOR" : "PookaMustard",
-    "INSTALL_MSG" : "Bing cog installed. To start, use [b]help Bing. You can also set [p]bingsetadult [channel/server] to allow for searches without SafeSearch enabled.",
-    "NAME" : "Bing",
-    "SHORT" : "Bing cog that searches Bing for web, images, videos and news.",
-    "DESCRIPTION" : "Bing cog that searches Bing for web, images, videos and news, with a larger focus on image search. Requires Python module py-bing-search to work, and API key from the Azure Marketplace."
-} 
