@@ -30,7 +30,7 @@ Makes the bot repeat what you say, while taking into account that only the bot o
 
 ### GOG
 Fetches games or movies from GOG.com and displays information about them such as the prices and the platforms. Requires requests and BeautifulSoup4 to operate. Currently supports:
-- `[p]gog [searchname]` - Search and display information for the specified game or movie. Will ask the user which result they want if more than one result is detected. Used for up-to-date searches.
+- `[p]gog [search query]` - Search and display information for the specified game or movie. Will ask the user which result they want if more than one result is detected. Used for up-to-date searches.
 - `[p]gogcount` - Says how many products there are on GOG.com.
 
 ### Is It Down
@@ -52,8 +52,9 @@ Fetches the Pokédex entry, name and image of a Pokémon and embeds them into Di
 - `[p]pokemon [optional: pokémonname OR pokedéx entry]` - Fetches a Pokémon. If there are no parameters provided, the bot will assume a random Pokémon. Otherwise, the bot will fetch the Pokémon listed under the specified Pokédex entry or EXACT Pokémon name.
 
 ### The Pirate Bay
-Fetches up to five possible matching torrents from The Pirate Bay using web crawling, and provides basic information on the torrents and the search URL if more than five results were found. Torrents may be NSFW. Usage:
-- `[p]tpb [searchname]`
+Fetches up to eight possible matching torrents from The Pirate Bay using web crawling, and provides basic information on the torrents and the search URL if more than five results were found. Torrents may be NSFW. Usage:
+- `[p]tpb [search query]` - To search for any torrent
+- `[p]tpbcat [categories separated by commas with no spaces] [search query]` - To search for a torrent in a specified category
 
 ## Contact
 The cogs should generally work fine, but sometimes there might be an unexpected error or bug that hinders the experience. In case you do find such an issue, either leave an issue on this repo, or contact me on Discord at Pooka#2892.
