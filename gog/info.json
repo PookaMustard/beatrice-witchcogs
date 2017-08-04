@@ -1,7 +1,7 @@
 { 
     "AUTHOR" : "PookaMustard",
-    "INSTALL_MSG" : "GOG cog installed. To start usage, type `[p]gog <game you want to search here> for up-to-date searches or `[p]magog <game you want to search here> for detailed searches.",
+    "INSTALL_MSG" : "GOG cog installed. To start usage, type `[p]gog <game you want to search here>.",
     "NAME" : "GOG",
     "SHORT" : "Search GOG.com",
-    "DESCRIPTION" : "Cog for searching games and movies on GOG.com, with visual in-chat information about the game such as its price and platforms supported. Requests required to operate."
+    "DESCRIPTION" : "Cog for searching games and movies on GOG.com, with visual in-chat information about the game such as its price and platforms supported."
 } 
