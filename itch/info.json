@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "You have installed the Itch cog. To start, type `[p]itch [search]`. Beautiful Soup 4/bs4 required for operation.",
+    "NAME" : "Itch",
+    "SHORT" : "Search products sold on itch.io",
+    "DESCRIPTION" : "Search games, ebooks and other products on the indie market itch.io",
+    "TAGS" : ["search", "games", "ebooks", "itch.io"],
+    "REQUIREMENTS" : ["bs4"],
+    "HIDDEN" : false
+}
