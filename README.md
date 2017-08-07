@@ -37,6 +37,10 @@ Fetches games or movies from GOG.com and displays information about them such as
 Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. It requires the dependencies asyncio and aiohttp Usage:
 - `[p]isitdown [url]`
 
+### Itch
+Searches for products sold on the indie marketplace itch.io. Usage:
+- `[p]itch [search]`
+
 ### Minecraft
 Various Minecraft utilities. Usage:
 - `[p]minecraft status` - Checks the various Minecraft.net API status affecting gameplay
