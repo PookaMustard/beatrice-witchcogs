@@ -36,7 +36,13 @@ Fetches games or movies from GOG.com and displays information about them such as
 ### Is It Down
 Makes the bot check if a site is up and online or down and offline. May be prone to errors depending on the status of the site in question. It requires the dependencies asyncio and aiohttp Usage:
 - `[p]isitdown [url]`
- 
+
+### Minecraft
+Various Minecraft utilities. Usage:
+- `[p]minecraft status` - Checks the various Minecraft.net API status affecting gameplay
+- `[p]minecraft wiki [search]` - Searches the official Minecraft Wiki for articles
+- `[p]minecraft player [player_name]` - Looks up a player's information such as skins, capes, or ID
+
 ### MyAnimeList Search
 Makes the bot generate links for MAL search results. Currently supports:
 - `[p]mal [searchname]` - Generates all-purpose search link for the specified string
