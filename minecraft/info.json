@@ -1,0 +1,10 @@
+{
+    "AUTHOR" : "PookaMustard",
+    "INSTALL_MSG" : "You have installed the Minecraft cog. Start using it by typing [p]minecraft in Discord.",
+    "NAME" : "Minecraft",
+    "SHORT" : "Minecraft utilities",
+    "DESCRIPTION" : "Utilities concerning Minecraft. Includes Minecraft.net API status, Minecraft Wiki search and player info lookup",
+    "TAGS" : ["minecraft", "wiki", "search"],
+    "REQUIREMENTS" : [],
+    "HIDDEN" : false
+}
